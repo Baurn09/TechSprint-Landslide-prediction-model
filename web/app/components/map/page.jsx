@@ -16,32 +16,21 @@ import { areaMetadata } from "../../lib/areaMetaData";
 
 
 const hotspots = [
-  //critical risk spots
-  { id: "noney", name: "Tupul", coords: [24.8900, 93.6300] },//done                         1            2           3
-  { id: "senapati", name: "Senapati Hill Slopes", coords: [25.0900, 94.1100] },//done       4
-  { id: "noney", name: "Noney General Hills", coords: [24.7500, 93.6300]},//done            5
-  { id: "senapati", name: "NH 39 strech : Mao-Karong", coords: [25.5200, 94.1500]},//done   6
-  { id: "ukhrul", name: "Ukhrul Lower Slopes", coords: [25.0800, 94.3100]},//done           7
-  //moderate risk spots
-  { id: "chandel", name: "Chandel", coords: [24.3300, 94.3150] },//done                         1
-  { id: "pherzwal", name: "Pherzwal Hills", coords: [24.3000, 93.1500]},//done                  2
-  { id: "churchandpur", name: "Churchandpur Hill Outskrts", coords: [24.3325, 93.6850]},//done  3
-  { id: "kangpokpi", name: "Kangpokpi Hill Areas", coords: [25.0300, 93.9500]},//done           4
-  { id: "bishnupur", name: "Bishnupur HIll Fringes", coords: [24.6300, 93.7700]},//done but was supposed to be critical
-  
-  { id: "noney", name: "Tupul", coords: [24.8900, 93.6300] },//done                             01
-  { id: "noney", name: "Tamenglong Hill", coords: [24.8100, 93.6300] },//done                   02
-  { id: "ukhrul", name: "Ukhrul Hill Region", coords: [25.1300, 94.3500] },//done               03
-  { id: "senapati", name: "Senapati Hill Slopes", coords: [25.0900, 94.1100] },//done           04
-  { id: "noney", name: "Noney General Hills", coords: [24.7500, 93.6300]},//done                05
-  { id: "senapati", name: "NH 39 strech : Mao-Karong", coords: [25.5200, 94.1500]},//done       06
-  { id: "ukhrul", name: "Ukhrul Lower Slopes", coords: [25.0800, 94.3100]},//done               07
-  { id: "chandel", name: "Chandel", coords: [24.3300, 94.3150] },//done                         08
-  { id: "pherzwal", name: "Pherzwal Hills", coords: [24.3000, 93.1500]},//done                  09
-  { id: "churchandpur", name: "Churchandpur Hill Outskrts", coords: [24.3325, 93.6850]},//done  10
-  { id: "kangpokpi", name: "Kangpokpi Hill Areas", coords: [25.0300, 93.9500]},//done           11
-  { id: "bishnupur", name: "Bishnupur HIll Fringes", coords: [24.6300, 93.7700]},//done         12
+  // critical
+  { id: "noney", name: "Tupul", coords: [24.8900, 93.6300] },
+  { id: "senapati", name: "Senapati Hill Slopes", coords: [25.0900, 94.1100] },
+  { id: "noney", name: "Noney General Hills", coords: [24.7500, 93.6300] },
+  { id: "senapati", name: "NH 39 stretch : Mao–Karong", coords: [25.5200, 94.1500] },
+  { id: "ukhrul", name: "Ukhrul Lower Slopes", coords: [25.0800, 94.3100] },
+
+  // moderate
+  { id: "churachandpur", name: "Churachandpur", coords: [24.3300, 94.3150] },
+  { id: "pherzawl", name: "Pherzawl Hills", coords: [24.3000, 93.1500] },
+  { id: "churachandpur", name: "Churachandpur Hill Outskirts", coords: [24.3325, 93.6850] },
+  { id: "kangpokpi", name: "Kangpokpi Hill Areas", coords: [25.0300, 93.9500] },
+  { id: "bishnupur", name: "Bishnupur Hill Fringes", coords: [24.6300, 93.7700] },
 ];
+
 
 const MANIPUR_BOUNDS = [
   [23.8, 93.0],
@@ -151,7 +140,8 @@ export default function RiskMap() {
               <Popup>
                 <strong className="uppercase">{spot.name}</strong>
                 <br />
-                <b>Soil type:</b> {areaMetadata[spot.id]?.soil}
+                <b>Soil type:</b>{" "}{areaMetadata[spot.id]?.soil ?? "Data not available"}
+
                 <br />
                 <b>Terrain:</b> {areaMetadata[spot.id]?.terrain}
                 <br />

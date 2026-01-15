@@ -1,5 +1,5 @@
-"use client";
 
+"use client";
 import {
   MapContainer,
   TileLayer,
@@ -14,7 +14,6 @@ import { deployedSensors } from "../../lib/deployedSensors";
 import { generateGridLines } from "../../lib/gridUtils";
 import { areaMetadata } from "../../lib/areaMetaData";
 
-
 const hotspots = [
   // critical
   { id: "noney", name: "Tupul", coords: [24.8900, 93.6300] },
@@ -22,7 +21,6 @@ const hotspots = [
   { id: "noney", name: "Noney General Hills", coords: [24.7500, 93.6300] },
   { id: "senapati", name: "NH 39 stretch : Mao–Karong", coords: [25.5200, 94.1500] },
   { id: "ukhrul", name: "Ukhrul Lower Slopes", coords: [25.0800, 94.3100] },
-
   // moderate
   { id: "churachandpur", name: "Churachandpur", coords: [24.3300, 94.3150] },
   { id: "pherzawl", name: "Pherzawl Hills", coords: [24.3000, 93.1500] },
@@ -31,21 +29,17 @@ const hotspots = [
   { id: "bishnupur", name: "Bishnupur Hill Fringes", coords: [24.6300, 93.7700] },
 ];
 
-
 const MANIPUR_BOUNDS = [
   [23.8, 93.0],
   [26.0, 95.2],
 ];
-
 const gridLines = generateGridLines(
   MANIPUR_BOUNDS,
   0.0025,   // smaller cells
   0.005
 );
-
 export default function RiskMap() {
   const router = useRouter();
-
   return (
     <main className="p-6 bg-[#F2EFEA] text-black">
       <h1 className="text-2xl font-bold">
@@ -54,7 +48,6 @@ export default function RiskMap() {
       <p className="text-sm text-gray-600 mb-4">
         Macro-level analysis to identify zones requiring ground sensor monitoring
       </p>
-
       <MapContainer
         center={[24.8, 94.2]}
         zoom={10}
@@ -68,7 +61,6 @@ export default function RiskMap() {
           attribution="© OpenStreetMap"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-
         {/* Reference grid (satellite scan resolution) */}
         {gridLines.map((line, i) => (
           <Polyline
@@ -82,11 +74,9 @@ export default function RiskMap() {
             interactive={false}
           />
         ))}
-
         {/* Hotspots */}
         {hotspots.map((spot) => {
           const deployed = deployedSensors[spot.id];
-
           return deployed ? (
             <Rectangle
               key={spot.id}
@@ -112,7 +102,6 @@ export default function RiskMap() {
                 <span className="text-green-700 text-sm">
                   Ground sensors deployed
                 </span>
-
                 <br />
                 <button
                   className="mt-2 px-3 py-1 bg-blue-600 text-white rounded text-sm"
@@ -124,7 +113,6 @@ export default function RiskMap() {
                 </button>
               </Popup>
             </Rectangle>
-
           ) : (
             <Rectangle
               key={spot.id}
@@ -141,7 +129,6 @@ export default function RiskMap() {
                 <strong className="uppercase">{spot.name}</strong>
                 <br />
                 <b>Soil type:</b>{" "}{areaMetadata[spot.id]?.soil ?? "Data not available"}
-
                 <br />
                 <b>Terrain:</b> {areaMetadata[spot.id]?.terrain}
                 <br />
@@ -150,7 +137,6 @@ export default function RiskMap() {
                 <span className="text-yellow-700 text-sm">
                   Satellite monitoring only
                 </span>
-
                 <br />
                 <button
                   className="mt-2 px-3 py-1 bg-blue-600 text-white rounded text-sm"
@@ -162,7 +148,6 @@ export default function RiskMap() {
                 </button>
               </Popup>
             </Rectangle>
-
           );
         })}
       </MapContainer>

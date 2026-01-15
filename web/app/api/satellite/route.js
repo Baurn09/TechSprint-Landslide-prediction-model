@@ -2,19 +2,19 @@ import { satelliteRiskGBM } from "../../lib/satelliteGBM";
 
 const satelliteData = {
   noney: {
-    R: 0.78, // rainfall
-    V: 0.42, // vegetation (NDVI)
-    S: 0.85, // slope
-    E: 0.66, // elevation
-    P: 0.71, // soil proxy
-    H: 0.80, // historical susceptibility
+    R: 0.90, // rainfall
+    V: 0.30, // vegetation (NDVI)
+    S: 0.80, // slope
+    E: 0.90, // elevation
+    P: 0.10, // soil proxy
+    H: 0.90, // historical susceptibility
   },
   ukhrul: {
-    R: 0.65,
-    V: 0.45,
+    R: 0.70,
+    V: 0.20,
     S: 0.90,
-    E: 0.70,
-    P: 0.75,
+    E: 0.90,
+    P: 0.20,
     H: 0.85,
   },
   tamenglong: {
@@ -26,12 +26,12 @@ const satelliteData = {
     H: 0.70,
   },
   default: {
-    R: 0.50,
-    V: 0.55,
-    S: 0.60,
-    E: 0.50,
-    P: 0.45,
-    H: 0.30,
+    R: 0.80,
+    V: 0.90,
+    S: 0.80,
+    E: 0.70,
+    P: 0.25,
+    H: 0.90,
   },
 };
 
@@ -42,7 +42,7 @@ export async function GET(request) {
   const features = satelliteData[area] || satelliteData.default;
 
   // 🔹 ML inference
-  const riskScore = satelliteRiskGBM(features);
+  const riskScore =   satelliteRiskGBM(features);
 
   let decision = "NO_DEPLOYMENT";
   if (riskScore >= 0.7) decision = "DEPLOY_SENSORS";

@@ -1,13 +1,12 @@
 import { sensorRiskRandomForest } from "../../lib/sensorRandomForest";
 
 /* ---------- persistent sensor state ---------- */
-
 let state = {
   soilMoisture: 55,
   motion: { x: 0.02, y: 0.02, z: 0.01 },
 };
 
-/* ---------- simulation helpers ---------- */
+/* ---------- helpers ---------- */
 
 function updateSoilMoisture(areaFactor) {
   const delta =
@@ -30,10 +29,11 @@ function updateMotion(areaFactor) {
 
 function deriveMotionMetrics() {
   const { x, y, z } = state.motion;
-  const tilt = Math.sqrt(x * x + y * y);
-  const vibration = Math.abs(z);
-  const magnitude = Math.sqrt(x * x + y * y + z * z);
-  return { tilt, vibration, magnitude };
+  return {
+    tilt: Math.sqrt(x * x + y * y),
+    vibration: Math.abs(z),
+    magnitude: Math.sqrt(x * x + y * y + z * z),
+  };
 }
 
 /* ---------- API ---------- */
@@ -59,6 +59,7 @@ export async function GET(request) {
     magnitude: motion.magnitude,
   };
 
+  // 🔹 ML inference
   const riskScore = sensorRiskRandomForest(features);
 
   return Response.json({

@@ -1,13 +1,6 @@
-// lib/satelliteGBM.js
-// Gradient Boosted Trees style inference for satellite data
-// Features must be normalized between 0 and 1
 
 const learningRate = 0.25;
 
-/**
- * Each function represents a weak learner (tree)
- * Learned from offline training (distilled behavior)
- */
 const trees = [
   // Rainfall + slope trigger
   (f) => 0.6 * f.R + 0.4 * f.S,

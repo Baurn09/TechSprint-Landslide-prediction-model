@@ -2,36 +2,36 @@ import { satelliteRiskGBM } from "../../lib/satelliteGBM";
 
 const satelliteData = {
   noney: {
-    slope: 0.85,
-    rainfall: 0.78,
-    vegetation: 0.40,
-    soil: 0.70,
-    history: 0.80,
-    elevation: 0.65,
+    R: 0.78, // rainfall
+    V: 0.42, // vegetation (NDVI)
+    S: 0.85, // slope
+    E: 0.66, // elevation
+    P: 0.71, // soil proxy
+    H: 0.80, // historical susceptibility
   },
   ukhrul: {
-    slope: 0.90,
-    rainfall: 0.65,
-    vegetation: 0.45,
-    soil: 0.75,
-    history: 0.85,
-    elevation: 0.70,
+    R: 0.65,
+    V: 0.45,
+    S: 0.90,
+    E: 0.70,
+    P: 0.75,
+    H: 0.85,
   },
   tamenglong: {
-    slope: 0.80,
-    rainfall: 0.85,
-    vegetation: 0.45,
-    soil: 0.50,
-    history: 0.70,
-    elevation: 0.60,
+    R: 0.85,
+    V: 0.45,
+    S: 0.80,
+    E: 0.60,
+    P: 0.50,
+    H: 0.70,
   },
   default: {
-    slope: 0.60,
-    rainfall: 0.50,
-    vegetation: 0.55,
-    soil: 0.45,
-    history: 0.30,
-    elevation: 0.50,
+    R: 0.50,
+    V: 0.55,
+    S: 0.60,
+    E: 0.50,
+    P: 0.45,
+    H: 0.30,
   },
 };
 
@@ -39,17 +39,9 @@ export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const area = searchParams.get("area") || "default";
 
-  const d = satelliteData[area] || satelliteData.default;
+  const features = satelliteData[area] || satelliteData.default;
 
-  const features = {
-    R: d.rainfall,
-    V: d.vegetation,
-    S: d.slope,
-    E: d.elevation,
-    P: d.soil,
-    H: d.history,
-  };
-
+  // 🔹 ML inference
   const riskScore = satelliteRiskGBM(features);
 
   let decision = "NO_DEPLOYMENT";

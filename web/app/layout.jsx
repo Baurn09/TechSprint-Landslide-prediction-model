@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
               <div className="flex gap-12 items-center justify-center">
                 <Link href="/" className=" text-white hover:text-blue-600">Home</Link>
                 <Link href="/components/map" className="text-white hover:text-black">Map</Link>
+                <Link href="/admin" className="text-white hover:text-black">Admin</Link>
                 <div className="dropdown dropdown-end">
                   <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                     

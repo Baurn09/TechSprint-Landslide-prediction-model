@@ -1,94 +1,102 @@
-// app/api/sensors/route.js
+// app/api/sensor/route.js
 
+// Persistent state (simulates continuous sensor readings)
 let state = {
   soilMoisture: 55, // %
-  rainfall: 0,      // mm/hr
-  tilt: 0.02,       // degrees
-  phase: "DRY",     // DRY → RAIN → SATURATED
+  motion: {
+    x: 0.02,
+    y: 0.02,
+    z: 0.01,
+  },
 };
 
-function simulateRainfall() {
-  const chance = Math.random();
+// ---------- helpers ----------
 
-  if (chance < 0.2) {
-    return 0; // no rain
-  }
-  if (chance < 0.6) {
-    return Math.floor(5 + Math.random() * 10); // light rain
-  }
-  return Math.floor(15 + Math.random() * 20); // heavy rain
+// simulate slow soil moisture change
+function updateSoilMoisture(areaFactor) {
+  const delta =
+    Math.random() < 0.6
+      ? Math.random() * 1.5 // slow drying
+      : Math.random() * 3.5; // wetting event
+
+  state.soilMoisture += delta * areaFactor;
+  state.soilMoisture = Math.min(
+    Math.max(state.soilMoisture, 40),
+    95
+  );
 }
 
-function updateState(area) {
-  const areaFactor =
-    area === "tamenglong" || area === "ukhrul" || area === "noney"
-      ? 1.3 // hilly zones
-      : 1.0; // moderate zones
+// simulate 3-axis motion sensor
+function updateMotion(areaFactor) {
+  // slow tilt drift (slope movement)
+  state.motion.x += (Math.random() - 0.5) * 0.01 * areaFactor;
+  state.motion.y += (Math.random() - 0.5) * 0.01 * areaFactor;
 
-  state.rainfall = simulateRainfall() * areaFactor;
+  // vertical vibration (micro slips / tremors)
+  state.motion.z =
+    Math.abs((Math.random() - 0.5) * 0.05 * areaFactor);
 
-  if (state.rainfall > 0) {
-    state.soilMoisture += state.rainfall * 0.3;
-  } else {
-    state.soilMoisture -= 1;
-  }
-
-  state.soilMoisture = Math.min(Math.max(state.soilMoisture, 40), 95);
-
-  if (state.soilMoisture < 65) state.phase = "DRY";
-  else if (state.soilMoisture < 80) state.phase = "RAIN";
-  else state.phase = "SATURATED";
-
-  if (state.phase === "SATURATED") {
-    state.tilt += Math.random() * 0.03 * areaFactor;
-  } else {
-    state.tilt -= 0.005;
-  }
-
-  state.tilt = Math.max(state.tilt, 0.01);
+  // clamp values
+  state.motion.x = Math.max(
+    Math.min(state.motion.x, 0.4),
+    -0.4
+  );
+  state.motion.y = Math.max(
+    Math.min(state.motion.y, 0.4),
+    -0.4
+  );
 }
 
+// derive metrics from raw motion
+function deriveMotionMetrics() {
+  const { x, y, z } = state.motion;
 
-function calculateRisk(area) {
-  const reasons = [];
+  const tilt = Math.sqrt(x * x + y * y);
+  const vibration = Math.abs(z);
+  const magnitude = Math.sqrt(
+    x * x + y * y + z * z
+  );
 
-  if (state.soilMoisture > 65) reasons.push("High soil moisture");
-  if (state.rainfall > 10) reasons.push("Heavy rainfall");
-  if (state.tilt > 0.15) reasons.push("Accelerating ground tilt");
-
-  let riskLevel = "SAFE";
-
-  if (
-    state.soilMoisture > 80 &&
-    state.rainfall > 15 &&
-    state.tilt > 0.18
-  ) {
-    riskLevel = "CRITICAL";
-  } else if (state.soilMoisture > 65) {
-    riskLevel = "WARNING";
-  }
-
-  return { riskLevel, reasons };
+  return {
+    x,
+    y,
+    z,
+    tilt,
+    vibration,
+    magnitude,
+  };
 }
 
+// ---------- main ----------
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const area = searchParams.get("area") || "default";
 
-  updateState(area);
+  // hilly zones behave worse
+  const areaFactor =
+    area === "tamenglong" ||
+    area === "ukhrul" ||
+    area === "noney"
+      ? 1.4
+      : 1.0;
 
-  const { riskLevel, reasons } = calculateRisk(area);
+  updateSoilMoisture(areaFactor);
+  updateMotion(areaFactor);
+
+  const motion = deriveMotionMetrics();
 
   return Response.json({
     area,
     timestamp: new Date().toISOString(),
     soilMoisture: Number(state.soilMoisture.toFixed(1)),
-    rainfall: state.rainfall,
-    tilt: Number(state.tilt.toFixed(3)),
-    phase: state.phase,
-    riskLevel,
-    reasons,
+    motion: {
+      x: Number(motion.x.toFixed(3)),
+      y: Number(motion.y.toFixed(3)),
+      z: Number(motion.z.toFixed(3)),
+      tilt: Number(motion.tilt.toFixed(3)),
+      vibration: Number(motion.vibration.toFixed(3)),
+      magnitude: Number(motion.magnitude.toFixed(3)),
+    },
   });
 }
-

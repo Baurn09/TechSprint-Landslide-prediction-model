@@ -27,9 +27,9 @@ const satelliteData = {
   },
   default: {
     slope: 0.60,
-    rainfall: 0.90,
-    vegetation: 0.50,
-    soil: 0.40,
+    rainfall: 0.50,
+    vegetation: 0.55,
+    soil: 0.45,
     history: 0.30,
     elevation: 0.50,
   },
@@ -41,8 +41,7 @@ export async function GET(request) {
 
   const d = satelliteData[area] || satelliteData.default;
 
-  // Feature vector (EXACTLY matching your table)
-  const featureVector = {
+  const features = {
     R: d.rainfall,
     V: d.vegetation,
     S: d.slope,
@@ -51,7 +50,7 @@ export async function GET(request) {
     H: d.history,
   };
 
-  const riskScore = satelliteRiskGBM(featureVector);
+  const riskScore = satelliteRiskGBM(features);
 
   let decision = "NO_DEPLOYMENT";
   if (riskScore >= 0.7) decision = "DEPLOY_SENSORS";
@@ -59,7 +58,7 @@ export async function GET(request) {
 
   return Response.json({
     area,
-    features: featureVector,
+    features,
     riskScore,
     decision,
     model: "Gradient Boosted Trees (Satellite)",

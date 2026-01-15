@@ -2,34 +2,29 @@ export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const area = searchParams.get("area") || "default";
 
-  // 1️⃣ Fetch satellite risk
-  const satRes = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/satellite?area=${area}`
-  );
-  const satelliteData = await satRes.json();
-  const satelliteRisk = satelliteData.riskScore;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
+  /* ---------- satellite risk ---------- */
+  const satRes = await fetch(`${baseUrl}/api/satellite?area=${area}`);
+  const satData = await satRes.json();
+  const satelliteRisk = satData.riskScore;
 
   let sensorRisk = null;
   let finalRisk = satelliteRisk;
 
-  // 2️⃣ Fetch sensor risk ONLY if sensors exist
+  /* ---------- sensor risk (if deployed) ---------- */
   try {
-    const sensorRes = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/sensor?area=${area}`
-    );
+    const sensorRes = await fetch(`${baseUrl}/api/sensor?area=${area}`);
     const sensorData = await sensorRes.json();
     sensorRisk = sensorData.riskScore;
 
-    // 3️⃣ FUSION LOGIC (THIS IS YOUR LINE)
-    finalRisk =
-      0.6 * satelliteRisk +
-      0.4 * sensorRisk;
+    // Dense sensor deployment → sensor dominates
+    finalRisk = 0.3 * satelliteRisk + 0.7 * sensorRisk;
   } catch {
-    // no sensors → satellite-only risk
     finalRisk = satelliteRisk;
   }
 
-  // 4️⃣ Alert levels
+  /* ---------- alert level ---------- */
   let alertLevel = "GREEN";
   if (finalRisk >= 0.75) alertLevel = "RED";
   else if (finalRisk >= 0.45) alertLevel = "YELLOW";

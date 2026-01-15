@@ -95,10 +95,10 @@ export default function Home() {
             </header>
           
             <h1 className="transition-all hover:scale-105 text-8xl text-white font-bold mb-4">
-              AI-Based Environmental &
+              LANDSLIDE EARLY
             </h1>
             <h1 className="transition-all hover:scale-105 text-8xl text-white font-bold mb-4">
-              Disaster Risk Forecasting
+              WARNING SYSTEM
             </h1>
             <p className="text-lg text-stone-300">
               Real-time landslide risk prediction using satellite data,

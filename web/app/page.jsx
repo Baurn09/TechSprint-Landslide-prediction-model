@@ -1,4 +1,6 @@
 
+import Link from "next/link";
+
 import { Inter, Share_Tech, Space_Grotesk } from "next/font/google";
 import Image from "next/image";
 const bungee = Share_Tech({
@@ -53,16 +55,52 @@ const InfoBlock = ({ title, description, image, children, reverse }) => {
 export default function Home() {
   return (
     <main className={`bg-[#F2EFEA] ${bungee.className} `}>
-      <section className="relative w-full bg-[#F2EFEA] h-screen overflow-hidden">
+      <section className="relative w-full bg-[url('/mim2.png')] h-screen overflow-hidden">
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+            <header className="px-8 py-4 absolute top-5 left-[20%] w-[60vw]">
+              <div className="navbar flex justify-between shadow-sm rounded-xl  bg-[#163832] ">
+                <div>
+                  <a className="btn btn-ghost text-xl text-white">M.I.M</a>
+                </div>
+                <div className="flex gap-12 items-center justify-center">
+                  <Link href="/" className=" text-white hover:text-blue-600">Home</Link>
+                  <Link href="/components/map" className="text-white hover:text-black">Map</Link>
+                  <Link href="/admin" className="text-white hover:text-black">Admin</Link>
+                  <div className="dropdown dropdown-end">
+                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                      
+                      <div className="w-10 rounded-full">
+                        <Image
+                          width={10}
+                          height={10}
+                          alt="Tailwind CSS Navbar component"
+                          src="/land1.jpeg" />
+                      </div>
+                    </div>
+                    <ul
+                      tabIndex="-1"
+                      className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                      <li>
+                        <a className="justify-between">
+                          Profile
+                          <span className="badge">New</span>
+                        </a>
+                      </li>
+                      <li><a>Settings</a></li>
+                      <li><a>Logout</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </header>
           
-            <h1 className="transition-all hover:scale-105 text-8xl text-stone-700 font-bold mb-4">
-              LANDSLIDE EARLY
+            <h1 className="transition-all hover:scale-105 text-8xl text-white font-bold mb-4">
+              AI-Based Environmental &
             </h1>
-            <h1 className="transition-all hover:scale-105 text-8xl text-stone-700 font-bold mb-4">
-              WARNING SYSTEM
+            <h1 className="transition-all hover:scale-105 text-8xl text-white font-bold mb-4">
+              Disaster Risk Forecasting
             </h1>
-            <p className="text-lg text-stone-500">
+            <p className="text-lg text-stone-300">
               Real-time landslide risk prediction using satellite data,
               ground sensors, and machine learning.
             </p>

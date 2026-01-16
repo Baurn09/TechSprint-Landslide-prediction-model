@@ -1,5 +1,3 @@
-import { sensorRiskRandomForest } from "../../lib/sensorRandomForest";
-
 /* ---------- persistent sensor state ---------- */
 let state = {
   soilMoisture: 55,
@@ -47,6 +45,7 @@ export async function GET(request) {
       ? 1.4
       : 1.0;
 
+  // 🔄 simulate sensor evolution
   updateSoilMoisture(areaFactor);
   updateMotion(areaFactor);
 
@@ -59,8 +58,29 @@ export async function GET(request) {
     magnitude: motion.magnitude,
   };
 
-  // 🔹 ML inference
-  const riskScore = sensorRiskRandomForest(features);
+  // ✅ FEATURE ORDER MUST MATCH TRAINING
+  const featureArray = [
+    features.soilMoisture,
+    features.tilt,
+    features.vibration,
+    features.magnitude,
+  ];
+
+  // 🔥 CALL REAL ML MODEL (FastAPI)
+  const res = await fetch("http://127.0.0.1:8000/predict/sensor", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ features: featureArray }),
+  });
+
+  if (!res.ok) {
+    return Response.json(
+      { error: "Sensor ML service unavailable" },
+      { status: 500 }
+    );
+  }
+
+  const ml = await res.json();
 
   return Response.json({
     area,
@@ -71,7 +91,9 @@ export async function GET(request) {
       vibration: Number(features.vibration.toFixed(3)),
       magnitude: Number(features.magnitude.toFixed(3)),
     },
-    riskScore,
+    riskScore: ml.riskScore,        // 0 → 1
+    riskPercent: ml.riskPercent,    // 0 → 100
+    status: ml.status,              // LOW | MODERATE | HIGH
     model: "Random Forest (Ground Sensors)",
   });
 }

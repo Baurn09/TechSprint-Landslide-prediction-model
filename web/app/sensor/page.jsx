@@ -55,18 +55,21 @@ export default function SensorPage() {
 
   const { features, riskScore } = data;
 
-  const isCritical = riskScore >= 0.75;
+  // ==========================
+  // 🔮 FORECAST LOGIC
+  // ==========================
+  const forecast = getForecast(riskScore);
 
   return (
     <main className="p-8 bg-white text-black min-h-screen">
-      {isCritical && (
+      {/* NEAR-TERM ALERT */}
+      {forecast.level === "NEAR_TERM" && (
         <div className="mb-6 bg-red-600 text-white p-4 rounded shadow animate-pulse">
           <h2 className="text-lg font-bold">
-            🚨 GROUND INSTABILITY DETECTED
+            🚨 NEAR-TERM LANDSLIDE WARNING
           </h2>
           <p className="text-sm">
-            High failure probability in{" "}
-            <strong>{area.toUpperCase()}</strong>
+            Expected within <strong>{forecast.duration}</strong>
           </p>
         </div>
       )}
@@ -104,11 +107,27 @@ export default function SensorPage() {
       {/* ML Risk */}
       <div className="mt-6 p-4 bg-gray-100 rounded">
         <h3 className="font-semibold">
-          Random Forest Risk Estimation
+          Ground Sensor ML Risk Estimation
         </h3>
         <p className="mt-1">
-          Ground Sensor Risk Score:{" "}
-          <strong>{riskScore}</strong>
+          Risk Score: <strong>{riskScore}</strong>
+        </p>
+      </div>
+
+      {/* 🔮 FORECAST PANEL */}
+      <div className="mt-6 p-4 rounded bg-gray-100">
+        <h3 className="font-semibold">Landslide Forecast</h3>
+
+        <p
+          className="mt-2 font-medium"
+          style={{ color: forecast.color }}
+        >
+          {forecast.message}
+        </p>
+
+        <p className="text-sm text-gray-600 mt-1">
+          Forecast Window:{" "}
+          <strong>{forecast.duration}</strong>
         </p>
       </div>
 
@@ -149,6 +168,40 @@ export default function SensorPage() {
       </div>
     </main>
   );
+}
+
+/* ==========================
+   Helper Components & Logic
+   ========================== */
+
+function getForecast(riskScore) {
+  if (riskScore >= 0.7) {
+    return {
+      level: "NEAR_TERM",
+      duration: "24–72 hours",
+      message:
+        "🚨 Landslide likely in the near term. Immediate preparedness advised.",
+      color: "red",
+    };
+  }
+
+  if (riskScore >= 0.4) {
+    return {
+      level: "MODERATE",
+      duration: "3–7 days",
+      message:
+        "🟠 Conditions indicate increasing instability. Monitor closely.",
+      color: "orange",
+    };
+  }
+
+  return {
+    level: "STABLE",
+    duration: "No immediate threat",
+    message:
+      "🟢 Ground conditions are currently stable.",
+    color: "green",
+  };
 }
 
 function Metric({ label, value }) {

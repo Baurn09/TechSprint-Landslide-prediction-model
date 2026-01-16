@@ -1,25 +1,11 @@
-from pathlib import Path
+from fastapi import FastAPI
 from pydantic import BaseModel
 import numpy as np
-from fastapi import FastAPI
-
-BASE_DIR = Path(__file__).resolve().parent
-TRAINING_DIR = BASE_DIR.parent / "training"
 import joblib
 import os
 
 app = FastAPI()
 
-<<<<<<< HEAD
-with open(TRAINING_DIR / "satellite_gbt_model.pkl", "rb") as f:
-    model = pickle.load(f)
-
-with open(TRAINING_DIR / "satellite_scaler.pkl", "rb") as f:
-    scaler = pickle.load(f)
-
-
-
-=======
 # ------------------ PATH SETUP ------------------
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -42,7 +28,6 @@ class SatelliteRequest(BaseModel):
     features: list[float]  # length = 7
 
 # ------------------ PREDICTION ENDPOINT ------------------
->>>>>>> 697a574495f79e7122473ba2ebe4fd0c478e7934
 
 @app.post("/predict/satellite")
 def predict_satellite(data: SatelliteRequest):
@@ -60,5 +45,38 @@ def predict_satellite(data: SatelliteRequest):
             "LOW" if risk_prob < 0.4
             else "MODERATE" if risk_prob < 0.7
             else "HIGH"
+        )
+    }
+
+#Ground sensor part 
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_DIR = os.path.join(BASE_DIR, "..", "training")
+
+SENSOR_SCALER = os.path.join(MODEL_DIR, "sensor_scaler.pkl")
+SENSOR_MODEL = os.path.join(MODEL_DIR, "sensor_random_forest.pkl")
+
+sensor_scaler = joblib.load(SENSOR_SCALER)
+sensor_model = joblib.load(SENSOR_MODEL)
+
+print("✅ Ground sensor model loaded")
+
+class SensorRequest(BaseModel):
+    features: list[float]  # [soilMoisture, tilt, vibration, magnitude]
+
+@app.post("/predict/sensor")
+def predict_sensor(data: SensorRequest):
+    X = np.array([data.features])
+    X_scaled = sensor_scaler.transform(X)
+
+    prob = sensor_model.predict_proba(X_scaled)[0][1]
+
+    return {
+        "riskScore": round(float(prob), 4),
+        "riskPercent": int(round(prob * 100)),
+        "status": (
+            "HIGH" if prob >= 0.7
+            else "MODERATE" if prob >= 0.4
+            else "LOW"
         )
     }

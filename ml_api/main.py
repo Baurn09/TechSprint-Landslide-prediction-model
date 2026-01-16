@@ -1,10 +1,12 @@
 from pathlib import Path
-import pickle
+from pydantic import BaseModel
 import numpy as np
 from fastapi import FastAPI
 
 BASE_DIR = Path(__file__).resolve().parent
 TRAINING_DIR = BASE_DIR.parent / "training"
+import joblib
+import os
 
 app = FastAPI()
 
@@ -16,14 +18,46 @@ with open(TRAINING_DIR / "satellite_scaler.pkl", "rb") as f:
 
 
 
+=======
+# ------------------ PATH SETUP ------------------
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_DIR = os.path.join(BASE_DIR, "..", "training")
+
+SCALER_PATH = os.path.join(MODEL_DIR, "satellite_scaler.pkl")
+MODEL_PATH = os.path.join(MODEL_DIR, "satellite_gbt_model.pkl")
+
+# ------------------ LOAD MODEL ON STARTUP ------------------
+
+scaler = joblib.load(SCALER_PATH)
+model = joblib.load(MODEL_PATH)
+
+print("✅ Satellite model & scaler loaded successfully")
+
+# ------------------ INPUT SCHEMA ------------------
+
+class SatelliteRequest(BaseModel):
+    # Must be in the SAME ORDER as training FEATURES
+    features: list[float]  # length = 7
+
+# ------------------ PREDICTION ENDPOINT ------------------
+>>>>>>> 697a574495f79e7122473ba2ebe4fd0c478e7934
 
 @app.post("/predict/satellite")
-def predict_satellite(data: dict):
-    X = np.array([data["features"]])
+def predict_satellite(data: SatelliteRequest):
+    X = np.array([data.features])
+
     X_scaled = scaler.transform(X)
 
-    risk = model.predict_proba(X_scaled)[0][1]
+    # Probability of landslide (class 1)
+    risk_prob = model.predict_proba(X_scaled)[0][1]
 
     return {
-        "riskScore": float(risk)
+        "riskScore": round(float(risk_prob), 4),
+        "riskPercent": int(round(risk_prob * 100)),
+        "status": (
+            "LOW" if risk_prob < 0.4
+            else "MODERATE" if risk_prob < 0.7
+            else "HIGH"
+        )
     }

@@ -1,74 +1,141 @@
-# Landslide Early Warning System
+# 🌍 AI-Based Grid-Level Landslide Early Warning System
 
-An **AI-powered landslide early warning system** that combines  
-**ground sensors, machine learning, software analytics, and satellite-assisted monitoring**
-to detect and assess landslide risk in real time.
+An **AI-driven landslide early warning system** that integrates **satellite analysis, grid-based monitoring, ground sensors, and machine learning** to assess landslide risk and generate **grid-specific alerts for authorities**.
 
 ---
 
-## 🚀 Project Overview
+## 🚀 Overview
 
-Landslides are sudden and destructive natural disasters, especially in hilly and high-rainfall regions.  
-This project aims to provide an **early warning mechanism** by:
+Landslides are highly localized disasters caused by a combination of **steep slopes, rainfall, weak soil, and reduced vegetation cover**.
+Most existing systems issue **broad regional warnings**, which are often inaccurate.
 
-- Identifying **landslide-prone areas** using satellite data
-- Deploying **ground sensors** for real-time monitoring
-- Using **machine learning** to classify risk levels
-- Triggering alerts when conditions become dangerous
+This project focuses on **grid-level landslide risk forecasting**, enabling **precise monitoring and targeted response**.
 
 ---
 
-## 🧠 How the System Works
+## 🧠 System Architecture
 
-1. **Satellite Analysis (WHERE)**
-   - Terrain slope and vegetation indices (NDVI) are extracted
-   - High-risk zones are identified
-   - Helps decide where to place ground sensors
+### 1. Grid-Based Area Division
 
-2. **Ground Sensors (WHEN)**
-   - Soil moisture sensor
-   - Tilt / IMU sensor
-   - (Optional) vibration / rainfall sensors
-   - Data is collected in real time
+* The region is divided into **uniform grid cells**
+* Each grid is monitored and evaluated independently
+* Risk is calculated **per grid**
 
-3. **Machine Learning (HOW SEVERE)**
-   - A Random Forest classifier combines:
-     - Sensor data
-     - Satellite-derived parameters
-   - Outputs risk level: **LOW / MEDIUM / HIGH**
+### 2. Satellite-Based Risk Assessment (Baseline)
 
-4. **Software & Alerts**
-   - Backend receives sensor data
-   - ML model predicts risk
-   - Alerts can be triggered for high-risk conditions
+* Satellite-derived features:
+
+  * Rainfall
+  * Slope
+  * Elevation
+  * Vegetation Index (NDVI)
+  * Soil proxy
+  * Historical landslide susceptibility
+* A **Gradient Boosted Tree (GBT)** model estimates baseline landslide susceptibility
+* High-risk grids are identified for **ground sensor deployment**
+
+### 3. Ground Sensor Monitoring (Real-Time)
+
+* Sensors are deployed **only in high-risk grids**
+* Measures:
+
+  * Soil moisture
+  * Tilt
+  * Vibration
+  * 3-axis acceleration (X, Y, Z)
+* Sensors communicate via **LoRa** to a **Grid Gateway**
+* Gateway forwards data to the central server where internet is available
+
+### 4. Machine Learning & Risk Evaluation
+
+* **Gradient Boosted Trees** → Satellite data (long-term susceptibility)
+* **Random Forest** → Ground sensor data (real-time instability)
+* Risk levels:
+
+  * **LOW**
+  * **MODERATE**
+  * **HIGH**
+
+### 5. Alerts & Dashboard
+
+* Risk is continuously updated per grid
+* **Alerts are generated only for authorities**
+* A web dashboard provides:
+
+  * Grid-wise risk visualization
+  * Sensor status
+  * Real-time updates
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Software
-- Python
-- pandas, NumPy
-- scikit-learn
-- (not yet done) (backend)
-- GitHub (collaboration & version control)
+### Software & Backend
+
+* Python
+* pandas, NumPy
+* scikit-learn
+* XGBoost
+* FastAPI
+* GitHub
+
+### Frontend
+
+* Next.js / React
+* Grid-based monitoring dashboard
 
 ### Machine Learning
-- Random Forest Classifier
-- Synthetic training data (based on geotechnical thresholds)
+
+* Gradient Boosted Trees (Satellite data)
+* Random Forest (Ground sensor data)
+* Synthetic + historical datasets
 
 ### Hardware
-- ESP32 / microcontroller
-- Capacitive soil moisture sensor
-- MPU6050 (tilt / IMU)
-- (Optional) vibration & rainfall sensors
+
+* ESP32 / microcontroller
+* Capacitive soil moisture sensor
+* MPU6050 (IMU / tilt)
+* LoRa communication
+* Grid Gateway (internet-enabled)
 
 ### Satellite Data
-- Digital Elevation Model (DEM)
-- Sentinel-2 (NDVI / vegetation)
-- Used for terrain risk assessment (supporting layer)
+
+* Digital Elevation Model (DEM)
+* Sentinel-2 (NDVI)
+* Weather and historical disaster data
 
 ---
 
 ## 📂 Project Structure
 
+training/        # ML training scripts & datasets
+backend/         # FastAPI services for ML inference
+web/             # Next.js dashboard
+hardware/        # Sensor & gateway logic
+
+---
+
+## 📌 Key Features
+
+* Grid-level risk forecasting
+* Real-time ground monitoring
+* AI-based decision support
+* Designed for hilly and low-connectivity regions
+* Scalable and modular architecture
+
+---
+
+## 📖 Use Case
+
+Designed for **disaster management authorities** to:
+
+* Monitor landslide-prone regions
+* Deploy sensors efficiently
+* Receive targeted early warnings
+* Improve preparedness and response
+
+---
+
+### 🔑 One-line summary
+
+> **A grid-based AI system combining satellite intelligence and real-time ground sensing for accurate landslide early warnings.**

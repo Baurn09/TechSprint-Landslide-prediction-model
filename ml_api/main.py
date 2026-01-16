@@ -1,24 +1,11 @@
-from pathlib import Path
+from fastapi import FastAPI
 from pydantic import BaseModel
 import numpy as np
-from fastapi import FastAPI
-
-BASE_DIR = Path(__file__).resolve().parent
-TRAINING_DIR = BASE_DIR.parent / "training"
 import joblib
 import os
 
 app = FastAPI()
 
-with open(TRAINING_DIR / "satellite_gbt_model.pkl", "rb") as f:
-    model = pickle.load(f)
-
-with open(TRAINING_DIR / "satellite_scaler.pkl", "rb") as f:
-    scaler = pickle.load(f)
-
-
-
-=======
 # ------------------ PATH SETUP ------------------
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -41,7 +28,6 @@ class SatelliteRequest(BaseModel):
     features: list[float]  # length = 7
 
 # ------------------ PREDICTION ENDPOINT ------------------
->>>>>>> 697a574495f79e7122473ba2ebe4fd0c478e7934
 
 @app.post("/predict/satellite")
 def predict_satellite(data: SatelliteRequest):

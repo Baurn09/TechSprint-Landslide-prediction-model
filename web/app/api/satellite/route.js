@@ -1,13 +1,11 @@
-import { satelliteRiskGBM } from "../../lib/satelliteGBM";
-
 const satelliteData = {
   noney: {
-    R: 0.90, // rainfall
-    V: 0.30, // vegetation (NDVI)
-    S: 0.80, // slope
-    E: 0.90, // elevation
-    P: 0.10, // soil proxy
-    H: 0.90, // historical susceptibility
+    R: 0.90,
+    V: 0.30,
+    S: 0.80,
+    E: 0.90,
+    P: 0.10,
+    H: 0.90,
   },
   ukhrul: {
     R: 0.70,
@@ -39,20 +37,49 @@ export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const area = searchParams.get("area") || "default";
 
-  const features = satelliteData[area] || satelliteData.default;
+  const f = satelliteData[area] || satelliteData.default;
 
-  // 🔹 ML inference
-  const riskScore =   satelliteRiskGBM(features);
+  // ✅ MATCH TRAINING FEATURE ORDER
+  const featureVector = [
+    f.R,
+    f.V,
+    f.S,
+    f.E,
+    f.P,
+    f.H,
+    f.R * f.S, // Rain_on_Slope
+  ];
+
+  // 🔥 CALL FASTAPI (REAL MODEL)
+  const response = await fetch("http://127.0.0.1:8000/predict/satellite", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      features: featureVector,
+    }),
+  });
+
+  if (!response.ok) {
+    return Response.json(
+      { error: "ML service unavailable" },
+      { status: 500 }
+    );
+  }
+
+  const mlResult = await response.json();
 
   let decision = "NO_DEPLOYMENT";
-  if (riskScore >= 0.7) decision = "DEPLOY_SENSORS";
-  else if (riskScore >= 0.4) decision = "MONITOR";
+  if (mlResult.riskScore >= 0.7) decision = "DEPLOY_SENSORS";
+  else if (mlResult.riskScore >= 0.4) decision = "MONITOR";
 
   return Response.json({
     area,
-    features,
-    riskScore,
+    features: f,
+    riskScore: mlResult.riskScore,
+    riskPercent: mlResult.riskPercent,
     decision,
-    model: "Gradient Boosted Trees (Satellite)",
+    model: "XGBoost (Satellite)",
   });
 }

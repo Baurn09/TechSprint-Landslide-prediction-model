@@ -13,6 +13,112 @@ This project focuses on **grid-level landslide risk forecasting**, enabling **pr
 
 ---
 
+## ▶️ How to Run the Project
+
+Follow the steps below to train the models and start the application locally.
+
+---
+
+### 1️⃣ Train the Machine Learning Models
+
+Open a terminal in the project root and run:
+
+```bash
+cd training
+python satellite_train.py
+python sensor_train.py
+```
+
+**What this does:**
+
+* Trains the **satellite landslide risk model** (Gradient Boosted Tree)
+* Trains the **ground sensor risk model** (Random Forest)
+* Saves trained model files for backend inference
+
+> ⚠️ Training is required only once unless the data or model is updated.
+
+---
+
+### 2️⃣ Start the ML Backend (FastAPI)
+
+Navigate to the ML API directory and start the backend server:
+
+```bash
+cd ..
+cd ml_api
+python -m uvicorn main:app --reload
+```
+
+**What this does:**
+
+* Starts the FastAPI backend
+* Loads trained ML models
+* Exposes REST APIs for risk prediction
+* Runs at: `http://localhost:8000`
+
+The `--reload` flag automatically restarts the server on code changes.
+
+---
+
+### 3️⃣ Start the Frontend (Next.js Dashboard)
+
+Open a **new terminal window** and run:
+
+```bash
+cd ..
+cd web
+npm install
+npm run dev
+```
+
+#### What `npm install` does:
+
+* Installs all frontend dependencies listed in `package.json`
+* This includes React, Next.js, chart libraries, and UI utilities
+* Required only the **first time** or when dependencies change
+
+#### What `npm run dev` does:
+
+* Starts the Next.js development server
+* Runs the web dashboard locally
+* Accessible at: `http://localhost:3000`
+
+---
+
+## 🖥️ Running Services Summary
+
+| Service                 | URL                                            |
+| ----------------------- | ---------------------------------------------- |
+| ML Backend (FastAPI)    | [http://localhost:8000](http://localhost:8000) |
+| Web Dashboard (Next.js) | [http://localhost:3000](http://localhost:3000) |
+
+---
+
+## ℹ️ Notes
+
+* Make sure **Python 3.9+** and **Node.js 18+** are installed
+* Backend and frontend must run **simultaneously**
+* Hardcoded satellite data is used only to demonstrate workflow in the current prototype
+
+---
+
+### ✅ Quick Start (TL;DR)
+
+```bash
+cd training
+python satellite_train.py
+python sensor_train.py
+
+cd ../ml_api
+python -m uvicorn main:app --reload
+
+cd ../web
+npm install
+npm run dev
+```
+
+---
+
 ## 🧠 System Architecture
 
 ### 1. Grid-Based Area Division
@@ -107,12 +213,12 @@ This project focuses on **grid-level landslide risk forecasting**, enabling **pr
 ---
 
 ## 📂 Project Structure
-
+```
 training/        # ML training scripts & datasets
 backend/         # FastAPI services for ML inference
 web/             # Next.js dashboard
 hardware/        # Sensor & gateway logic
-
+```
 ---
 
 ## 📌 Key Features

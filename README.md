@@ -119,6 +119,160 @@ npm run dev
 
 ---
 
+## 🧭 Application Navigation & User Flow
+
+This section explains how users navigate through the system and how information is progressively revealed from **high-level risk overview** to **detailed sensor-level insights**.
+
+---
+
+### 1️⃣ Landing Page
+
+* This is the **entry point** of the application.
+* Users can choose between:
+
+  * **View Map** → for geographical risk visualization
+  * **Admin Console** → for authority-level monitoring and management
+
+---
+
+### 2️⃣ View Map → Grid-Based Risk Visualization
+
+* Displays an **interactive map divided into grids**.
+* Each grid represents an **independent monitoring zone**.
+
+#### Grid Color Coding
+
+* 🟡 **Yellow grids** → Moderate to critical zones identified via satellite analysis
+* 🔴 **Red grids** → Aggregated high-risk grids where **ground sensors are deployed**
+
+---
+
+### 3️⃣ Clicking on a Grid (Overview Dialog)
+
+Clicking on a grid opens a **dialog box** showing contextual information, such as:
+
+* **Location**: Senapati Hill Slopes
+* **Soil Type**: Clay with colluvial deposits
+* **Terrain**: Steep cut slopes
+* **Nature of Instability**: Road-induced instability
+* **Ground Sensors**: Deployed
+
+A **“View Details”** button is available for deeper inspection.
+
+---
+
+### 4️⃣ View Details → Satellite Risk Assessment
+
+This page provides **satellite-derived risk factors** for the selected grid:
+
+* Slope Factor
+* Rainfall Index
+* Vegetation Index (NDVI)
+* Soil Stability Proxy
+* Historical Susceptibility
+
+#### Sensor Deployment Assessment
+
+* **Satellite Risk Score**: `0.922`
+* 🔴 **High susceptibility detected. Ground sensors recommended.**
+
+#### Ground Sensor Status
+
+* Ground sensors are **deployed** in this area
+* Option available to **View Ground Sensor Data**
+
+---
+
+### 5️⃣ View Ground Sensor Data → Real-Time Monitoring
+
+This page shows **live ground sensor monitoring** for the selected area.
+
+#### Ground Sensor Monitoring
+
+* **Area**: SENAPATI
+* **Sensor ID**: —
+
+#### Sensor Readings
+
+* **Soil Moisture (%)**: `95.0`
+* **Tilt Index**: `0.149`
+* **Vibration Index**: `0.017`
+
+#### Machine Learning Output
+
+* **Model**: Random Forest
+* **Ground Sensor Risk Score**: `0.42`
+
+#### Visual Trends
+
+* Soil Moisture Trend
+* Motion Magnitude Trend
+
+#### Sensor Configuration
+
+* Soil moisture probe (depth: 1 m)
+* 3-axis accelerometer
+* Sampling interval: 3 seconds
+
+---
+
+### 6️⃣ Admin Console (Landing Page → Admin)
+
+Accessible from the landing page via **Admin**.
+
+#### Admin Dashboard Overview
+
+**Landslide Monitoring – Admin Console**
+*Disaster Management Authority*
+
+* **Monitored Zones**: 6
+* **Sensor-Deployed Zones**: 3
+* **Active Alerts**: 2
+* **Last Update**: 2 minutes ago
+
+#### Active Alerts Table
+
+| Area   | Level    | Time      |
+| ------ | -------- | --------- |
+| Noney  | CRITICAL | 14:32 IST |
+| Ukhrul | WARNING  | 13:10 IST |
+
+---
+
+### 7️⃣ Grid Gateway → Aggregated Sensor Feed
+
+From the Admin Console, selecting **Grid Gateway** opens the **Collection Booth view**.
+
+**Landslide Monitoring – Admin Console**
+*Disaster Management Authority*
+
+**Collection Booth (Grid Gateway)**
+Aggregated sensor feed from hill-region ground sensors.
+
+| Sensor ID  | Area   | Risk     | Soil (%) | Motion | Last Seen |
+| ---------- | ------ | -------- | -------- | ------ | --------- |
+| MN-NNY-001 | Noney  | CRITICAL | 83       | 0.792  | 13s ago   |
+| MN-NNY-002 | Noney  | SAFE     | 54       | 0.386  | 1s ago    |
+| MN-UKH-001 | Ukhrul | SAFE     | 75       | 0.682  | —         |
+
+This view helps authorities:
+
+* Monitor **multiple sensors at once**
+* Identify **critical sensor-level anomalies**
+* Track **data freshness and connectivity**
+
+---
+
+## 🔑 Navigation Philosophy
+
+* **Map-first → Detail-on-demand**
+* **Satellite risk → Sensor confirmation**
+* **Public view → Authority-only insights**
+* Designed to support **fast decision-making during emergencies**
+
+---
+
+
 ## 🧠 System Architecture
 
 ### 1. Grid-Based Area Division

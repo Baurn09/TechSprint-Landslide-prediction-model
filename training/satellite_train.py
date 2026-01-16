@@ -1,14 +1,13 @@
 import pandas as pd
 import numpy as np
+import xgboost as xgb
 import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score, classification_report
 from xgboost import XGBClassifier
 
-# ==================================================
-# STEP 1: LOAD & CLEAN DATA
-# ==================================================
+
 print("\n--- Loading Satellite Training Data ---")
 
 df = pd.read_csv("satellite_training_data.csv")
@@ -32,9 +31,7 @@ TARGET = "landslide"
 X = df[FEATURES]
 y = df[TARGET]
 
-# ==================================================
-# STEP 2: TRAIN–TEST SPLIT
-# ==================================================
+
 X_train, X_test, y_train, y_test = train_test_split(
     X,
     y,

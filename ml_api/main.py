@@ -47,7 +47,6 @@ def predict_satellite(data: SatelliteRequest):
             else "HIGH"
         )
     }
-
 #Ground sensor part 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

@@ -214,10 +214,11 @@ npm run dev
 
 ## 📂 Project Structure
 ```
+grid/            # Used to give each grid an ID used for independent monitoring (Future Scope)
+hardware/        # Sensor & gateway logic (Future Scope)
+ml_api/          # FastAPI services for satellite ML inference
 training/        # ML training scripts & datasets
-backend/         # FastAPI services for ML inference
 web/             # Next.js dashboard
-hardware/        # Sensor & gateway logic
 ```
 ---
 

@@ -37,7 +37,7 @@ python sensor_train.py
 
 > ⚠️ Training is required only once unless the data or model is updated.
 
----
+
 
 ### 2️⃣ Start the ML Backend (FastAPI)
 
@@ -58,7 +58,7 @@ python -m uvicorn main:app --reload
 
 The `--reload` flag automatically restarts the server on code changes.
 
----
+
 
 ### 3️⃣ Start the Frontend (Next.js Dashboard)
 
@@ -133,7 +133,7 @@ This section explains how users navigate through the system and how information 
   * **View Map** → for geographical risk visualization
   * **Admin Console** → for authority-level monitoring and management
 
----
+
 
 ### 2️⃣ View Map → Grid-Based Risk Visualization
 
@@ -145,7 +145,7 @@ This section explains how users navigate through the system and how information 
 * 🟡 **Yellow grids** → Moderate to critical zones identified via satellite analysis
 * 🔴 **Red grids** → Aggregated high-risk grids where **ground sensors are deployed**
 
----
+
 
 ### 3️⃣ Clicking on a Grid (Overview Dialog)
 
@@ -159,7 +159,7 @@ Clicking on a grid opens a **dialog box** showing contextual information, such a
 
 A **“View Details”** button is available for deeper inspection.
 
----
+
 
 ### 4️⃣ View Details → Satellite Risk Assessment
 
@@ -181,7 +181,7 @@ This page provides **satellite-derived risk factors** for the selected grid:
 * Ground sensors are **deployed** in this area
 * Option available to **View Ground Sensor Data**
 
----
+
 
 ### 5️⃣ View Ground Sensor Data → Real-Time Monitoring
 
@@ -214,7 +214,7 @@ This page shows **live ground sensor monitoring** for the selected area.
 * 3-axis accelerometer
 * Sampling interval: 3 seconds
 
----
+
 
 ### 6️⃣ Admin Console (Landing Page → Admin)
 
@@ -237,7 +237,7 @@ Accessible from the landing page via **Admin**.
 | Noney  | CRITICAL | 14:32 IST |
 | Ukhrul | WARNING  | 13:10 IST |
 
----
+
 
 ### 7️⃣ Grid Gateway → Aggregated Sensor Feed
 

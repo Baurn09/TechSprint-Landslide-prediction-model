@@ -135,7 +135,7 @@ Designed for **disaster management authorities** to:
 * Improve preparedness and response
 
 ---
-📊 Data & Model Training
+## 📊 Data & Model Training
 
 The machine learning models are trained using a combination of:
 
@@ -147,7 +147,9 @@ The satellite model is trained on features such as rainfall, slope, vegetation i
 
 The ground sensor model is trained on simulated sensor readings (soil moisture, tilt, vibration, and acceleration) using a Random Forest classifier, designed to handle noisy, real-time data.
 
-⚠️ Note on Satellite Data in the Prototype
+---
+
+## ⚠️ Note on Satellite Data in the Prototype
 
 In the current prototype, satellite values are hardcoded within the application.
 

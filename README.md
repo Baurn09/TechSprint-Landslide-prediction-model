@@ -135,7 +135,27 @@ Designed for **disaster management authorities** to:
 * Improve preparedness and response
 
 ---
+📊 Data & Model Training
 
+The machine learning models are trained using a combination of:
+
+Synthetic datasets generated based on geotechnical knowledge and known landslide-triggering conditions
+
+Historical records and publicly available environmental references (used for feature design and validation)
+
+The satellite model is trained on features such as rainfall, slope, vegetation index (NDVI), elevation, soil proxy, and historical susceptibility using a Gradient Boosted Tree.
+
+The ground sensor model is trained on simulated sensor readings (soil moisture, tilt, vibration, and acceleration) using a Random Forest classifier, designed to handle noisy, real-time data.
+
+⚠️ Note on Satellite Data in the Prototype
+
+In the current prototype, satellite values are hardcoded within the application.
+
+This is done only to demonstrate the system workflow and decision logic (risk calculation, sensor deployment logic, and alert generation).
+
+In a full deployment, these values would be dynamically fetched from real satellite and weather data sources.
+
+---
 ### 🔑 One-line summary
 
 > **A grid-based AI system combining satellite intelligence and real-time ground sensing for accurate landslide early warnings.**

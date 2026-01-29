@@ -118,17 +118,16 @@ export default function SensorPage() {
       <div className="mt-6 p-4 rounded bg-gray-100">
         <h3 className="font-semibold">Landslide Forecast</h3>
 
-        <p
-          className="mt-2 font-medium"
-          style={{ color: forecast.color }}
-        >
+        <p className={`mt-2 font-medium ${forecast.textClass}`}>
           {forecast.message}
         </p>
 
-        <p className="text-sm text-gray-600 mt-1">
-          Forecast Window:{" "}
-          <strong>{forecast.duration}</strong>
+        <p
+          className={`text-md font-bold rounded-md px-2 w-fit text-white py-1 mt-2 ${forecast.windowClass}`}
+        >
+          Forecast Window: <strong>{forecast.duration}</strong>
         </p>
+
       </div>
 
       {/* Trends */}
@@ -181,7 +180,8 @@ function getForecast(riskScore) {
       duration: "24–72 hours",
       message:
         "🚨 Landslide likely in the near term. Immediate preparedness advised.",
-      color: "red",
+      textClass: "text-red-700",
+      windowClass: "bg-red-700 animate-pulse",
     };
   }
 
@@ -191,18 +191,20 @@ function getForecast(riskScore) {
       duration: "3–7 days",
       message:
         "🟠 Conditions indicate increasing instability. Monitor closely.",
-      color: "orange",
+      textClass: "text-orange-600",
+      windowClass: "bg-orange-600",
     };
   }
 
   return {
     level: "STABLE",
     duration: "No immediate threat",
-    message:
-      "🟢 Ground conditions are currently stable.",
-    color: "green",
+    message: "🟢 Ground conditions are currently stable.",
+    textClass: "text-green-700",
+    windowClass: "bg-green-700",
   };
 }
+
 
 function Metric({ label, value }) {
   return (

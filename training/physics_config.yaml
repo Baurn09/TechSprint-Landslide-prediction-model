@@ -1,0 +1,11 @@
+soil:
+  saturation_rate_critical: 0.02     # Δθ / sec
+  max_safe_moisture: 0.45
+
+tilt:
+  micro_tilt_deg: 0.05
+  creep_tilt_deg: 0.15
+
+vibration:
+  rms_low: 0.5
+  rms_high: 1.5

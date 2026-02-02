@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 import numpy as np
 from collections import deque
+<<<<<<< HEAD
 from ml_api.serial_reader import start_serial_thread, latest_sensor_data
 import joblib
 import os
@@ -51,13 +52,31 @@ def predict_satellite(data: SatelliteRequest):
     }
 
 # ------------------ START SERIAL ------------------
+=======
+
+# ================= SENSOR IMPORTS =================
+from ml_api.serial_reader import start_serial_thread, latest_sensor_data
+
+# ================= APP =================
+app = FastAPI()
+
+# ==================================================
+# START SERIAL (UNCHANGED)
+# ==================================================
+>>>>>>> 3bdec942a1cdffe2d2197998236f016e849c13b1
 
 @app.on_event("startup")
 def startup_event():
     print("🚀 FastAPI starting...")
     start_serial_thread()
 
+<<<<<<< HEAD
 # ------------------ SENSOR CONFIG ------------------
+=======
+# ==================================================
+# SENSOR CONFIG (UNCHANGED)
+# ==================================================
+>>>>>>> 3bdec942a1cdffe2d2197998236f016e849c13b1
 
 WINDOW = 120  # calibration samples
 SOIL_RATE_TH = 0.02
@@ -71,13 +90,22 @@ vib_buf  = deque(maxlen=WINDOW)
 prev_soil = None
 prev_tilt = None
 
+<<<<<<< HEAD
 # ------------------ SENSOR ENDPOINT ------------------
+=======
+# ==================================================
+# SENSOR ENDPOINT (UNCHANGED)
+# ==================================================
+>>>>>>> 3bdec942a1cdffe2d2197998236f016e849c13b1
 
 @app.post("/predict/sensor")
 def predict_sensor():
     global prev_soil, prev_tilt
 
+<<<<<<< HEAD
     # 🔍 DEBUG: check if data reaches main.py
+=======
+>>>>>>> 3bdec942a1cdffe2d2197998236f016e849c13b1
     print("🧠 main.py sees:", latest_sensor_data)
 
     soil = latest_sensor_data["soil"]
@@ -98,7 +126,10 @@ def predict_sensor():
     tilt_buf.append(tilt)
     vib_buf.append(abs(vib))
 
+<<<<<<< HEAD
     # ---------------- CALIBRATION ----------------
+=======
+>>>>>>> 3bdec942a1cdffe2d2197998236f016e849c13b1
     if len(soil_buf) < WINDOW:
         return {
             "soil": soil,
@@ -119,7 +150,10 @@ def predict_sensor():
 
     anomaly_score = soil_z + tilt_z + vib_z
 
+<<<<<<< HEAD
     # ---------------- PHYSICS ----------------
+=======
+>>>>>>> 3bdec942a1cdffe2d2197998236f016e849c13b1
     if prev_soil is None:
         prev_soil, prev_tilt = soil, tilt
         return {
@@ -157,4 +191,39 @@ def predict_sensor():
         "riskScore": round(float(risk), 3),
         "riskPercent": int(risk * 100),
         "status": status
+<<<<<<< HEAD
     }
+=======
+    }
+
+# ==================================================
+# SATELLITE MODEL (NEW – DOES NOT TOUCH SENSOR)
+# ==================================================
+
+import joblib
+import os
+
+BASE_DIR = os.path.dirname(__file__)
+
+sat_model = joblib.load(
+    os.path.join(BASE_DIR, "../training/landslide_logistic_model.pkl")
+)
+sat_scaler = joblib.load(
+    os.path.join(BASE_DIR, "../training/landslide_scaler.pkl")
+)
+
+class SatelliteInput(BaseModel):
+    features: list  # [R, V, S, E, P, H, rain_slope]
+
+@app.post("/predict/satellite")
+def predict_satellite(data: SatelliteInput):
+    X = np.array(data.features).reshape(1, -1)
+    X_scaled = sat_scaler.transform(X)
+
+    prob = sat_model.predict_proba(X_scaled)[0][1]
+
+    return {
+        "riskScore": float(prob),
+        "riskPercent": int(prob * 100)
+    }
+>>>>>>> 3bdec942a1cdffe2d2197998236f016e849c13b1

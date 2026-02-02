@@ -39,7 +39,7 @@ export async function GET(request) {
 
   const f = satelliteData[area] || satelliteData.default;
 
-  // ✅ MATCH TRAINING FEATURE ORDER
+  // ✅ MATCH TRAINING FEATURE ORDER (Logistic Regression – Satellite)
   const featureVector = [
     f.R,
     f.V,
@@ -80,6 +80,6 @@ export async function GET(request) {
     riskScore: mlResult.riskScore,
     riskPercent: mlResult.riskPercent,
     decision,
-    model: "XGBoost (Satellite)",
+    model: "Logistic Regression (Satellite)",
   });
 }

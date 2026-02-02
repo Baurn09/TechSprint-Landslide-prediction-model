@@ -23,8 +23,11 @@ export async function GET(request) {
   }
 
   const ml = await backend.json();
+<<<<<<< HEAD
 
   console.log("ML API response:", ml);
+=======
+>>>>>>> 3bdec942a1cdffe2d2197998236f016e849c13b1
 
   return Response.json({
     area,

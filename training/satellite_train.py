@@ -7,7 +7,9 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score, classification_report
 from xgboost import XGBClassifier
 
-
+# ==================================================
+# STEP 1: LOADING & PREPROCESSING
+# ==================================================
 print("\n--- Loading Satellite Training Data ---")
 
 df = pd.read_csv("satellite_training_data.csv")
@@ -15,14 +17,26 @@ print(f"Dataset Loaded | Shape: {df.shape}")
 
 # Basic cleaning
 df.drop_duplicates(inplace=True)
-df.fillna(df.median(), inplace=True)
+# Select only numeric columns for median calculation to avoid errors with date/.geo
+numeric_cols = df.select_dtypes(include=[np.number]).columns
+df[numeric_cols] = df[numeric_cols].fillna(df[numeric_cols].median())
+
+# Mapping CSV columns to the logic in your template
+# R=rain_7d, V=ndvi, S=slope, E=elevation, P=population, H=soil_moisture
+df['R'] = df['rain_7d']
+df['V'] = df['ndvi']
+df['S'] = df['slope']
+df['E'] = df['elevation']
+df['P'] = df['population']
+df['H'] = df['soil_moisture']
 
 # Feature engineering (rainfall on slope interaction)
 df["Rain_on_Slope"] = df["R"] * df["S"]
 
-# Clip values to physical bounds
-cols_to_clip = ["R", "V", "S", "E", "P", "H"]
-df[cols_to_clip] = df[cols_to_clip].clip(0.0, 1.0)
+# NOTE: The template clipped values to 1.0. 
+# Since raw satellite data (Elevation/Rain) exceeds 1.0, 
+# we skip clipping here to preserve data variance for the Scaler.
+# df[["R", "V", "S", "E", "P", "H"]].clip(0.0, 1.0, inplace=True)
 
 # Features & target
 FEATURES = ["R", "V", "S", "E", "P", "H", "Rain_on_Slope"]
@@ -31,7 +45,9 @@ TARGET = "landslide"
 X = df[FEATURES]
 y = df[TARGET]
 
-
+# ==================================================
+# STEP 2: DATA SPLITTING & SCALING
+# ==================================================
 X_train, X_test, y_train, y_test = train_test_split(
     X,
     y,
@@ -39,7 +55,6 @@ X_train, X_test, y_train, y_test = train_test_split(
     random_state=42,
     stratify=y
 )
-
 
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
@@ -49,12 +64,12 @@ joblib.dump(scaler, "satellite_scaler.pkl")
 print("Scaler saved.")
 
 # ==================================================
-# STEP 4: GRADIENT BOOSTED TREE MODEL
+# STEP 3: GRADIENT BOOSTED TREE MODEL
 # ==================================================
 print("\n--- Training Gradient Boosted Tree (XGBoost) ---")
 
 gbt_model = XGBClassifier(
-    n_estimators=300,
+    n_estimators=800,
     max_depth=4,
     learning_rate=0.05,
     subsample=0.8,
@@ -71,7 +86,7 @@ joblib.dump(gbt_model, "satellite_gbt_model.pkl")
 print("Satellite GBT model trained & saved.")
 
 # ==================================================
-# STEP 5: MODEL EVALUATION
+# STEP 4: MODEL EVALUATION
 # ==================================================
 print("\n--- Model Evaluation ---")
 
@@ -86,13 +101,15 @@ print("Classification Report:")
 print(classification_report(y_test, y_pred, target_names=["No Landslide", "Landslide"]))
 
 # ==================================================
-# STEP 6: REAL-WORLD SCENARIO TEST
+# STEP 5: REAL-WORLD SCENARIO TEST
 # ==================================================
 print("\n--- Real-World Scenario Simulation ---")
 
+# Example input values based on dataset scales
+# Format: [Rain, NDVI, Slope, Elevation, Population, SoilMoisture, Interaction]
 test_samples = np.array([
-    [0.30, 0.70, 0.40, 0.50, 0.40, 0.20, 0.12],  # Low risk
-    [0.85, 0.35, 0.90, 0.70, 0.75, 0.85, 0.85 * 0.90]   # High risk
+    [5.0, 0.5, 2.0, 100.0, 10.0, 0.1, 10.0],    # Low risk (low rain, low slope)
+    [80.0, 0.2, 35.0, 800.0, 50.0, 0.4, 2800.0] # High risk (heavy rain, steep slope)
 ])
 
 test_samples_scaled = scaler.transform(test_samples)

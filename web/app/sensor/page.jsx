@@ -24,6 +24,7 @@ export default function SensorPage() {
 
   useEffect(() => {
     fetchData();
+    
     const id = setInterval(fetchData, 3000);
     return () => clearInterval(id);
   }, [area]);
@@ -33,6 +34,8 @@ export default function SensorPage() {
     const json = await res.json();
 
     setData(json);
+
+    console.log("Fetched sensor data:", json);
 
     if (json?.features?.soilMoisture !== undefined) {
       setMoistureHistory((prev) => [
@@ -44,7 +47,7 @@ export default function SensorPage() {
     if (json?.features?.magnitude !== undefined) {
       setMotionHistory((prev) => [
         ...prev.slice(-19),
-        json.features.magnitude,
+        json.features.vibration,
       ]);
     }
   };
@@ -90,17 +93,17 @@ export default function SensorPage() {
       <div className="grid grid-cols-3 gap-6 mt-6">
         <Metric
           label="Soil Moisture (%)"
-          value={features.soilMoisture.toFixed(1)}
+          value={features.soilMoisture}
         />
 
         <Metric
           label="Tilt Index"
-          value={features.tilt.toFixed(3)}
+          value={features.tilt}
         />
 
         <Metric
           label="Vibration Index"
-          value={features.vibration.toFixed(3)}
+          value={features.vibration}
         />
       </div>
 

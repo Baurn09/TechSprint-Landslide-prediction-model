@@ -1,18 +1,26 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
 import numpy as np
 from collections import deque
+
+# ================= SENSOR IMPORTS =================
 from ml_api.serial_reader import start_serial_thread, latest_sensor_data
 
+# ================= APP =================
 app = FastAPI()
 
-# ------------------ START SERIAL ------------------
+# ==================================================
+# START SERIAL (UNCHANGED)
+# ==================================================
 
 @app.on_event("startup")
 def startup_event():
     print("🚀 FastAPI starting...")
     start_serial_thread()
 
-# ------------------ SENSOR CONFIG ------------------
+# ==================================================
+# SENSOR CONFIG (UNCHANGED)
+# ==================================================
 
 WINDOW = 120  # calibration samples
 SOIL_RATE_TH = 0.02
@@ -26,13 +34,14 @@ vib_buf  = deque(maxlen=WINDOW)
 prev_soil = None
 prev_tilt = None
 
-# ------------------ SENSOR ENDPOINT ------------------
+# ==================================================
+# SENSOR ENDPOINT (UNCHANGED)
+# ==================================================
 
 @app.post("/predict/sensor")
 def predict_sensor():
     global prev_soil, prev_tilt
 
-    # 🔍 DEBUG: check if data reaches main.py
     print("🧠 main.py sees:", latest_sensor_data)
 
     soil = latest_sensor_data["soil"]
@@ -53,7 +62,6 @@ def predict_sensor():
     tilt_buf.append(tilt)
     vib_buf.append(abs(vib))
 
-    # ---------------- CALIBRATION ----------------
     if len(soil_buf) < WINDOW:
         return {
             "soil": soil,
@@ -74,7 +82,6 @@ def predict_sensor():
 
     anomaly_score = soil_z + tilt_z + vib_z
 
-    # ---------------- PHYSICS ----------------
     if prev_soil is None:
         prev_soil, prev_tilt = soil, tilt
         return {
@@ -112,4 +119,35 @@ def predict_sensor():
         "riskScore": round(float(risk), 3),
         "riskPercent": int(risk * 100),
         "status": status
+    }
+
+# ==================================================
+# SATELLITE MODEL (NEW – DOES NOT TOUCH SENSOR)
+# ==================================================
+
+import joblib
+import os
+
+BASE_DIR = os.path.dirname(__file__)
+
+sat_model = joblib.load(
+    os.path.join(BASE_DIR, "../training/landslide_logistic_model.pkl")
+)
+sat_scaler = joblib.load(
+    os.path.join(BASE_DIR, "../training/landslide_scaler.pkl")
+)
+
+class SatelliteInput(BaseModel):
+    features: list  # [R, V, S, E, P, H, rain_slope]
+
+@app.post("/predict/satellite")
+def predict_satellite(data: SatelliteInput):
+    X = np.array(data.features).reshape(1, -1)
+    X_scaled = sat_scaler.transform(X)
+
+    prob = sat_model.predict_proba(X_scaled)[0][1]
+
+    return {
+        "riskScore": float(prob),
+        "riskPercent": int(prob * 100)
     }

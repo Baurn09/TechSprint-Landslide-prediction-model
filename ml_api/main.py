@@ -139,15 +139,51 @@ sat_scaler = joblib.load(
 
 class SatelliteInput(BaseModel):
     features: list  # [R, V, S, E, P, H, rain_slope]
-
 @app.post("/predict/satellite")
 def predict_satellite(data: SatelliteInput):
-    X = np.array(data.features).reshape(1, -1)
-    X_scaled = sat_scaler.transform(X)
 
+    R, V, S, E, P, H, RS = data.features
+
+    # ---- derive training features ----
+
+    rain_1d = R * 100
+    rain_7d = R * 200
+    rain_30d = R * 500
+
+    soil_moisture = R * 0.4
+    soil_type = 3
+    population = P * 100
+    elevation = E * 1000
+    slope = S * 6
+
+    rain_slope_interaction = rain_7d * slope
+    rain_intensity_ratio = rain_1d / (rain_30d + 1e-6)
+    bare_soil_index = 1 - V
+    saturation_index = rain_30d * soil_moisture
+
+    feature_vector = [[
+        elevation,
+        V,
+        population,
+        rain_1d,
+        rain_7d,
+        rain_30d,
+        slope,
+        soil_moisture,
+        soil_type,
+        rain_slope_interaction,
+        rain_intensity_ratio,
+        bare_soil_index,
+        saturation_index
+    ]]
+
+    X = np.array(feature_vector)
+
+    X_scaled = sat_scaler.transform(X)
     prob = sat_model.predict_proba(X_scaled)[0][1]
 
     return {
         "riskScore": float(prob),
         "riskPercent": int(prob * 100)
     }
+

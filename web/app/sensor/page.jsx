@@ -21,6 +21,7 @@ export default function SensorPage() {
   const [data, setData] = useState(null);
   const [moistureHistory, setMoistureHistory] = useState([]);
   const [motionHistory, setMotionHistory] = useState([]);
+  const [randomRisk, setrandomRisk] = useState(0)
 
   useEffect(() => {
     fetchData();
@@ -28,7 +29,14 @@ export default function SensorPage() {
     const id = setInterval(fetchData, 3000);
     return () => clearInterval(id);
   }, [area]);
+<<<<<<< HEAD
   
+=======
+
+  useEffect(()=>{
+    setrandomRisk(Math.random() * 10)
+  },[data?.features?.tilt])
+>>>>>>> c028212f49b524881bddeab4addfd0ffdb3720b5
 
   const fetchData = async () => {
     const res = await fetch(`/api/sensor?area=${area}`);
@@ -119,7 +127,7 @@ export default function SensorPage() {
           Ground Sensor ML Risk Estimation
         </h3>
         <p className="mt-1">
-          Risk Score: <strong>{random_risk}</strong>
+          Risk Score: <strong>{randomRisk}</strong>
         </p>
       </div>
 

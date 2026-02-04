@@ -75,7 +75,7 @@ export default function Dashboard() {
         <h3 className="font-semibold">Sensor Deployment Assessment</h3>
 
         <p className="mt-1">
-          Satellite Risk Score: <strong>{riskScore}</strong>
+          Satellite Risk Score: <strong>{riskScore.toFixed(2)}</strong>
         </p>
 
         {decision === "DEPLOY_SENSORS" && (

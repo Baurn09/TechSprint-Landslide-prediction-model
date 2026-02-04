@@ -1,0 +1,9301 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.335972,
+          27.241524
+        ]
+      },
+      "properties": {
+        "date": "06-06-2021",
+        "name": "Leporiang Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.274842,
+          28.122053
+        ]
+      },
+      "properties": {
+        "date": "13-08-2021",
+        "name": "Sirki Waterfall Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.181389,
+          28.153611
+        ]
+      },
+      "properties": {
+        "date": "27-06-2021",
+        "name": "Rotlung Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.748649,
+          28.849609
+        ]
+      },
+      "properties": {
+        "date": "13-08-2021",
+        "name": "Tuting Yingkiong_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.721322,
+          27.784222
+        ]
+      },
+      "properties": {
+        "date": "13-08-2021",
+        "name": "Likabali Basar landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.842537,
+          28.936253
+        ]
+      },
+      "properties": {
+        "date": "17-06-2021",
+        "name": "Pekong Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.467809,
+          27.965813
+        ]
+      },
+      "properties": {
+        "date": "08-07-2021",
+        "name": "Tode landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.622322,
+          27.095983
+        ]
+      },
+      "properties": {
+        "date": "31-05-2021",
+        "name": "IG Park Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.43801,
+          27.326763
+        ]
+      },
+      "properties": {
+        "date": "05-06-2021",
+        "name": "BCT Road Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.479767,
+          27.208119
+        ]
+      },
+      "properties": {
+        "date": "25-05-2021",
+        "name": "Nechipu_Saddle_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.603611,
+          26.911944
+        ]
+      },
+      "properties": {
+        "date": "22-06-2021",
+        "name": "Kuthong Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.235101,
+          28.214774
+        ]
+      },
+      "properties": {
+        "date": "30-06-2021",
+        "name": "Pasighat_Yingkiong_Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.71335,
+          27.796145
+        ]
+      },
+      "properties": {
+        "date": "30-06-2021",
+        "name": "Garu Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.303984,
+          27.186597
+        ]
+      },
+      "properties": {
+        "date": "28-04-2021",
+        "name": "Membachur Garbow landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.9963,
+          28.233722
+        ]
+      },
+      "properties": {
+        "date": "27-06-2021",
+        "name": "Sangam bridge_collapse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.073954,
+          27.794025
+        ]
+      },
+      "properties": {
+        "date": "09-09-2021",
+        "name": "Raga landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.566072,
+          27.104442
+        ]
+      },
+      "properties": {
+        "date": "20-09-2021",
+        "name": "20 landslides BCT road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.694636,
+          26.162784
+        ]
+      },
+      "properties": {
+        "date": "18-06-2021",
+        "name": "Water works_colony_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.110996,
+          26.574761
+        ]
+      },
+      "properties": {
+        "date": "25-08-2021",
+        "name": "Burapahar Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.690161,
+          26.170251
+        ]
+      },
+      "properties": {
+        "date": "20-10-2021",
+        "name": "Pandu landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.810523,
+          26.154238
+        ]
+      },
+      "properties": {
+        "date": "06-08-2021",
+        "name": "Borabari landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.820138,
+          25.217562
+        ]
+      },
+      "properties": {
+        "date": "06-06-2021",
+        "name": "Tujang Waichong_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.509375,
+          24.503658
+        ]
+      },
+      "properties": {
+        "date": "20-08-2021",
+        "name": "S_kholep_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.677995,
+          25.158298
+        ]
+      },
+      "properties": {
+        "date": "24-06-2021",
+        "name": "Tamel landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.857702,
+          25.241119
+        ]
+      },
+      "properties": {
+        "date": "02-08-2021",
+        "name": "Lamlenkon landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.56119,
+          24.826041
+        ]
+      },
+      "properties": {
+        "date": "16-08-2021",
+        "name": "Awang khul landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.677995,
+          25.158298
+        ]
+      },
+      "properties": {
+        "date": "07-06-2021",
+        "name": "Tamei2 landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.160246,
+          24.319566
+        ]
+      },
+      "properties": {
+        "date": "26-07-2021",
+        "name": "Chahmol landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.440246,
+          24.818353
+        ]
+      },
+      "properties": {
+        "date": "19-07-2021",
+        "name": "Thingou landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.358421,
+          25.091769
+        ]
+      },
+      "properties": {
+        "date": "16-06-2021",
+        "name": "Mini Secretariat landiside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.332535,
+          24.767366
+        ]
+      },
+      "properties": {
+        "date": "19-07-2021",
+        "name": "Sibilong temple landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.915829,
+          24.005219
+        ]
+      },
+      "properties": {
+        "date": "09-10-2021",
+        "name": "Khulmulen-Sajik landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.86466,
+          25.585545
+        ]
+      },
+      "properties": {
+        "date": "24-02-2021",
+        "name": "Sonapani landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.214668,
+          25.499358
+        ]
+      },
+      "properties": {
+        "date": "30-06-2021",
+        "name": "Tura dalu stretch"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.362063,
+          25.081742
+        ]
+      },
+      "properties": {
+        "date": "02-08-2021",
+        "name": "Kuliang landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.831915,
+          25.202693
+        ]
+      },
+      "properties": {
+        "date": "30-06-2021",
+        "name": "Malikona_Village_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.761693,
+          22.130154
+        ]
+      },
+      "properties": {
+        "date": "26-08-2021",
+        "name": "Zochachhuah landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.816565,
+          22.805047
+        ]
+      },
+      "properties": {
+        "date": "19-07-2021",
+        "name": "Bualtei landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.741738,
+          23.74192
+        ]
+      },
+      "properties": {
+        "date": "11-06-2021",
+        "name": "Thuampui landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.859428,
+          23.689863
+        ]
+      },
+      "properties": {
+        "date": "09-10-2021",
+        "name": "Thingsulthliah landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.805655,
+          25.793499
+        ]
+      },
+      "properties": {
+        "date": "02-02-2021",
+        "name": "TL Park landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.254627,
+          26.092899
+        ]
+      },
+      "properties": {
+        "date": "06-08-2021",
+        "name": "Lower Etsuchuka Colony landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.806,
+          25.772599
+        ]
+      },
+      "properties": {
+        "date": "17-02-2021",
+        "name": "TL Park 2 landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.767115,
+          26.046657
+        ]
+      },
+      "properties": {
+        "date": "20-07-2021",
+        "name": "Wangshu_PwD Road_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.438812,
+          25.657788
+        ]
+      },
+      "properties": {
+        "date": "12-07-2021",
+        "name": "Losami Phek landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.254289,
+          26.096249
+        ]
+      },
+      "properties": {
+        "date": "06-08-2021",
+        "name": "Police Point landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.246956,
+          26.091211
+        ]
+      },
+      "properties": {
+        "date": "06-08-2021",
+        "name": "Airfield colony landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.221938,
+          26.208542
+        ]
+      },
+      "properties": {
+        "date": "05-08-2021",
+        "name": "Sanis Doyarig_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.940678,
+          25.766187
+        ]
+      },
+      "properties": {
+        "date": "10-05-2021",
+        "name": "Piphema landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.863047,
+          25.7623
+        ]
+      },
+      "properties": {
+        "date": "17-08-2021",
+        "name": "Pungro-Mimi landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.686755,
+          25.603106
+        ]
+      },
+      "properties": {
+        "date": "14-07-2021",
+        "name": "Phek landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.409427,
+          25.659725
+        ]
+      },
+      "properties": {
+        "date": "31-07-2021",
+        "name": "Pfutsero-Khomi-Phek landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.402948,
+          25.723469
+        ]
+      },
+      "properties": {
+        "date": "31-07-2021",
+        "name": "Pfutsero-Lanye Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.061502,
+          26.250081
+        ]
+      },
+      "properties": {
+        "date": "08-11-2021",
+        "name": "Wensoi Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.939423,
+          26.232589
+        ]
+      },
+      "properties": {
+        "date": "09-09-2021",
+        "name": "Chedang Saddle Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.614992,
+          27.250224
+        ]
+      },
+      "properties": {
+        "date": "24-08-2021",
+        "name": "Samsing Shanti Turn Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.152087,
+          27.1624
+        ]
+      },
+      "properties": {
+        "date": "24-08-2021",
+        "name": "Muneew Tareybhir Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.45744,
+          27.090965
+        ]
+      },
+      "properties": {
+        "date": "29-07-2021",
+        "name": "Melli Secondary School Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.456816,
+          27.090724
+        ]
+      },
+      "properties": {
+        "date": "30-07-2021",
+        "name": "Melli Bazaar Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.531935,
+          27.142902
+        ]
+      },
+      "properties": {
+        "date": "30-07-2021",
+        "name": "Mamkhola Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.466754,
+          27.10871
+        ]
+      },
+      "properties": {
+        "date": "30-07-2021",
+        "name": "Melli 2 Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.325929,
+          27.111336
+        ]
+      },
+      "properties": {
+        "date": "30-07-2021",
+        "name": "Melli Jorethang_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.609439,
+          27.32459
+        ]
+      },
+      "properties": {
+        "date": "20-10-2021",
+        "name": "Pani House Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.464695,
+          27.09117
+        ]
+      },
+      "properties": {
+        "date": "18-06-2021",
+        "name": "Bhalukhola landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.728341,
+          27.376583
+        ]
+      },
+      "properties": {
+        "date": "25-03-2021",
+        "name": "Kyonsola waterfall landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.597286,
+          27.255462
+        ]
+      },
+      "properties": {
+        "date": "08-08-2021",
+        "name": "Basilakha landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.487805,
+          27.366542
+        ]
+      },
+      "properties": {
+        "date": "31-07-2021",
+        "name": "Seley Ward landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.441413,
+          26.939387
+        ]
+      },
+      "properties": {
+        "date": "31-07-2021",
+        "name": "Seti Jhora Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.280411,
+          27.146369
+        ]
+      },
+      "properties": {
+        "date": "30-07-2021",
+        "name": "Sisney Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.307456,
+          27.221268
+        ]
+      },
+      "properties": {
+        "date": "27-08-2021",
+        "name": "Jorethang-Legship Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.61023,
+          27.326815
+        ]
+      },
+      "properties": {
+        "date": "01-06-2021",
+        "name": "Seesa Golai Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.608275,
+          27.343272
+        ]
+      },
+      "properties": {
+        "date": "09-06-2021",
+        "name": "Tashi Namgyal Secondary School Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.158235,
+          27.276428
+        ]
+      },
+      "properties": {
+        "date": "29-08-2021",
+        "name": "Bongten-Changay Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.480725,
+          23.2463
+        ]
+      },
+      "properties": {
+        "date": "26-08-2021",
+        "name": "Sarsima Landiside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.494288,
+          23.228158
+        ]
+      },
+      "properties": {
+        "date": "26-08-2021",
+        "name": "Jharjhari landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.3835,
+          25.300713
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Byndihati-Umtyra_Road_Creep"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.386284,
+          25.299032
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Byndihati-Umtyra_1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.38648,
+          25.298933
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Byndihati-Umtyra_2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.386894,
+          25.29857
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Byndihati-Umtyra_3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.386955,
+          25.29842
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Byndihati-Umtyra_4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.386986,
+          25.298416
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Byndihati-Umtyra_5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.386986,
+          25.298306
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Byndihati-Umtyra_6"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.38725,
+          25.297895
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Byndihati-Umtyra_7"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.38736,
+          25.297684
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Byndihati-Umtyra_8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.38735,
+          25.297401
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Byndihati-Umtyra_9"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.38551,
+          25.259485
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Nongsning_12"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.3757,
+          25.242348
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Shiehruphi_1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.37896,
+          25.220339
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Thangskai_1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.36781,
+          25.150444
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Umlaper_tea_stall_1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.37676,
+          25.147703
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Tongseng1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.373055,
+          25.143984
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Tongseng2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.37366,
+          25.1438
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Tongseng3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.37443,
+          25.144033
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Tongseng4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.379005,
+          25.14076
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "HP_petrol_pump_tongseng_1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.37903,
+          25.140772
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "HP_petrol_pump_tongseng_2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.37898,
+          25.140808
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "HP_petrol_pump_tongseng_3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.388245,
+          25.129538
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "3km_before_sonapur_1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.38578,
+          25.12547
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Before_Sonapur2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.37368,
+          25.113762
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Before_Sonapur3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.410835,
+          25.045042
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Donsakul 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.43025,
+          25.044744
+        ]
+      },
+      "properties": {
+        "date": "2022-04-13",
+        "name": "Ratacherra 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.060165,
+          25.389677
+        ]
+      },
+      "properties": {
+        "date": "2022-06-09",
+        "name": "Jebalgre_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          89.951546,
+          25.507116
+        ]
+      },
+      "properties": {
+        "date": "2022-06-09",
+        "name": "Betasingh_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.37444,
+          25.18166
+        ]
+      },
+      "properties": {
+        "date": "2020-06-16",
+        "name": "Lumshnong_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.57084,
+          25.44632
+        ]
+      },
+      "properties": {
+        "date": "2022-06-16",
+        "name": "Laitlarem landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.02121,
+          25.206291
+        ]
+      },
+      "properties": {
+        "date": "2022-06-17",
+        "name": "Darrang_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.03326,
+          25.459652
+        ]
+      },
+      "properties": {
+        "date": "2022-06-17",
+        "name": "Bolsalgre_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.68374,
+          25.351841
+        ]
+      },
+      "properties": {
+        "date": "2022-06-17",
+        "name": "Siju_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.6878,
+          27.112083
+        ]
+      },
+      "properties": {
+        "date": "2022-06-19",
+        "name": "Sood_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.62141,
+          27.095318
+        ]
+      },
+      "properties": {
+        "date": "2022-05-16",
+        "name": "Punjabi_dhabha_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.61592,
+          27.079184
+        ]
+      },
+      "properties": {
+        "date": "2022-05-16",
+        "name": "Ganga_Jully_basti_road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.650566,
+          27.107346
+        ]
+      },
+      "properties": {
+        "date": "2022-06-19",
+        "name": "Modirijo landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.27676,
+          27.856197
+        ]
+      },
+      "properties": {
+        "date": "2022-04-19",
+        "name": "Sulung_tapin_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.6709,
+          24.80265
+        ]
+      },
+      "properties": {
+        "date": "2022-06-30",
+        "name": "Tupul_yard_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.84086,
+          22.690073
+        ]
+      },
+      "properties": {
+        "date": "2022-06-19",
+        "name": "Tawipui_road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.695972,
+          27.830094
+        ]
+      },
+      "properties": {
+        "date": "2022-08-31",
+        "name": "Poom_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.395556,
+          27.296944
+        ]
+      },
+      "properties": {
+        "date": "2022-11-04",
+        "name": "Yangang Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.7776,
+          28.2333
+        ]
+      },
+      "properties": {
+        "date": "2023-02-24",
+        "name": "Roing Anini"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.86047758,
+          28.78213823
+        ]
+      },
+      "properties": {
+        "date": "2023-03-24",
+        "name": "Tuting Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.77570872,
+          28.79895656
+        ]
+      },
+      "properties": {
+        "date": "2023-05-05",
+        "name": "Mossing Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.43502779,
+          27.89451833
+        ]
+      },
+      "properties": {
+        "date": "2023-05-06",
+        "name": "Kurung 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.42410335,
+          27.8964705
+        ]
+      },
+      "properties": {
+        "date": "2023-05-06",
+        "name": "Kurung 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.610166,
+          27.026924
+        ]
+      },
+      "properties": {
+        "date": "2023-06-12",
+        "name": "Tippi Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.828636,
+          27.095932
+        ]
+      },
+      "properties": {
+        "date": "2023-06-23",
+        "name": "Karsingsa Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.671454,
+          27.101535
+        ]
+      },
+      "properties": {
+        "date": "2023-06-23",
+        "name": "Puroik Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.525162,
+          27.10699
+        ]
+      },
+      "properties": {
+        "date": "2023-06-23",
+        "name": "Sessa Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.930641,
+          28.233721
+        ]
+      },
+      "properties": {
+        "date": "2023-06-23",
+        "name": "Pangin Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.282822,
+          28.095267
+        ]
+      },
+      "properties": {
+        "date": "2023-07-16",
+        "name": "Pangin Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.144356,
+          28.235584
+        ]
+      },
+      "properties": {
+        "date": "2023-07-28",
+        "name": "Taliha Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.269295,
+          28.14251
+        ]
+      },
+      "properties": {
+        "date": "2023-07-28",
+        "name": "NH 13, Pangin Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.697075,
+          27.717104
+        ]
+      },
+      "properties": {
+        "date": "2023-08-18",
+        "name": "Siji Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.547048,
+          27.204944
+        ]
+      },
+      "properties": {
+        "date": "2023-08-27",
+        "name": "Nag Mandir Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.38797,
+          27.203191
+        ]
+      },
+      "properties": {
+        "date": "2023-08-27",
+        "name": "Rupa Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.136539,
+          27.057521
+        ]
+      },
+      "properties": {
+        "date": "2023-08-27",
+        "name": "Dengzi Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.218027,
+          27.09638
+        ]
+      },
+      "properties": {
+        "date": "2023-08-27",
+        "name": "Tenzin Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.258982,
+          27.552115
+        ]
+      },
+      "properties": {
+        "date": "2023-10-27",
+        "name": "Subansiri Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.76566,
+          25.529813
+        ]
+      },
+      "properties": {
+        "date": "2023-07-10",
+        "name": "Iron Bridge Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.85535,
+          25.994082
+        ]
+      },
+      "properties": {
+        "date": "2023-07-16",
+        "name": "Kiphire Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.047805,
+          25.709988
+        ]
+      },
+      "properties": {
+        "date": "2023-07-17",
+        "name": "Meriema Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.784753,
+          25.876143
+        ]
+      },
+      "properties": {
+        "date": "2023-08-09",
+        "name": "Kiphire Town Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.906812,
+          25.708869
+        ]
+      },
+      "properties": {
+        "date": "2023-08-25",
+        "name": "Mimi Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.51346,
+          26.653847
+        ]
+      },
+      "properties": {
+        "date": "2023-08-27",
+        "name": "Noklangsangba Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.797729,
+          25.798326
+        ]
+      },
+      "properties": {
+        "date": "2023-07-04",
+        "name": "Pakala Pahar Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.080945,
+          26.106224
+        ]
+      },
+      "properties": {
+        "date": "2023-07-09",
+        "name": "Choklangan Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.020282,
+          26.197297
+        ]
+      },
+      "properties": {
+        "date": "2023-07-09",
+        "name": "Wonthai Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.015413,
+          26.199008
+        ]
+      },
+      "properties": {
+        "date": "2023-07-09",
+        "name": "Ehoukeh King Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.204533,
+          23.491709
+        ]
+      },
+      "properties": {
+        "date": "2023-01-26",
+        "name": "Hermon Veng Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.714248,
+          23.745055
+        ]
+      },
+      "properties": {
+        "date": "2023-06-16",
+        "name": "Hunthar Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.71425,
+          23.74506
+        ]
+      },
+      "properties": {
+        "date": "2023-07-04",
+        "name": "Hunthar Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.708782,
+          23.742421
+        ]
+      },
+      "properties": {
+        "date": "2023-07-27",
+        "name": "Vaivakawn Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.889308,
+          22.518533
+        ]
+      },
+      "properties": {
+        "date": "2023-08-08",
+        "name": "Lawngtlai Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.760969,
+          22.880829
+        ]
+      },
+      "properties": {
+        "date": "2023-08-08",
+        "name": "Lunglei Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.713846,
+          23.745833
+        ]
+      },
+      "properties": {
+        "date": "2023-08-09",
+        "name": "Hunthar Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.91265,
+          23.233976
+        ]
+      },
+      "properties": {
+        "date": "2023-09-11",
+        "name": "Keitum Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.876558,
+          25.371447
+        ]
+      },
+      "properties": {
+        "date": "2023-04-14",
+        "name": "Rngain Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.202987,
+          25.515019
+        ]
+      },
+      "properties": {
+        "date": "2023-05-06",
+        "name": "Tura Civil Hospital Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.36018,
+          25.105844
+        ]
+      },
+      "properties": {
+        "date": "2023-05-27",
+        "name": "Sonapur Tunnel Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.360242,
+          25.105931
+        ]
+      },
+      "properties": {
+        "date": "2023-04-05",
+        "name": "Sonapur Tunnel Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.360245,
+          25.105937
+        ]
+      },
+      "properties": {
+        "date": "2023-06-10",
+        "name": "Sonapur Tunnel Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.360255,
+          25.10594
+        ]
+      },
+      "properties": {
+        "date": "2023-06-14",
+        "name": "Sonapur Tunnel Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.902608,
+          25.309601
+        ]
+      },
+      "properties": {
+        "date": "2023-06-11",
+        "name": "Pynursla Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.360259,
+          25.105945
+        ]
+      },
+      "properties": {
+        "date": "2023-06-15",
+        "name": "Sonapur Tunnel Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.876551,
+          25.371452
+        ]
+      },
+      "properties": {
+        "date": "2023-06-14",
+        "name": "Rngain Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.366042,
+          25.275153
+        ]
+      },
+      "properties": {
+        "date": "2023-06-17",
+        "name": "Dommawlein Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.57097,
+          25.446165
+        ]
+      },
+      "properties": {
+        "date": "2023-06-17",
+        "name": "Laitlarem Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.020892,
+          25.205927
+        ]
+      },
+      "properties": {
+        "date": "2023-06-17",
+        "name": "Darrang Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.3603,
+          25.10595
+        ]
+      },
+      "properties": {
+        "date": "2023-06-19",
+        "name": "Sonapur Tunnel Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.181776,
+          25.521879
+        ]
+      },
+      "properties": {
+        "date": "2023-06-22",
+        "name": "PA Sangma Stadium Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.948666,
+          25.687251
+        ]
+      },
+      "properties": {
+        "date": "2023-06-22",
+        "name": "Umiam View Point Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.361278,
+          25.105701
+        ]
+      },
+      "properties": {
+        "date": "2023-06-23",
+        "name": "Sonapur Tunnel Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.36114,
+          25.106073
+        ]
+      },
+      "properties": {
+        "date": "2023-07-03",
+        "name": "Sonapur Tunnel Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.360407,
+          25.106083
+        ]
+      },
+      "properties": {
+        "date": "2023-08-04",
+        "name": "Sonapur Tunnel Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.36123,
+          25.106699
+        ]
+      },
+      "properties": {
+        "date": "2023-08-10",
+        "name": "Sonapur Tunnel Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.360287,
+          25.105957
+        ]
+      },
+      "properties": {
+        "date": "2023-08-26",
+        "name": "Sonapur Tunnel Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.615265,
+          25.88385
+        ]
+      },
+      "properties": {
+        "date": "2023-09-26",
+        "name": "Patharkhmah Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.180176,
+          25.390614
+        ]
+      },
+      "properties": {
+        "date": "2023-10-08",
+        "name": "Pynthorlangtein Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.550414,
+          24.820487
+        ]
+      },
+      "properties": {
+        "date": "2023-08-16",
+        "name": "Awangkhul Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.477731,
+          24.826582
+        ]
+      },
+      "properties": {
+        "date": "2023-08-16",
+        "name": "Khongsang Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.55041,
+          24.820481
+        ]
+      },
+      "properties": {
+        "date": "2023-08-20",
+        "name": "Awangkhul Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.25992713,
+          27.55468158
+        ]
+      },
+      "properties": {
+        "date": "2023-04-03",
+        "name": "Subansiri Lower Hydroelectric Project"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.719487,
+          26.123803
+        ]
+      },
+      "properties": {
+        "date": "2023-06-17",
+        "name": "Dhirenpara Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.43331,
+          25.894901
+        ]
+      },
+      "properties": {
+        "date": "2023-06-29",
+        "name": "Joramhuria-Khokhapara Road Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.038339,
+          24.795353
+        ]
+      },
+      "properties": {
+        "date": "2023-08-21",
+        "name": "Lalpani Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.76544,
+          26.19676
+        ]
+      },
+      "properties": {
+        "date": "2023-10-06",
+        "name": "Kharguli Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.793724,
+          26.187105
+        ]
+      },
+      "properties": {
+        "date": "2023-10-06",
+        "name": "Bamunimaidam Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.798065,
+          26.152334
+        ]
+      },
+      "properties": {
+        "date": "2023-10-07",
+        "name": "Lechubagan Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.75701,
+          26.141897
+        ]
+      },
+      "properties": {
+        "date": "2023-10-07",
+        "name": "Kahilipara Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.52320007,
+          27.39235464
+        ]
+      },
+      "properties": {
+        "date": "2023-03-26",
+        "name": "Sokpay Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.657305,
+          27.613235
+        ]
+      },
+      "properties": {
+        "date": "2023-05-19",
+        "name": "Chungthang Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.64646,
+          27.603889
+        ]
+      },
+      "properties": {
+        "date": "2023-06-16",
+        "name": "Chungthang 2 Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.250366,
+          27.26933
+        ]
+      },
+      "properties": {
+        "date": "2023-06-18",
+        "name": "Kalej Khola Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.136778,
+          27.254354
+        ]
+      },
+      "properties": {
+        "date": "2023-06-18",
+        "name": "Dentam Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.103311,
+          27.142583
+        ]
+      },
+      "properties": {
+        "date": "2023-06-18",
+        "name": "Lower Okhrey Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.500328,
+          27.535576
+        ]
+      },
+      "properties": {
+        "date": "2023-07-12",
+        "name": "Lingzya Busty Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.390868,
+          27.299226
+        ]
+      },
+      "properties": {
+        "date": "2023-07-14",
+        "name": "Rafung Khola Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.728199,
+          27.378152
+        ]
+      },
+      "properties": {
+        "date": "2023-07-14",
+        "name": "9th Mile Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.649425,
+          27.565792
+        ]
+      },
+      "properties": {
+        "date": "2023-07-14",
+        "name": "Theng Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.55059,
+          27.259994
+        ]
+      },
+      "properties": {
+        "date": "2023-08-04",
+        "name": "32 No. Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.550684,
+          27.259936
+        ]
+      },
+      "properties": {
+        "date": "2023-08-24",
+        "name": "32 No. Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.08848,
+          27.278215
+        ]
+      },
+      "properties": {
+        "date": "2023-08-25",
+        "name": "Lingzing Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.18362,
+          27.912811
+        ]
+      },
+      "properties": {
+        "date": "2023-10-04",
+        "name": "Lhonak Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.62872,
+          23.837263
+        ]
+      },
+      "properties": {
+        "date": "2023-03-31",
+        "name": "Teliamura Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.777581,
+          28.233285
+        ]
+      },
+      "properties": {
+        "date": "2024-04-24",
+        "name": "Hunli-Anini"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.542196,
+          27.78598
+        ]
+      },
+      "properties": {
+        "date": "2024-05-16",
+        "name": "Pach Nallah"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.910333,
+          28.748529
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Bomdo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.783419,
+          27.121869
+        ]
+      },
+      "properties": {
+        "date": "2024-06-18",
+        "name": "Karsingsa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.62708,
+          27.099654
+        ]
+      },
+      "properties": {
+        "date": "2024-06-23",
+        "name": "Itanagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.746747,
+          27.141177
+        ]
+      },
+      "properties": {
+        "date": "2024-06-16",
+        "name": "Rangfra"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.605617,
+          27.03649
+        ]
+      },
+      "properties": {
+        "date": "2024-06-26",
+        "name": "Tippi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.711676,
+          27.923784
+        ]
+      },
+      "properties": {
+        "date": "2024-06-25",
+        "name": "Siji"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.883203,
+          28.226541
+        ]
+      },
+      "properties": {
+        "date": "2024-06-29",
+        "name": "Tarak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.6327,
+          27.07383
+        ]
+      },
+      "properties": {
+        "date": "2024-06-29",
+        "name": "Jullang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.361341,
+          28.519848
+        ]
+      },
+      "properties": {
+        "date": "2024-06-29",
+        "name": "Tatu"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.374843,
+          27.886843
+        ]
+      },
+      "properties": {
+        "date": "2024-06-29",
+        "name": "Demwe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.565515,
+          28.06798
+        ]
+      },
+      "properties": {
+        "date": "2024-06-29",
+        "name": "Hayuliang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.958741,
+          27.30978
+        ]
+      },
+      "properties": {
+        "date": "2024-06-30",
+        "name": "Bana"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.964479,
+          28.676866
+        ]
+      },
+      "properties": {
+        "date": "2024-06-30",
+        "name": "Jengging"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.092954,
+          28.142213
+        ]
+      },
+      "properties": {
+        "date": "2024-06-29",
+        "name": "Babuk"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.605705,
+          27.090926
+        ]
+      },
+      "properties": {
+        "date": "2024-07-01",
+        "name": "DivisionIV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.430041,
+          27.895164
+        ]
+      },
+      "properties": {
+        "date": "2024-06-30",
+        "name": "Rengchi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.591888,
+          27.089317
+        ]
+      },
+      "properties": {
+        "date": "2024-07-01",
+        "name": "Baat"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.98636,
+          28.233305
+        ]
+      },
+      "properties": {
+        "date": "2024-07-04",
+        "name": "Pangin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.093074,
+          28.142494
+        ]
+      },
+      "properties": {
+        "date": "2024-07-06",
+        "name": "Babuk2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.783633,
+          27.121839
+        ]
+      },
+      "properties": {
+        "date": "2024-07-05",
+        "name": "Karsingsa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.316142,
+          28.697524
+        ]
+      },
+      "properties": {
+        "date": "2024-07-05",
+        "name": "ShiYomi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.439961,
+          28.047143
+        ]
+      },
+      "properties": {
+        "date": "2024-07-05",
+        "name": "Mompani"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.636163,
+          27.72775
+        ]
+      },
+      "properties": {
+        "date": "2024-07-05",
+        "name": "Palin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.792901,
+          27.307091
+        ]
+      },
+      "properties": {
+        "date": "2024-07-14",
+        "name": "Palizi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.621829,
+          27.031002
+        ]
+      },
+      "properties": {
+        "date": "2024-07-22",
+        "name": "Holongi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.857654,
+          27.611051
+        ]
+      },
+      "properties": {
+        "date": "2024-09-07",
+        "name": "Bramadungchung"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.562963,
+          27.203922
+        ]
+      },
+      "properties": {
+        "date": "2024-10-04",
+        "name": "Kaspi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.891914,
+          25.109872
+        ]
+      },
+      "properties": {
+        "date": "2024-05-01",
+        "name": "Jatinga"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.76249,
+          25.019471
+        ]
+      },
+      "properties": {
+        "date": "2024-05-03",
+        "name": "Damcherra"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.738226,
+          27.282038
+        ]
+      },
+      "properties": {
+        "date": "2024-05-26",
+        "name": "Tikok"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.263033,
+          27.532524
+        ]
+      },
+      "properties": {
+        "date": "2024-05-27",
+        "name": "Subansiri"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.747639,
+          26.144954
+        ]
+      },
+      "properties": {
+        "date": "2024-05-29",
+        "name": "KrishnaNagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.71827,
+          26.125215
+        ]
+      },
+      "properties": {
+        "date": "2024-06-03",
+        "name": "Katahbari"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.698208,
+          26.160366
+        ]
+      },
+      "properties": {
+        "date": "2024-06-03",
+        "name": "GramyaNagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.116465,
+          25.179895
+        ]
+      },
+      "properties": {
+        "date": "2024-05-30",
+        "name": "Mahur"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.01028,
+          25.202045
+        ]
+      },
+      "properties": {
+        "date": "2024-05-30",
+        "name": "Lungkhok"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.020431,
+          25.1934
+        ]
+      },
+      "properties": {
+        "date": "2024-05-30",
+        "name": "Bethel"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.775725,
+          26.190964
+        ]
+      },
+      "properties": {
+        "date": "2024-05-30",
+        "name": "RudraNagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.523786,
+          24.787043
+        ]
+      },
+      "properties": {
+        "date": "2024-06-19",
+        "name": "Bendargool"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.846223,
+          26.111529
+        ]
+      },
+      "properties": {
+        "date": "2024-07-04",
+        "name": "8thMile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.829241,
+          26.179508
+        ]
+      },
+      "properties": {
+        "date": "2024-07-12",
+        "name": "Bonda"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.747317,
+          25.006926
+        ]
+      },
+      "properties": {
+        "date": "2024-08-10",
+        "name": "Damchera2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.27133,
+          24.67507
+        ]
+      },
+      "properties": {
+        "date": "2024-05-27",
+        "name": "Kasom"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.7777,
+          24.78167
+        ]
+      },
+      "properties": {
+        "date": "2024-05-28",
+        "name": "Imphal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.97409,
+          25.26763
+        ]
+      },
+      "properties": {
+        "date": "2024-05-28",
+        "name": "Senapati"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.21625,
+          24.95445
+        ]
+      },
+      "properties": {
+        "date": "2024-07-02",
+        "name": "MongkotChepu"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.34178,
+          25.06391
+        ]
+      },
+      "properties": {
+        "date": "2024-07-03",
+        "name": "Kazipphung"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.96529,
+          25.13191
+        ]
+      },
+      "properties": {
+        "date": "2024-07-04",
+        "name": "Kangpokpi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.49901,
+          24.98131
+        ]
+      },
+      "properties": {
+        "date": "2024-07-29",
+        "name": "Dimthanlong"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.79057,
+          24.7764
+        ]
+      },
+      "properties": {
+        "date": "2024-07-29",
+        "name": "Sinam"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.43601,
+          24.76632
+        ]
+      },
+      "properties": {
+        "date": "2024-07-29",
+        "name": "Rengpang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.46316,
+          24.75121
+        ]
+      },
+      "properties": {
+        "date": "2024-07-29",
+        "name": "Taodaijang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.83401,
+          24.53455
+        ]
+      },
+      "properties": {
+        "date": "2024-08-01",
+        "name": "Thanga1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.81729,
+          24.52563
+        ]
+      },
+      "properties": {
+        "date": "2024-08-01",
+        "name": "Thanga2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.81477,
+          24.5226
+        ]
+      },
+      "properties": {
+        "date": "2024-08-01",
+        "name": "ThangaNgaram"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.919,
+          24.73502
+        ]
+      },
+      "properties": {
+        "date": "2024-08-01",
+        "name": "Oinam"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.82001,
+          24.52711
+        ]
+      },
+      "properties": {
+        "date": "2024-08-01",
+        "name": "Heisnam"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.13879,
+          24.75096
+        ]
+      },
+      "properties": {
+        "date": "2024-08-06",
+        "name": "Jiribam"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.42788,
+          24.75648
+        ]
+      },
+      "properties": {
+        "date": "2024-08-07",
+        "name": "Nungba"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.26164,
+          24.72047
+        ]
+      },
+      "properties": {
+        "date": "2024-08-07",
+        "name": "Kaimai"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.35854,
+          25.092
+        ]
+      },
+      "properties": {
+        "date": "2024-08-12",
+        "name": "Hamleikhong"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.73187,
+          24.78893
+        ]
+      },
+      "properties": {
+        "date": "2024-08-18",
+        "name": "KSinam2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.55647,
+          24.81961
+        ]
+      },
+      "properties": {
+        "date": "2024-08-18",
+        "name": "Awangkhul"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.5706,
+          24.83803
+        ]
+      },
+      "properties": {
+        "date": "2024-10-01",
+        "name": "AwangkhulRangkhung"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.36018,
+          25.105844
+        ]
+      },
+      "properties": {
+        "date": "2024-02-03",
+        "name": "SonapurTunnel1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.358006,
+          25.102667
+        ]
+      },
+      "properties": {
+        "date": "2024-04-30",
+        "name": "SonapurTunnel2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.856166,
+          25.569287
+        ]
+      },
+      "properties": {
+        "date": "2024-05-16",
+        "name": "ThirdMile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.856614,
+          25.568237
+        ]
+      },
+      "properties": {
+        "date": "2024-05-16",
+        "name": "Borma"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.873806,
+          25.568556
+        ]
+      },
+      "properties": {
+        "date": "2024-05-17",
+        "name": "ShillongAssembly"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.360977,
+          25.106205
+        ]
+      },
+      "properties": {
+        "date": "2024-05-27",
+        "name": "SonapurTunnel3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.614595,
+          25.363389
+        ]
+      },
+      "properties": {
+        "date": "2024-05-28",
+        "name": "Weilong"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.893134,
+          25.62836
+        ]
+      },
+      "properties": {
+        "date": "2024-05-28",
+        "name": "Mawlai"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.902597,
+          25.625808
+        ]
+      },
+      "properties": {
+        "date": "2024-05-28",
+        "name": "Mawkynroh"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.751767,
+          25.453314
+        ]
+      },
+      "properties": {
+        "date": "2024-05-28",
+        "name": "Mawphland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.871489,
+          25.567062
+        ]
+      },
+      "properties": {
+        "date": "2024-05-28",
+        "name": "Rilbong"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.881821,
+          25.560962
+        ]
+      },
+      "properties": {
+        "date": "2024-05-28",
+        "name": "Lumparing"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.3896869,
+          25.39192932
+        ]
+      },
+      "properties": {
+        "date": "2024-05-28",
+        "name": "13KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.748951,
+          25.271534
+        ]
+      },
+      "properties": {
+        "date": "2024-05-30",
+        "name": "Nongpriang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.368435,
+          25.15457
+        ]
+      },
+      "properties": {
+        "date": "2024-05-30",
+        "name": "Lumshnong1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.38607,
+          25.162582
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Lumshnong2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.866635,
+          25.568354
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Lummawbah"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.433141,
+          25.52819
+        ]
+      },
+      "properties": {
+        "date": "2024-06-17",
+        "name": "Markasa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.874287,
+          25.82781
+        ]
+      },
+      "properties": {
+        "date": "2024-06-14",
+        "name": "RiPalei"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.875187,
+          25.800588
+        ]
+      },
+      "properties": {
+        "date": "2024-06-14",
+        "name": "Umsamlem"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.899853,
+          25.679203
+        ]
+      },
+      "properties": {
+        "date": "2024-06-14",
+        "name": "Umiam1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.466408,
+          25.368971
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Mawkyrwat"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.236212,
+          25.225818
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Ranikor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.828582,
+          25.518951
+        ]
+      },
+      "properties": {
+        "date": "2024-06-19",
+        "name": "Pomlum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.220332,
+          25.152774
+        ]
+      },
+      "properties": {
+        "date": "2024-06-17",
+        "name": "Karkhana"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.700373,
+          25.510164
+        ]
+      },
+      "properties": {
+        "date": "2024-06-28",
+        "name": "Sohiong"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.903928,
+          25.669593
+        ]
+      },
+      "properties": {
+        "date": "2024-06-30",
+        "name": "Umiam2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.898077,
+          25.653138
+        ]
+      },
+      "properties": {
+        "date": "2024-07-01",
+        "name": "UmiamDam"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.900697,
+          25.682492
+        ]
+      },
+      "properties": {
+        "date": "2024-06-30",
+        "name": "Umbang1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.897497,
+          25.676048
+        ]
+      },
+      "properties": {
+        "date": "2024-06-30",
+        "name": "NEPA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.898378,
+          25.675099
+        ]
+      },
+      "properties": {
+        "date": "2024-06-30",
+        "name": "Umiam3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.902376,
+          25.686237
+        ]
+      },
+      "properties": {
+        "date": "2024-06-30",
+        "name": "Umbang2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.903145,
+          25.686801
+        ]
+      },
+      "properties": {
+        "date": "2024-06-30",
+        "name": "Umbang3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.906341,
+          25.692127
+        ]
+      },
+      "properties": {
+        "date": "2024-06-30",
+        "name": "Sumer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.899541,
+          25.67939
+        ]
+      },
+      "properties": {
+        "date": "2024-06-30",
+        "name": "Umbang4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.271797,
+          25.529008
+        ]
+      },
+      "properties": {
+        "date": "2024-07-02",
+        "name": "Tiehsaw"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.514339,
+          25.466183
+        ]
+      },
+      "properties": {
+        "date": "2024-07-02",
+        "name": "Pariong"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.647418,
+          25.193381
+        ]
+      },
+      "properties": {
+        "date": "2024-07-04",
+        "name": "Baghmara1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.633676,
+          25.210055
+        ]
+      },
+      "properties": {
+        "date": "2024-07-04",
+        "name": "Baghmara2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.898983,
+          25.649229
+        ]
+      },
+      "properties": {
+        "date": "2024-07-02",
+        "name": "Umiam4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.898692,
+          25.650726
+        ]
+      },
+      "properties": {
+        "date": "2024-07-02",
+        "name": "Umiam5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.893994,
+          25.651025
+        ]
+      },
+      "properties": {
+        "date": "2024-07-02",
+        "name": "UmiamView"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.889399,
+          25.641388
+        ]
+      },
+      "properties": {
+        "date": "2024-07-02",
+        "name": "Mawlai2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.889427,
+          25.640973
+        ]
+      },
+      "properties": {
+        "date": "2024-07-02",
+        "name": "Mawlai3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.362414,
+          25.08048
+        ]
+      },
+      "properties": {
+        "date": "2024-07-12",
+        "name": "Kuliang1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.193856,
+          25.724652
+        ]
+      },
+      "properties": {
+        "date": "2024-07-13",
+        "name": "Dadenggre"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.875303,
+          25.809077
+        ]
+      },
+      "properties": {
+        "date": "2024-07-14",
+        "name": "Pahamrinai"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.874717,
+          25.781194
+        ]
+      },
+      "properties": {
+        "date": "2024-07-06",
+        "name": "Umran"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.869058,
+          26.029622
+        ]
+      },
+      "properties": {
+        "date": "2024-07-18",
+        "name": "Maupur"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.362358,
+          25.080525
+        ]
+      },
+      "properties": {
+        "date": "2024-08-06",
+        "name": "Kuliang2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.361029,
+          25.106369
+        ]
+      },
+      "properties": {
+        "date": "2024-08-06",
+        "name": "SonapurTunnel4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.362247,
+          25.080525
+        ]
+      },
+      "properties": {
+        "date": "2024-08-12",
+        "name": "Kuliang3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.362123,
+          25.080525
+        ]
+      },
+      "properties": {
+        "date": "2024-08-17",
+        "name": "Kuliang4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.865183,
+          25.951567
+        ]
+      },
+      "properties": {
+        "date": "2024-09-06",
+        "name": "Shangbangla"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.362183,
+          25.080516
+        ]
+      },
+      "properties": {
+        "date": "2024-09-30",
+        "name": "Kuliang5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.237665,
+          25.267236
+        ]
+      },
+      "properties": {
+        "date": "2024-10-04",
+        "name": "Koinadubi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.424197,
+          25.236002
+        ]
+      },
+      "properties": {
+        "date": "2024-10-05",
+        "name": "Attesia"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.257292,
+          25.599743
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Rongram"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.420247,
+          25.556716
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Mangrure1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.420122,
+          25.556503
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Mangrure2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.420051,
+          25.556389
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Mangrure3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.412596,
+          25.549989
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Simsang1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.412686,
+          25.55002
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Simsang2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.408643,
+          25.549016
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Simsang3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.385679,
+          25.547884
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Durakalakgre"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.351459,
+          25.561542
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Matchurigre1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.351379,
+          25.561887
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Matchurigre2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.351379,
+          25.561884
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Matchurigre3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.349382,
+          25.561705
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Matchurigre4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.341414,
+          25.557146
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Matchurigre5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.341198,
+          25.55621
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Matchurigre6"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.340616,
+          25.555088
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Matchurigre7"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.236012,
+          25.556378
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Chasingre"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.230769,
+          25.545538
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Rongkon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.204561,
+          25.308286
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Rengsipara1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.204644,
+          25.308134
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Rengsipara2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.220672,
+          25.496547
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Bolpuchring1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.221742,
+          25.496702
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Bolpuchring2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.222287,
+          25.496123
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Bolpuchring3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.223143,
+          25.47651
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Derengre"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.220833,
+          25.470969
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Dinasagre1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.220708,
+          25.469956
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Dinasagre2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.223057,
+          25.399736
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Rongbretgre1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.226635,
+          25.396902
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Rongbretgre2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.22618,
+          25.395992
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Rongbretgre3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.225665,
+          25.39366
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Rongbretgre4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.222252,
+          25.355696
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Santogre1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.222034,
+          25.355738
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Santogre2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.203781,
+          25.338717
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Kherapara1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.205449,
+          25.324709
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Kherapara2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.205134,
+          25.324395
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Kherapara3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.205068,
+          25.324305
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Kherapara4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.200065,
+          25.314873
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Dopogre1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.200072,
+          25.314952
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Dopogre2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.71768,
+          23.68059
+        ]
+      },
+      "properties": {
+        "date": "2024-05-28",
+        "name": "Hlimen"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.71425,
+          23.74506
+        ]
+      },
+      "properties": {
+        "date": "2024-05-28",
+        "name": "Hunthar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.7266,
+          23.71769
+        ]
+      },
+      "properties": {
+        "date": "2024-05-28",
+        "name": "Salem"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.72635,
+          23.62224
+        ]
+      },
+      "properties": {
+        "date": "2024-05-28",
+        "name": "Falkawn"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.68159,
+          23.45122
+        ]
+      },
+      "properties": {
+        "date": "2024-05-28",
+        "name": "Lungsei"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.70656,
+          23.55912
+        ]
+      },
+      "properties": {
+        "date": "2024-05-28",
+        "name": "Aibawk"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.27094,
+          23.75095
+        ]
+      },
+      "properties": {
+        "date": "2024-06-11",
+        "name": "Khantlang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.73935,
+          23.75524
+        ]
+      },
+      "properties": {
+        "date": "2024-07-02",
+        "name": "Zuangtui"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.72946,
+          23.75565
+        ]
+      },
+      "properties": {
+        "date": "2024-07-02",
+        "name": "Bawngkawn"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.7463,
+          23.73397
+        ]
+      },
+      "properties": {
+        "date": "2024-07-02",
+        "name": "Zemabawk"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.73362,
+          23.76229
+        ]
+      },
+      "properties": {
+        "date": "2024-07-02",
+        "name": "Durtlang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.64393,
+          23.99435
+        ]
+      },
+      "properties": {
+        "date": "2024-08-28",
+        "name": "Kawnpui"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.521634,
+          26.006772
+        ]
+      },
+      "properties": {
+        "date": "2024-07-01",
+        "name": "ZunhebotoDIET"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.841673,
+          26.185832
+        ]
+      },
+      "properties": {
+        "date": "2024-07-03",
+        "name": "KWongthu"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.746775,
+          26.090935
+        ]
+      },
+      "properties": {
+        "date": "2024-07-05",
+        "name": "Chessore"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.12725,
+          25.607096
+        ]
+      },
+      "properties": {
+        "date": "2024-07-12",
+        "name": "SecaKhel"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.531077,
+          26.015899
+        ]
+      },
+      "properties": {
+        "date": "2024-07-07",
+        "name": "Alahuto"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.255575,
+          26.107402
+        ]
+      },
+      "properties": {
+        "date": "2024-07-15",
+        "name": "Wokha"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.25861,
+          26.09928
+        ]
+      },
+      "properties": {
+        "date": "2024-07-22",
+        "name": "Tchuyiro"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.246652,
+          26.2956
+        ]
+      },
+      "properties": {
+        "date": "2024-07-22",
+        "name": "Lakhuti"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.103026,
+          25.680683
+        ]
+      },
+      "properties": {
+        "date": "2024-07-26",
+        "name": "Pezielietsie"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.18373,
+          25.671317
+        ]
+      },
+      "properties": {
+        "date": "2024-08-04",
+        "name": "Dzuu"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.930126,
+          25.699199
+        ]
+      },
+      "properties": {
+        "date": "2024-08-12",
+        "name": "Lophukhong"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.034266,
+          25.724445
+        ]
+      },
+      "properties": {
+        "date": "2024-08-14",
+        "name": "Zubza"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.04216,
+          25.670326
+        ]
+      },
+      "properties": {
+        "date": "2024-08-23",
+        "name": "Khonoma"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.254992,
+          26.098734
+        ]
+      },
+      "properties": {
+        "date": "2024-08-26",
+        "name": "Etsuchuka"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.537726,
+          26.249363
+        ]
+      },
+      "properties": {
+        "date": "2024-08-29",
+        "name": "Longsa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.586325,
+          26.302047
+        ]
+      },
+      "properties": {
+        "date": "2024-08-26",
+        "name": "Mokokchung"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.913722,
+          25.773953
+        ]
+      },
+      "properties": {
+        "date": "2024-09-03",
+        "name": "Pherima"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.068528,
+          25.710966
+        ]
+      },
+      "properties": {
+        "date": "2024-09-09",
+        "name": "KMCDump1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.068536,
+          25.710898
+        ]
+      },
+      "properties": {
+        "date": "2024-10-04",
+        "name": "KMCDump2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.61161,
+          27.24534
+        ]
+      },
+      "properties": {
+        "date": "2024-05-17",
+        "name": "PakyongDC"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.67311,
+          27.62714
+        ]
+      },
+      "properties": {
+        "date": "2024-06-01",
+        "name": "Matim"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.61639,
+          27.37194
+        ]
+      },
+      "properties": {
+        "date": "2024-06-01",
+        "name": "Tashi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.41938,
+          27.29403
+        ]
+      },
+      "properties": {
+        "date": "2024-06-10",
+        "name": "Majua"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.53445,
+          27.50028
+        ]
+      },
+      "properties": {
+        "date": "2024-06-13",
+        "name": "Mangan1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.50579,
+          27.23553
+        ]
+      },
+      "properties": {
+        "date": "2024-06-11",
+        "name": "Shantinagar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.60993,
+          27.32167
+        ]
+      },
+      "properties": {
+        "date": "2024-06-11",
+        "name": "PaniHouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.54756,
+          27.86372
+        ]
+      },
+      "properties": {
+        "date": "2024-06-11",
+        "name": "Zeema"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.55658,
+          27.50669
+        ]
+      },
+      "properties": {
+        "date": "2024-06-13",
+        "name": "Pakshep"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.52691,
+          27.5086
+        ]
+      },
+      "properties": {
+        "date": "2024-06-13",
+        "name": "Sangkalang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.60395,
+          27.32468
+        ]
+      },
+      "properties": {
+        "date": "2024-06-28",
+        "name": "Lingding"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.32418,
+          27.35164
+        ]
+      },
+      "properties": {
+        "date": "2024-07-12",
+        "name": "Makha"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.5491,
+          27.82149
+        ]
+      },
+      "properties": {
+        "date": "2024-07-21",
+        "name": "MunsiThang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.65081,
+          27.56807
+        ]
+      },
+      "properties": {
+        "date": "2024-07-22",
+        "name": "Toong"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.45966,
+          27.25169
+        ]
+      },
+      "properties": {
+        "date": "2024-08-20",
+        "name": "Balutar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.59367,
+          27.23968
+        ]
+      },
+      "properties": {
+        "date": "2024-08-29",
+        "name": "PakyongAirport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.52716,
+          27.47775
+        ]
+      },
+      "properties": {
+        "date": "2024-09-30",
+        "name": "RangRang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.49725,
+          27.37807
+        ]
+      },
+      "properties": {
+        "date": "2024-09-30",
+        "name": "LowerTintek"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.09037,
+          27.17605
+        ]
+      },
+      "properties": {
+        "date": "2024-09-30",
+        "name": "RibdiBhareng"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.705846,
+          23.878866
+        ]
+      },
+      "properties": {
+        "date": "2024-06-15",
+        "name": "Mungiakami"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.516866,
+          23.167876
+        ]
+      },
+      "properties": {
+        "date": "2024-08-19",
+        "name": "Debipur"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.634953,
+          23.839927
+        ]
+      },
+      "properties": {
+        "date": "2024-08-19",
+        "name": "Teliamura"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.908101,
+          24.109649
+        ]
+      },
+      "properties": {
+        "date": "2024-08-19",
+        "name": "Saikar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.524158,
+          23.312969
+        ]
+      },
+      "properties": {
+        "date": "2024-08-22",
+        "name": "Gardang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.755621,
+          23.423169
+        ]
+      },
+      "properties": {
+        "date": "2024-08-22",
+        "name": "NutanBazar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.67923,
+          91.89988
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Umiam Landslide 7"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.68672,
+          91.9034
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Umbang Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.68624,
+          91.90282
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Umbang Landslide 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.69024,
+          91.90534
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Sumer Landslide 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.75852,
+          91.87999
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Umsamlem Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.82308,
+          91.87242
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Kwinain Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.81488,
+          91.87571
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Umnget Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.92683,
+          91.87521
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Umling Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.92723,
+          91.87506
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Umling Landslide 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.95857,
+          91.86467
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Umling Landslide 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.9571,
+          91.86125
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Umling Landslide 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.01556,
+          91.86894
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Byrnihat Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.0169,
+          91.86662
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Byrnihat Landslide 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.02992,
+          91.86895
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "17 Mile Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.03532,
+          91.86799
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Byrnihat Landslide 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.03628,
+          91.86832
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Byrnihat Landslide 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.08904,
+          91.87737
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Ampher Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.09923,
+          91.87597
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Jorabat Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.70906,
+          91.89498
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Umsning Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.70907,
+          91.895
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Umsning Landslide 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.6792,
+          91.89967
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Umiam Landslide 8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.67051,
+          91.90494
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Umiam Landslide 9"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.66272,
+          91.90127
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Umiam Landslide 10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.66073,
+          91.9014
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Umiam Landslide 11"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.65293,
+          91.89804
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Umiam Landslide 12"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.62575,
+          91.89703
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "ISBT Bypass Landslide 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.6248,
+          91.91046
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "ISBT Bypass Landslide 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.62053,
+          91.90989
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "ISBT Bypass Landslide 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.49086,
+          91.82135
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Mylliem Landslide 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.48787,
+          91.81959
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Mylliem Landslide 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.48715,
+          91.81948
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Mylliem Landslide 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.4868,
+          91.81987
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Mylliem Landslide 5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.47565,
+          91.81801
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Mylliem Landslide 6"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.47174,
+          91.81621
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Mylliem Landslide 7"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.47133,
+          91.81608
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Mylliem Landslide 8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.46944,
+          91.81748
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Mylliem Landslide 9"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.46891,
+          91.8184
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Mylliem Landslide 10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.46687,
+          91.81902
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Mylliem Landslide 11"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.46591,
+          91.82085
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Mylliem Landslide 12"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.46593,
+          91.82263
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Mylliem Landslide 13"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.46529,
+          91.82496
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Umtyngar Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.46555,
+          91.82614
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Umtyngar Landslide 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.46443,
+          91.82775
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Umtyngar Landslide 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.46194,
+          91.82976
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Laitkroh Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.46117,
+          91.83177
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Laitkroh Landslide 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.44031,
+          91.84712
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Laitkroh Landslide 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.43961,
+          91.8491
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Laitkroh Landslide 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.43813,
+          91.85107
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Laitkroh Landslide 5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.43763,
+          91.85282
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Lum Thnagding Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.43763,
+          91.85432
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Lum Thnagding Landslide 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.43707,
+          91.8561
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Lum Thnagding Landslide 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.437,
+          91.85824
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Lum Thnagding Landslide 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.43398,
+          91.86066
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Wah Bnoh Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.43231,
+          91.86152
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Wah Bnoh Landslide 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.43141,
+          91.86274
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Wah Bnoh Landslide 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.42705,
+          91.86312
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Wah Bnoh Landslide 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.4229,
+          91.86607
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Wah Bnoh Landslide 5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.42221,
+          91.86785
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Wah Bnoh Landslide 6"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.42162,
+          91.86807
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Pomlum Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.42881,
+          91.86459
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Pomlum Landslide 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.41838,
+          91.86815
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Pomlum Landslide 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.41072,
+          91.87425
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Pomlum Landslide 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.40375,
+          91.87281
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Mawkejam Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.39732,
+          91.87258
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Mawkejam Landslide 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.39072,
+          91.87185
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Mawkejam Landslide 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.3852,
+          91.87428
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Mawkejam Landslide 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.38303,
+          91.87442
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Rgnain Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.38257,
+          91.87439
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Rgnain Landslide 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.37975,
+          91.87347
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Rgnain Landslide 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.37642,
+          91.87452
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Rgnain Landslide 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.36093,
+          91.88129
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Kyntiew Masi Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.3604,
+          91.88673
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Kyntiew Masi Landslide 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.35567,
+          91.89466
+        ]
+      },
+      "properties": {
+        "date": "31-05-2025",
+        "name": "Langkyrdem Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.34457,
+          91.8906
+        ]
+      },
+      "properties": {
+        "date": "30-05-2025",
+        "name": "Langkyrdem Landslide 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.826,
+          27.104
+        ]
+      },
+      "properties": {
+        "date": "2020-09-17",
+        "name": "Bandardewa NH15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.74347,
+          27.134693
+        ]
+      },
+      "properties": {
+        "date": "2020-07-10",
+        "name": "Tigdo Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.698,
+          27.107
+        ]
+      },
+      "properties": {
+        "date": "2020-07-10",
+        "name": "Modrijo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.61283,
+          27.081306
+        ]
+      },
+      "properties": {
+        "date": "2020-06-25",
+        "name": "Donyi Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.522,
+          26.326
+        ]
+      },
+      "properties": {
+        "date": "2020-08-15",
+        "name": "Alongmen Ward Mokochung"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.487,
+          26.166
+        ]
+      },
+      "properties": {
+        "date": "2020-08-14",
+        "name": "Akuluto Town"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.519,
+          26.01
+        ]
+      },
+      "properties": {
+        "date": "2020-08-17",
+        "name": "DC Hill West Colony"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.441,
+          25.873
+        ]
+      },
+      "properties": {
+        "date": "2020-07-08",
+        "name": "Xuivi Kilomi Stretch"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.098,
+          25.689
+        ]
+      },
+      "properties": {
+        "date": "2020-07-11",
+        "name": "High School Area Kohima"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.106,
+          25.662
+        ]
+      },
+      "properties": {
+        "date": "2020-10-04",
+        "name": "Lower PWD Kohima"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.091,
+          25.664
+        ]
+      },
+      "properties": {
+        "date": "2020-08-19",
+        "name": "Paramedical Colony Kohima"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.387,
+          25.498
+        ]
+      },
+      "properties": {
+        "date": "2020-08-20",
+        "name": "Laii Village"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.142,
+          25.396
+        ]
+      },
+      "properties": {
+        "date": "2020-06-02",
+        "name": "Imphal-Jiribam Landslide-1d"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.06528,
+          25.355955
+        ]
+      },
+      "properties": {
+        "date": "2020-10-23",
+        "name": "Khongnem-Thana"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.911,
+          25.236
+        ]
+      },
+      "properties": {
+        "date": "2020-07-06",
+        "name": "Twilang Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.985,
+          24.925
+        ]
+      },
+      "properties": {
+        "date": "2020-07-21",
+        "name": "K Sinam Village NH37"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.986,
+          24.748
+        ]
+      },
+      "properties": {
+        "date": "2020-08-11",
+        "name": "Khenjonglang Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          94.222,
+          24.318
+        ]
+      },
+      "properties": {
+        "date": "2020-08-20",
+        "name": "Khongkhang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.382774,
+          23.692778
+        ]
+      },
+      "properties": {
+        "date": "2020-08-01",
+        "name": "Zotlang-1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.19319,
+          23.523083
+        ]
+      },
+      "properties": {
+        "date": "2020-10-03",
+        "name": "Khazawl1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.7973,
+          23.350964
+        ]
+      },
+      "properties": {
+        "date": "2020-07-10",
+        "name": "Sailam_1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.891945,
+          23.533611
+        ]
+      },
+      "properties": {
+        "date": "2020-08-04",
+        "name": "Electric_veng3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.97425,
+          23.612047
+        ]
+      },
+      "properties": {
+        "date": "2020-05-28",
+        "name": "Mualpheng_1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.967,
+          23.6625
+        ]
+      },
+      "properties": {
+        "date": "2020-10-02",
+        "name": "Rulchawm1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.88556,
+          23.673332
+        ]
+      },
+      "properties": {
+        "date": "2020-07-10",
+        "name": "Phullen5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.72628,
+          23.562675
+        ]
+      },
+      "properties": {
+        "date": "2020-07-11",
+        "name": "Melriat_1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.05194,
+          23.84111
+        ]
+      },
+      "properties": {
+        "date": "2020-10-13",
+        "name": "Phullen3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.0475,
+          23.855618
+        ]
+      },
+      "properties": {
+        "date": "2020-08-17",
+        "name": "Phullen2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.75766,
+          23.730278
+        ]
+      },
+      "properties": {
+        "date": "2020-02-02",
+        "name": "Zemabawk_2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.760025,
+          23.731928
+        ]
+      },
+      "properties": {
+        "date": "2020-10-06",
+        "name": "Zembawk_1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.731186,
+          23.721556
+        ]
+      },
+      "properties": {
+        "date": "2020-09-22",
+        "name": "Bawngkawn_1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.728676,
+          23.720222
+        ]
+      },
+      "properties": {
+        "date": "2020-07-04",
+        "name": "Bawngkawn_2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.71698,
+          23.720278
+        ]
+      },
+      "properties": {
+        "date": "2020-06-10",
+        "name": "Khatla_1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.6981,
+          23.720156
+        ]
+      },
+      "properties": {
+        "date": "2020-06-05",
+        "name": "Maubawk_1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.70033,
+          23.72324
+        ]
+      },
+      "properties": {
+        "date": "2020-09-27",
+        "name": "Maubawk_2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.723,
+          23.746222
+        ]
+      },
+      "properties": {
+        "date": "2020-06-15",
+        "name": "Ramhlun_1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.72158,
+          23.740454
+        ]
+      },
+      "properties": {
+        "date": "2020-10-01",
+        "name": "Venglai_1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.71415,
+          23.73952
+        ]
+      },
+      "properties": {
+        "date": "2020-10-02",
+        "name": "Vaivakawn_1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.708725,
+          23.739746
+        ]
+      },
+      "properties": {
+        "date": "2020-07-17",
+        "name": "Vaivakawn_2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.695946,
+          23.751072
+        ]
+      },
+      "properties": {
+        "date": "2020-08-13",
+        "name": "Maubawk_3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.492226,
+          23.916945
+        ]
+      },
+      "properties": {
+        "date": "2020-07-11",
+        "name": "Mamit2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.49111,
+          23.92
+        ]
+      },
+      "properties": {
+        "date": "2020-06-10",
+        "name": "Mamit1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.49028,
+          23.924168
+        ]
+      },
+      "properties": {
+        "date": "2020-06-11",
+        "name": "Mamit3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.49,
+          23.94861
+        ]
+      },
+      "properties": {
+        "date": "2020-05-29",
+        "name": "Mamit5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.39056,
+          23.912779
+        ]
+      },
+      "properties": {
+        "date": "2020-06-11",
+        "name": "Mamit4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.67528,
+          24.231943
+        ]
+      },
+      "properties": {
+        "date": "2020-10-21",
+        "name": "Tumpui_veng1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.74167,
+          24.455
+        ]
+      },
+      "properties": {
+        "date": "2020-05-25",
+        "name": "Variengte_IOC_veng1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.98905,
+          24.646982
+        ]
+      },
+      "properties": {
+        "date": "2020-06-08",
+        "name": "SDMA_AS_2020_SONAI2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.903854,
+          24.721872
+        ]
+      },
+      "properties": {
+        "date": "2020-06-04",
+        "name": "SDMA_AS_2020_SONAI5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.82317,
+          24.727879
+        ]
+      },
+      "properties": {
+        "date": "2020-06-08",
+        "name": "SDMA_AS_2020_SONAI4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.646805,
+          24.703638
+        ]
+      },
+      "properties": {
+        "date": "2020-06-02",
+        "name": "SDMA_AS_2020_Mohanpur Grant Slide 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.64739,
+          24.731167
+        ]
+      },
+      "properties": {
+        "date": "2020-06-02",
+        "name": "SDMA_AS_2020_Mohanpur Grant Slide 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.55505,
+          24.79489
+        ]
+      },
+      "properties": {
+        "date": "2020-06-02",
+        "name": "SDMA_AS_2020_Chandipur Grant Slide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.45372,
+          24.780027
+        ]
+      },
+      "properties": {
+        "date": "2020-06-02",
+        "name": "SDMA_AS_2020_Karimpur Slide 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.45564,
+          24.783806
+        ]
+      },
+      "properties": {
+        "date": "2020-06-02",
+        "name": "SDMA_AS_2020_Karimpur Slide 1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.07306,
+          24.920973
+        ]
+      },
+      "properties": {
+        "date": "2020-06-02",
+        "name": "SDMA_AS_2020_Kanakpur Slide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.2457,
+          24.8172
+        ]
+      },
+      "properties": {
+        "date": "2020-06-02",
+        "name": "Imphal-Jiribam Landslide-1c"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.284,
+          24.774
+        ]
+      },
+      "properties": {
+        "date": "2020-06-02",
+        "name": "Imphal-Jiribam Landslide-1a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.43889,
+          24.775278
+        ]
+      },
+      "properties": {
+        "date": "2020-05-27",
+        "name": "Imphal-Jiribam Landslide-2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.696,
+          24.792
+        ]
+      },
+      "properties": {
+        "date": "2020-08-28",
+        "name": "Kotlen"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.814735,
+          25.770794
+        ]
+      },
+      "properties": {
+        "date": "2020-09-19",
+        "name": "Patkai Bridge Kukidolong Stretch"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.805565,
+          25.793833
+        ]
+      },
+      "properties": {
+        "date": "2020-09-12",
+        "name": "Patkai Bridge Kukidolong Stretch"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.80233,
+          25.796417
+        ]
+      },
+      "properties": {
+        "date": "2020-09-07",
+        "name": "Patkai Bridge Kukidolong Stretch"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.424,
+          27.565
+        ]
+      },
+      "properties": {
+        "date": "2020-05-26",
+        "name": "Myong Kyong 12th Mile Slide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.509,
+          27.52
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "Uphill Panang Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.50451,
+          27.505192
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "Barfok-Lingdok GPU"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.528,
+          27.506
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "Mangan-Sangkhalang Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.535,
+          27.502
+        ]
+      },
+      "properties": {
+        "date": "2020-06-29",
+        "name": "Mangang-Chungtohong Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.48735,
+          27.456923
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "Hee Gyanthang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.61,
+          27.453
+        ]
+      },
+      "properties": {
+        "date": "2020-06-25",
+        "name": "North_Sikkim_cutoff_event_2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.62566,
+          27.39839
+        ]
+      },
+      "properties": {
+        "date": "2020-05-24",
+        "name": "Satala Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.62358,
+          27.398666
+        ]
+      },
+      "properties": {
+        "date": "2020-05-24",
+        "name": "Dhare Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.546,
+          27.411
+        ]
+      },
+      "properties": {
+        "date": "2020-06-25",
+        "name": "North_Sikkim_cutoff_event_1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.505,
+          27.384
+        ]
+      },
+      "properties": {
+        "date": "2020-06-25",
+        "name": "North_Sikkim_cutoff_event_3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.47566,
+          27.389505
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "Lum Village"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.429,
+          27.39
+        ]
+      },
+      "properties": {
+        "date": "2020-06-01",
+        "name": "Sokpay_landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.59,
+          27.286
+        ]
+      },
+      "properties": {
+        "date": "2020-09-08",
+        "name": "20 Mile Bardun"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.553,
+          27.261
+        ]
+      },
+      "properties": {
+        "date": "2020-09-08",
+        "name": "Gangtok_Rangpo_landslides"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.546,
+          27.256
+        ]
+      },
+      "properties": {
+        "date": "2020-09-08",
+        "name": "Gai Dhara Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.459,
+          27.251
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "Tessta V NHPC Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.421,
+          27.257
+        ]
+      },
+      "properties": {
+        "date": "2020-06-08",
+        "name": "Thakka Road mudslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.311,
+          27.163
+        ]
+      },
+      "properties": {
+        "date": "2020-08-06",
+        "name": "Jorengthang Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.2034,
+          27.2206
+        ]
+      },
+      "properties": {
+        "date": "2020-10-02",
+        "name": "Boom Tafel"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.219,
+          27.286
+        ]
+      },
+      "properties": {
+        "date": "2020-05-24",
+        "name": "Lingchom Landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.232,
+          27.357
+        ]
+      },
+      "properties": {
+        "date": "2020-06-28",
+        "name": "Landslide near Fambrong Falls"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          89.98556,
+          25.589167
+        ]
+      },
+      "properties": {
+        "date": "2020-09-17",
+        "name": "L325"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          89.97,
+          25.581388
+        ]
+      },
+      "properties": {
+        "date": "2020-09-17",
+        "name": "L328"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.005554,
+          25.577778
+        ]
+      },
+      "properties": {
+        "date": "2020-09-17",
+        "name": "L326"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          89.99917,
+          25.574167
+        ]
+      },
+      "properties": {
+        "date": "2020-09-17",
+        "name": "L324"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          89.992775,
+          25.567778
+        ]
+      },
+      "properties": {
+        "date": "2020-09-17",
+        "name": "L323"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          89.98194,
+          25.559723
+        ]
+      },
+      "properties": {
+        "date": "2020-09-17",
+        "name": "L327"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          89.937225,
+          25.5525
+        ]
+      },
+      "properties": {
+        "date": "2020-09-17",
+        "name": "L332"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          89.93222,
+          25.544167
+        ]
+      },
+      "properties": {
+        "date": "2020-09-17",
+        "name": "L329"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          89.943054,
+          25.501389
+        ]
+      },
+      "properties": {
+        "date": "2020-09-17",
+        "name": "L330"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          89.953,
+          25.471905
+        ]
+      },
+      "properties": {
+        "date": "2020-07-08",
+        "name": "L321"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          89.5919,
+          25.275
+        ]
+      },
+      "properties": {
+        "date": "2020-08-09",
+        "name": "L322"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.5069,
+          25.26278
+        ]
+      },
+      "properties": {
+        "date": "2020-07-13",
+        "name": "L335"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.81416,
+          25.551666
+        ]
+      },
+      "properties": {
+        "date": "2020-07-13",
+        "name": "L339"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.57521,
+          25.582556
+        ]
+      },
+      "properties": {
+        "date": "2020-09-06",
+        "name": "Khera Songsak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.57833,
+          25.592367
+        ]
+      },
+      "properties": {
+        "date": "2020-07-12",
+        "name": "Rongap Songgitcham"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.394,
+          25.726
+        ]
+      },
+      "properties": {
+        "date": "2020-07-24",
+        "name": "Tura Highway landslide"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.055,
+          25.676
+        ]
+      },
+      "properties": {
+        "date": "2020-07-14",
+        "name": "Mawshynrut C and D block"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.16778,
+          25.624443
+        ]
+      },
+      "properties": {
+        "date": "2020-09-24",
+        "name": "L338"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.178055,
+          25.6
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "L340"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.262,
+          25.528
+        ]
+      },
+      "properties": {
+        "date": "2020-07-11",
+        "name": "Nongstoin Tura By-pass"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.272,
+          25.523
+        ]
+      },
+      "properties": {
+        "date": "2020-07-14",
+        "name": "Nongstoin Block CandRD"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.54161,
+          92.0125
+        ]
+      },
+      "properties": {
+        "date": "2015-2016",
+        "name": "Debris slide along NH-44 (TS 83 C/2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.53961,
+          92.00156
+        ]
+      },
+      "properties": {
+        "date": "2015-2016",
+        "name": "Rock slide along NH-44 (TS 83 C/2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.56933,
+          92.20214
+        ]
+      },
+      "properties": {
+        "date": "2015-2016",
+        "name": "Earth slide along Nongbah Road (TS 83 C/2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.43011,
+          92.18217
+        ]
+      },
+      "properties": {
+        "date": "2015-2016",
+        "name": "Rock slide along NH-40 (TS 83 C/3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.49047,
+          92.06931
+        ]
+      },
+      "properties": {
+        "date": "2015-2016",
+        "name": "Debris slide on downslope of road (TS 83 C/3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.40019,
+          92.01573
+        ]
+      },
+      "properties": {
+        "date": "2015-2016",
+        "name": "Natural rock slide by toe erosion (TS 83 C/3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.65839,
+          93.11808
+        ]
+      },
+      "properties": {
+        "date": "May-2015",
+        "name": "Shallow translational debris slide along NH-54, ~2 km SE of Langlao Disa (LS-1)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.61092,
+          93.09178
+        ]
+      },
+      "properties": {
+        "date": "2015",
+        "name": "Shallow translational debris slide along NH-54, ~1.5 km W of Purana Dibolong (LS-4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.67153,
+          93.11522
+        ]
+      },
+      "properties": {
+        "date": "05-07-2015",
+        "name": "Slope cut failure (topple) along NH-54, ~1 km E of Langlao Disa (LS-5)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.64897,
+          93.12083
+        ]
+      },
+      "properties": {
+        "date": "2015",
+        "name": "Shallow translational debris slide along NH-54, ~3 km N of Hatikhali (LS-6)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.50669,
+          93.10536
+        ]
+      },
+      "properties": {
+        "date": "2015",
+        "name": "Shallow translational debris slide along NH-54, near Langting (LS-7)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.81756,
+          93.10886
+        ]
+      },
+      "properties": {
+        "date": "15-11-2015",
+        "name": "Rock fall along NH-54, ~2 km SW of Arlongapai (LS-8)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.72561,
+          93.13075
+        ]
+      },
+      "properties": {
+        "date": "15-08-2015",
+        "name": "Shallow translational debris slide at Manderdisa\u2013Daolapur 3 (LS-9)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.72486,
+          93.13108
+        ]
+      },
+      "properties": {
+        "date": "15-08-2015",
+        "name": "Shallow translational debris slide at Manderdisa\u2013Daolapur 3 (LS-10)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.97253,
+          91.85939
+        ]
+      },
+      "properties": {
+        "date": "2015-2016",
+        "name": "Umling Debris slide (reactivated)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.75978,
+          26.262201
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "SDMA North Guwahati \u2013 Dirgheswari 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.76268,
+          26.254368
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "SDMA North Guwahati \u2013 Dirgheswari 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.765,
+          26.196
+        ]
+      },
+      "properties": {
+        "date": "2020-06-28",
+        "name": "Kharguli, Guwahati"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.69352,
+          26.214209
+        ]
+      },
+      "properties": {
+        "date": "2020-06-26",
+        "name": "Gauripur, North Guwahati"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.689445,
+          26.210833
+        ]
+      },
+      "properties": {
+        "date": "2020-06-25",
+        "name": "Amingaon, Guwahati"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.756,
+          26.146
+        ]
+      },
+      "properties": {
+        "date": "2020-06-26",
+        "name": "Kahilipara, Guwahati"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.863,
+          26.102
+        ]
+      },
+      "properties": {
+        "date": "2020-07-12",
+        "name": "Jorabat \u2013 12th Mile"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.889,
+          25.746
+        ]
+      },
+      "properties": {
+        "date": "2020-10-24",
+        "name": "NH-06, Umsning"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.893,
+          25.65
+        ]
+      },
+      "properties": {
+        "date": "2020-09-24",
+        "name": "Ryndang Briew, Umiam"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.88272,
+          25.62
+        ]
+      },
+      "properties": {
+        "date": "2020-05-21",
+        "name": "Mawiong Umjapung"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.884,
+          25.581
+        ]
+      },
+      "properties": {
+        "date": "2020-07-12",
+        "name": "Police Reserve, Shillong"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.88,
+          25.561
+        ]
+      },
+      "properties": {
+        "date": "2020-09-25",
+        "name": "Dhobi Ghat, Laban"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.86076,
+          25.5573
+        ]
+      },
+      "properties": {
+        "date": "2020-09-26",
+        "name": "L267"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.84,
+          25.56
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "L264"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.8409,
+          25.563
+        ]
+      },
+      "properties": {
+        "date": "2020-09-24",
+        "name": "L266"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.845,
+          25.566
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "L263"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.817,
+          25.5097
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "L279"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.8062,
+          25.5035
+        ]
+      },
+      "properties": {
+        "date": "2020-05-21",
+        "name": "L284"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.805,
+          25.49052
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "L270"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.81946,
+          25.496
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "L268"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.81968,
+          25.49393
+        ]
+      },
+      "properties": {
+        "date": "2020-07-11",
+        "name": "L271"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.8215,
+          25.4895
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "L275"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.82072,
+          25.48429
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "L269"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.813225,
+          25.470934
+        ]
+      },
+      "properties": {
+        "date": "2020-05-24",
+        "name": "L234"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.82667,
+          25.460016
+        ]
+      },
+      "properties": {
+        "date": "2020-05-27",
+        "name": "L177"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.8357,
+          25.4617
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "L283"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.84,
+          25.448
+        ]
+      },
+      "properties": {
+        "date": "2020-07-11",
+        "name": "Laitlyngkot\u2013Pomlum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.74595,
+          25.4717
+        ]
+      },
+      "properties": {
+        "date": "2020-09-25",
+        "name": "L261"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.8468,
+          25.351
+        ]
+      },
+      "properties": {
+        "date": "2020-05-26",
+        "name": "L259"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.786,
+          25.4
+        ]
+      },
+      "properties": {
+        "date": "2020-05-29",
+        "name": "Mawkdok\u2013Khadarshnong Rd"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.766815,
+          25.393795
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "L218"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.75563,
+          25.380148
+        ]
+      },
+      "properties": {
+        "date": "2020-05-27",
+        "name": "L191"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.767845,
+          25.355244
+        ]
+      },
+      "properties": {
+        "date": "2020-06-24",
+        "name": "L195"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.76776,
+          25.34702
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "L222"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.76536,
+          25.347097
+        ]
+      },
+      "properties": {
+        "date": "2020-08-30",
+        "name": "L211"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.79079,
+          25.33172
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "L227"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.79825,
+          25.323166
+        ]
+      },
+      "properties": {
+        "date": "2020-06-24",
+        "name": "L205"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.803795,
+          25.326237
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "L231"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.93597,
+          25.3946
+        ]
+      },
+      "properties": {
+        "date": "2020-05-26",
+        "name": "L18"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.94392,
+          25.380934
+        ]
+      },
+      "properties": {
+        "date": "2020-05-27",
+        "name": "L32"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.981186,
+          25.37435
+        ]
+      },
+      "properties": {
+        "date": "2020-06-27",
+        "name": "L39"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.9854,
+          25.378433
+        ]
+      },
+      "properties": {
+        "date": "2020-07-10",
+        "name": "L43"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.98962,
+          25.385916
+        ]
+      },
+      "properties": {
+        "date": "2020-06-26",
+        "name": "L34"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.98842,
+          25.38875
+        ]
+      },
+      "properties": {
+        "date": "2020-05-26",
+        "name": "L2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.99098,
+          25.392033
+        ]
+      },
+      "properties": {
+        "date": "2020-05-26",
+        "name": "L10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.0077,
+          25.3451
+        ]
+      },
+      "properties": {
+        "date": "2020-05-23",
+        "name": "Mawlat"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.05989,
+          25.590668
+        ]
+      },
+      "properties": {
+        "date": "2020-09-27",
+        "name": "Thangshalai, Diengpasoh"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.18784,
+          25.453518
+        ]
+      },
+      "properties": {
+        "date": "2020-05-26",
+        "name": "Shillong\u2013Agartala Rd"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.201385,
+          25.447416
+        ]
+      },
+      "properties": {
+        "date": "2020-05-26",
+        "name": "Salaroh"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.19558,
+          25.441778
+        ]
+      },
+      "properties": {
+        "date": "2020-05-26",
+        "name": "Iawmusiang Landslide II"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.19447,
+          25.442333
+        ]
+      },
+      "properties": {
+        "date": "2020-05-26",
+        "name": "Iawmusiang Landslide I"
+      }
+    }
+  ]
+}

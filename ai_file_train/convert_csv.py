@@ -1,7 +1,7 @@
 import json
 import pandas as pd
 
-with open("fixed_ne_landslides.geojson") as f:
+with open("new_500_pts_landslides.geojson") as f:
     data = json.load(f)
 
 rows = []
@@ -16,6 +16,6 @@ for feat in data["features"]:
     })
 
 df = pd.DataFrame(rows)
-df.to_csv("fixed_ne_landslides.csv", index=False)
+df.to_csv("new_500_pts_landslides.csv", index=False)
 
 print("Saved CSV:", len(df))

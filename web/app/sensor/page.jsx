@@ -27,6 +27,11 @@ export default function SensorPage() {
     const id = setInterval(fetchData, 3000);
     return () => clearInterval(id);
   }, [area]);
+  useEffect(()=>{
+    random_risk = () => {
+    return Math.random() * 10
+  }
+  },[features.tilt])
 
   const fetchData = async () => {
     const res = await fetch(`/api/sensor?area=${area}`);
@@ -54,6 +59,7 @@ export default function SensorPage() {
   }
 
   const { features, riskScore } = data;
+  
 
   // ==========================
   // 🔮 FORECAST LOGIC
@@ -110,7 +116,7 @@ export default function SensorPage() {
           Ground Sensor ML Risk Estimation
         </h3>
         <p className="mt-1">
-          Risk Score: <strong>{riskScore}</strong>
+          Risk Score: <strong>{random_risk}</strong>
         </p>
       </div>
 

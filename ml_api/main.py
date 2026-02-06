@@ -138,11 +138,12 @@ sat_scaler = joblib.load(
 )
 
 class SatelliteInput(BaseModel):
-    features: list  # [R, V, S, E, P, H, rain_slope]
+    features: list  # [R, V, S, E, P]
 @app.post("/predict/satellite")
 def predict_satellite(data: SatelliteInput):
 
-    R, V, S, E, P, H, RS = data.features
+    R, V, S, E, P = data.features
+
 
     # ---- derive training features ----
 
@@ -160,6 +161,40 @@ def predict_satellite(data: SatelliteInput):
     rain_intensity_ratio = rain_1d / (rain_30d + 1e-6)
     bare_soil_index = 1 - V
     saturation_index = rain_30d * soil_moisture
+
+    # ================= DASHBOARD INDICATORS =================
+
+    # 1. Rainfall Stress
+    rainfall_stress = (
+        0.5 * rain_1d +
+        0.3 * rain_7d +
+        0.2 * rain_30d
+    )
+
+    # 2. Slope Factor
+    slope_factor = (
+        0.6 * slope +
+        0.4 * rain_slope_interaction
+    )
+
+    # 3. Soil Saturation
+    soil_saturation = (
+        0.5 * soil_moisture +
+        0.5 * saturation_index
+    )
+
+    # 4. Vegetation Protection
+    vegetation_protection = (
+        0.7 * V -
+        0.3 * bare_soil_index
+    )
+
+    # 5. Terrain Context
+    terrain_context = elevation
+
+    # 6. Human Exposure
+    human_exposure = population
+
 
     feature_vector = [[
         elevation,
@@ -184,6 +219,16 @@ def predict_satellite(data: SatelliteInput):
 
     return {
         "riskScore": float(prob),
-        "riskPercent": int(prob * 100)
+        "riskPercent": int(prob * 100),
+
+        "indicators": {
+            "rainfallStress": round(float(rainfall_stress), 2),
+            "slopeFactor": round(float(slope_factor), 2),
+            "soilSaturation": round(float(soil_saturation), 3),
+            "vegetationProtection": round(float(vegetation_protection), 3),
+            "terrainContext": round(float(terrain_context), 1),
+            "humanExposure": int(human_exposure)
+        }
     }
+
 

@@ -5,7 +5,6 @@ const satelliteData = {
     S: 0.80,
     E: 0.90,
     P: 0.10,
-    H: 0.90,
   },
   ukhrul: {
     R: 0.70,
@@ -13,7 +12,6 @@ const satelliteData = {
     S: 0.90,
     E: 0.90,
     P: 0.20,
-    H: 0.85,
   },
   tamenglong: {
     R: 0.85,
@@ -21,7 +19,6 @@ const satelliteData = {
     S: 0.80,
     E: 0.60,
     P: 0.50,
-    H: 0.70,
   },
   default: {
     R: 0.60,
@@ -29,7 +26,6 @@ const satelliteData = {
     S: 0.60,
     E: 0.70,
     P: 0.25,
-    H: 0.90,
   },
 };
 
@@ -46,9 +42,8 @@ export async function GET(request) {
     f.S,
     f.E,
     f.P,
-    f.H,
-    f.R * f.S, // Rain_on_Slope
   ];
+
 
   // 🔥 CALL FASTAPI (REAL MODEL)
   const response = await fetch("http://127.0.0.1:8000/predict/satellite", {

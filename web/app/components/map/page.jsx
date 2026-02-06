@@ -85,7 +85,7 @@ export default function RiskMap() {
               ]}
               pathOptions={{
                 color: "#111",
-                fillColor: "#dc2626",
+                fillColor: "#2563eb",
                 fillOpacity: 0.6,
               }}
             >
@@ -120,7 +120,7 @@ export default function RiskMap() {
                 [spot.coords[0] + 0.015, spot.coords[1] + 0.015],
               ]}
               pathOptions={{
-                color: "#f59e0b",
+                color: "#dc2626",
                 fillOpacity: 0.7,
               }}
             >

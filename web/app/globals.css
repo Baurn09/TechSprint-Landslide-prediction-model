@@ -30,3 +30,21 @@ body {
 .leaflet-top {
   top: 4rem;
 }
+
+/* Leaflet scale styling */
+.leaflet-control-scale {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.leaflet-control-scale-line {
+  background: rgba(255,255,255,0.95);
+  border: 9px solid #111;
+  padding: 8px 12px;
+  border-radius: 9px;
+}
+
+/* Black & white ONLY for terrain basemap */
+.bw-tiles {
+  filter: grayscale(100%) contrast(115%) brightness(95%);
+}

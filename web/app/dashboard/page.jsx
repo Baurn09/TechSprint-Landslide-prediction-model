@@ -28,7 +28,7 @@ export default function Dashboard() {
   const { features, riskScore, decision } = data;
 
   return (
-    <main className="p-8 w-full min-h-screen text-black bg-white">
+    <main className="p-8 w-full min-h-screen text-black bg-[#F2EFEA]">
       <h1 className="text-2xl font-bold">Live Dashboard</h1>
 
       <p className="text-sm text-gray-500 mt-1">

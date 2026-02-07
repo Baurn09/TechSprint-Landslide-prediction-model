@@ -123,7 +123,7 @@ export default function RiskMap() {
                   w-12 h-12
                   flex flex-col items-center justify-center"
       >
-        <span className="text-xs font-bold text-black leading-none">N</span>
+        <span className="text-xs font-bold text-red-500 leading-none">N</span>
         <svg
           width="18"
           height="18"
@@ -132,7 +132,7 @@ export default function RiskMap() {
         >
           <path
             d="M12 2 L17 22 L12 17 L7 22 Z"
-            fill="black"
+            fill="red"
           />
         </svg>
       </div>

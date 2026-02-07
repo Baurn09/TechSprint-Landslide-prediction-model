@@ -81,12 +81,7 @@ export default function Dashboard() {
           direction={directions.P}
         />
 
-        <Metric
-          label="Historical Susceptibility"
-          value={features.H}
-          trend={[0.6, 0.65, features.H]}   // sparkline data
-          direction={directions.H}
-        />
+        
       </div>
 
       {/* Risk Assessment */}

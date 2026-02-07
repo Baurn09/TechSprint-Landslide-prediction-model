@@ -9296,6 +9296,300 @@
         "date": "2020-05-26",
         "name": "Iawmusiang Landslide I"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.54161,
+          92.0125
+        ]
+      },
+      "properties": {
+        "date": "2015-2016",
+        "name": "Debris slide along NH-44 (TS 83 C/2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.53961,
+          92.00156
+        ]
+      },
+      "properties": {
+        "date": "2015-2016",
+        "name": "Rock slide along NH-44 (TS 83 C/2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.56933,
+          92.20214
+        ]
+      },
+      "properties": {
+        "date": "2015-2016",
+        "name": "Earth slide along Nongbah Road (TS 83 C/2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.43011,
+          92.18217
+        ]
+      },
+      "properties": {
+        "date": "2015-2016",
+        "name": "Rock slide along NH-40 (TS 83 C/3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.49047,
+          92.06931
+        ]
+      },
+      "properties": {
+        "date": "2015-2016",
+        "name": "Debris slide on downslope of road (TS 83 C/3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.40019,
+          92.01573
+        ]
+      },
+      "properties": {
+        "date": "2015-2016",
+        "name": "Natural rock slide by toe erosion (TS 83 C/3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.65839,
+          93.11808
+        ]
+      },
+      "properties": {
+        "date": "May-2015",
+        "name": "Shallow translational debris slide along NH-54, ~2 km SE of Langlao Disa (LS-1)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.61092,
+          93.09178
+        ]
+      },
+      "properties": {
+        "date": "2015",
+        "name": "Shallow translational debris slide along NH-54, ~1.5 km W of Purana Dibolong (LS-4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.67153,
+          93.11522
+        ]
+      },
+      "properties": {
+        "date": "05-07-2015",
+        "name": "Slope cut failure (topple) along NH-54, ~1 km E of Langlao Disa (LS-5)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.64897,
+          93.12083
+        ]
+      },
+      "properties": {
+        "date": "2015",
+        "name": "Shallow translational debris slide along NH-54, ~3 km N of Hatikhali (LS-6)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.50669,
+          93.10536
+        ]
+      },
+      "properties": {
+        "date": "2015",
+        "name": "Shallow translational debris slide along NH-54, near Langting (LS-7)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.81756,
+          93.10886
+        ]
+      },
+      "properties": {
+        "date": "15-11-2015",
+        "name": "Rock fall along NH-54, ~2 km SW of Arlongapai (LS-8)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.72561,
+          93.13075
+        ]
+      },
+      "properties": {
+        "date": "15-08-2015",
+        "name": "Shallow translational debris slide at Manderdisa\u2013Daolapur 3 (LS-9)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.72486,
+          93.13108
+        ]
+      },
+      "properties": {
+        "date": "15-08-2015",
+        "name": "Shallow translational debris slide at Manderdisa\u2013Daolapur 3 (LS-10)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.97253,
+          91.85939
+        ]
+      },
+      "properties": {
+        "date": "2015-2016",
+        "name": "Umling Debris slide (reactivated)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.49,
+          93.05
+        ]
+      },
+      "properties": {
+        "date": "2015-2016",
+        "name": "Multiple landslides recorded during field season 2015\u201316 (Dima Hasao / NH-54 region \u2013 approximate)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.0,
+          93.2
+        ]
+      },
+      "properties": {
+        "date": "2016-2017",
+        "name": "Landslides identified during FS 2016\u201317 (Karbi Anglong region \u2013 approximate)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.3,
+          91.6
+        ]
+      },
+      "properties": {
+        "date": "2017-2018",
+        "name": "Landslide inventory prepared using field survey and Google Earth imagery (Guwahati hill region \u2013 approximate)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.1,
+          91.7
+        ]
+      },
+      "properties": {
+        "date": "2018-2019",
+        "name": "Landslides mapped as inventory polygons during FS 2018\u201319 (Central Assam hill tracts \u2013 approximate)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.45,
+          92.75
+        ]
+      },
+      "properties": {
+        "date": "2019-2020",
+        "name": "Landslide incidences documented during FS 2019\u201320 (Barail Range / Dima Hasao sector \u2013 approximate)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.6,
+          92.9
+        ]
+      },
+      "properties": {
+        "date": "2020-2021",
+        "name": "Landslide incidences observed during FS 2020\u201321 (Dima Hasao meso-scale study area \u2013 approximate)"
+      }
     }
   ]
 }

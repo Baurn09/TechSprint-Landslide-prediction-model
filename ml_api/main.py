@@ -232,3 +232,77 @@ def predict_satellite(data: SatelliteInput):
     }
 
 
+# ==================================================
+# GRID BATCH MODEL INFERENCE (NEW)
+# ==================================================
+
+class GridRow(BaseModel):
+    grid_uid: str
+    ndvi: float
+    population: float
+    rain_1d: float
+    rain_7d: float
+    rain_30d: float
+    slope: float
+    soil_moisture: float
+    soil_type: float
+    elevation: float
+
+
+class GridBatchInput(BaseModel):
+    rows: list[GridRow]
+
+
+@app.post("/predict/grid")
+def predict_grid(data: GridBatchInput):
+
+    results = []
+
+    for row in data.rows:
+
+        # -------- base inputs from GEE --------
+
+        elevation = row.elevation
+        V = row.ndvi
+        population = row.population
+        rain_1d = row.rain_1d
+        rain_7d = row.rain_7d
+        rain_30d = row.rain_30d
+        slope = row.slope
+        soil_moisture = row.soil_moisture
+        soil_type = row.soil_type
+
+        # -------- derived features (MATCH TRAINING) --------
+
+        rain_slope_interaction = rain_7d * slope
+        rain_intensity_ratio = rain_1d / (rain_30d + 1e-6)
+        bare_soil_index = 1.0 - V
+        saturation_index = rain_30d * soil_moisture
+
+        feature_vector = [[
+            elevation,
+            V,
+            population,
+            rain_1d,
+            rain_7d,
+            rain_30d,
+            slope,
+            soil_moisture,
+            soil_type,
+            rain_slope_interaction,
+            rain_intensity_ratio,
+            bare_soil_index,
+            saturation_index
+        ]]
+
+        X = np.array(feature_vector)
+        X_scaled = sat_scaler.transform(X)
+
+        prob = sat_model.predict_proba(X_scaled)[0][1]
+
+        results.append({
+            "grid_uid": row.grid_uid,
+            "risk": float(prob)
+        })
+
+    return {"results": results}

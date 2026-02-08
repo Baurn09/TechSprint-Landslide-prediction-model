@@ -7,7 +7,8 @@ import {
   Rectangle,
   Popup,
   ScaleControl,
-  GeoJSON
+  GeoJSON,
+  ZoomControl
 } from "react-leaflet";
 
 import { useState, useEffect } from "react";
@@ -121,11 +122,15 @@ export default function RiskMap() {
       <div className="absolute bottom-6 right-6 z-[1000] bg-[#F2EFEA] rounded-xl shadow-lg p-3 text-sm space-y-2">
         <div className="flex items-center gap-2">
           <span className="w-3 h-3 bg-[#2563eb] rounded-sm"></span>
-          <span className="text-black font-bold text-md">Hill Grid Cells</span>
+          <span className="text-black font-bold text-md">Ground sensors deployed</span>
         </div>
         <div className="flex items-center gap-2">
           <span className="w-3 h-3 bg-[#dc2626] rounded-sm"></span>
-          <span className="text-black font-bold text-md">Satellite monitoring only</span>
+          <span className="text-black font-bold text-md">High Risk: Satellite monitoring only</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="w-3 h-3 bg-orange-300 rounded-sm"></span>
+          <span className="text-black font-bold text-md">Moderate Risk: Satellite monitoring only</span>
         </div>
       </div>
 
@@ -158,6 +163,27 @@ export default function RiskMap() {
         </label>
       </div>
 
+      {/*North Arrow */}
+      <div
+        className="absolute top-24 right-6 z-[1000]
+                  bg-[#F2EFEA] backdrop-blur-md
+                  rounded-full shadow-lg
+                  w-12 h-12
+                  flex flex-col items-center justify-center"
+      >
+        <span className="text-xs font-bold text-red-500 leading-none">N</span>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M12 2 L17 22 L12 17 L7 22 Z"
+            fill="red"
+          />
+        </svg>
+      </div>
 
       {/* ================= MAP ================= */}
 
@@ -167,6 +193,7 @@ export default function RiskMap() {
         minZoom={7}
         maxZoom={20}
         maxBounds={MANIPUR_BOUNDS}
+        zoomControl={false}
         className="h-full w-full"
       >
 
@@ -178,6 +205,7 @@ export default function RiskMap() {
         />
 
           <ScaleControl position="topright" imperial={false}  />
+          <ZoomControl position="topright" />
 
           {/* ===== ML RISK GRID LAYER ===== */}
 

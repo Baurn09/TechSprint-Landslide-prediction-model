@@ -86,7 +86,7 @@ export default function RiskMap() {
   }, []);
 
   useEffect(() => {
-    fetch("/data/grid_risk.geojson")
+    fetch("/data/grid_risk_collab.geojson")
       .then(r => r.json())
       .then(setRiskGrid)
       .catch(e => console.error("Risk grid load error", e));
@@ -236,7 +236,7 @@ export default function RiskMap() {
           <GeoJSON
             data={hillGrid}
             style={{
-              color: basemap == "street" ? "black" : "yellow",
+              color: basemap == "street" ? "black" : "#3BC1A8",
               weight: 0.5,
               fillOpacity: 0.04  
             }}
@@ -247,7 +247,7 @@ export default function RiskMap() {
 
         {/* ================= HOTSPOTS ================= */}
 
-        {hotspots.map((spot) => {
+        {/* {hotspots.map((spot) => {
           const deployed = deployedSensors[spot.id];
 
           return (
@@ -277,7 +277,7 @@ export default function RiskMap() {
               </Popup>
             </Rectangle>
           );
-        })}
+        })} */}
 
       </MapContainer>
     </main>

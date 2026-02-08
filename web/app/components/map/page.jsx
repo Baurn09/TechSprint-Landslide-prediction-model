@@ -85,15 +85,15 @@ export default function RiskMap() {
   }, []);
 
   useEffect(() => {
-    fetch("/data/grid_risk.geojson")
+    fetch("/data/grid_risk_collab.geojson")
       .then(r => r.json())
       .then(setRiskGrid)
       .catch(e => console.error("Risk grid load error", e));
   }, []);
 
   function getRiskColor(r) {
-    if (r > 0.95) return "#dc2626";     // red
-    if (r > 0.86) return "orange";     // orange
+    if (r > 0.7) return "#dc2626";     // red
+    if (r > 0.6) return "orange";     // orange
     // if (r > 0.2) return "#22c55e";     // yellow
     return "transparent";                  // green
   }

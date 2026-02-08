@@ -48,3 +48,36 @@ body {
 .bw-tiles {
   filter: grayscale(100%) contrast(115%) brightness(95%);
 }
+
+
+
+/* Reset the Leaflet top-right container */
+.leaflet-top.leaflet-right {
+  top: 0 !important;
+  bottom: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  pointer-events: none;
+}
+
+/* Keep scale control at top-right */
+.leaflet-control-scale {
+  margin-top: 10px;
+  pointer-events: auto;
+}
+
+/* Move ONLY zoom control to middle-right */
+.leaflet-control-zoom {
+  position: absolute !important;
+  top: 50% !important;
+  right: 14px !important;
+  transform: translateY(-50%) !important;
+  pointer-events: auto;
+}
+
+.leaflet-control-zoom a {
+  background: #F2EFEA;
+  color: #111;
+  border-radius: 8px;
+}

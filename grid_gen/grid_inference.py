@@ -51,6 +51,19 @@ print("Rows:", len(df))
 df = df.replace([float("inf"), -float("inf")], 0)
 df = df.fillna(0)
 
+# =========================================
+# DERIVED FEATURES (MUST MATCH TRAINING)
+# =========================================
+
+df["rain_slope_interaction"] = df["rain_7d"] * df["slope"]
+
+df["rain_intensity_ratio"] = df["rain_1d"] / (df["rain_30d"] + 1e-6)
+
+df["bare_soil_index"] = 1.0 - df["ndvi"]
+
+df["saturation_index"] = df["rain_30d"] * df["soil_moisture"]
+
+
 
 # =========================================
 # REQUIRED ML FEATURES
@@ -60,14 +73,19 @@ REQUIRED = [
     "grid_uid",
     "elevation",
     "ndvi",
+    "bare_soil_index",
     "population",
     "rain_1d",
     "rain_7d",
     "rain_30d",
+    "rain_intensity_ratio",
     "slope",
+    "rain_slope_interaction",
     "soil_moisture",
+    "saturation_index",
     "soil_type"
 ]
+
 
 missing = [c for c in REQUIRED if c not in df.columns]
 

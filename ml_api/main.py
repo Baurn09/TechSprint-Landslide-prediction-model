@@ -282,18 +282,19 @@ def predict_grid(data: GridBatchInput):
         feature_vector = [[
             elevation,
             V,
+            bare_soil_index,
             population,
             rain_1d,
             rain_7d,
             rain_30d,
-            slope,
-            soil_moisture,
-            soil_type,
-            rain_slope_interaction,
             rain_intensity_ratio,
-            bare_soil_index,
-            saturation_index
+            slope,
+            rain_slope_interaction,
+            soil_moisture,
+            saturation_index,
+            soil_type
         ]]
+
 
         print("Sample feature vector:", feature_vector)
         X = np.array(feature_vector)

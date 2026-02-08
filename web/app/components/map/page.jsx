@@ -93,8 +93,8 @@ export default function RiskMap() {
   }, []);
 
   function getRiskColor(r) {
-    if (r > 0.95) return "#dc2626";     // red
-    if (r > 0.86) return "orange";     // orange
+    if (r > 0.7) return "#dc2626";     // red
+    if (r > 0.65) return "orange";     // orange
     // if (r > 0.2) return "#22c55e";     // yellow
     return "transparent";                  // green
   }

@@ -94,7 +94,7 @@ export default function RiskMap() {
 
   function getRiskColor(r) {
     if (r > 0.7) return "#dc2626";     // red
-    if (r > 0.6) return "orange";     // orange
+    if (r > 0.65) return "orange";     // orange
     // if (r > 0.2) return "#22c55e";     // yellow
     return "transparent";                  // green
   }
@@ -236,7 +236,7 @@ export default function RiskMap() {
           <GeoJSON
             data={hillGrid}
             style={{
-              color: basemap == "street" ? "black" : "yellow",
+              color: basemap == "street" ? "black" : "#3BC1A8",
               weight: 0.5,
               fillOpacity: 0.04  
             }}
@@ -247,7 +247,7 @@ export default function RiskMap() {
 
         {/* ================= HOTSPOTS ================= */}
 
-        {hotspots.map((spot) => {
+        {/* {hotspots.map((spot) => {
           const deployed = deployedSensors[spot.id];
 
           return (
@@ -277,7 +277,7 @@ export default function RiskMap() {
               </Popup>
             </Rectangle>
           );
-        })}
+        })} */}
 
       </MapContainer>
     </main>

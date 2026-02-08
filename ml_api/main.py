@@ -264,7 +264,7 @@ def predict_grid(data: GridBatchInput):
 
         elevation = row.elevation
         V = row.ndvi
-        population = row.population
+        population = row.population * 100
         rain_1d = row.rain_1d
         rain_7d = row.rain_7d
         rain_30d = row.rain_30d
@@ -295,10 +295,15 @@ def predict_grid(data: GridBatchInput):
             saturation_index
         ]]
 
+        print("Sample feature vector:", feature_vector)
         X = np.array(feature_vector)
+
         X_scaled = sat_scaler.transform(X)
 
         prob = sat_model.predict_proba(X_scaled)[0][1]
+        print("prob:", prob)
+        if slope < 5 or elevation < 600:
+            prob = 0
 
         results.append({
             "grid_uid": row.grid_uid,

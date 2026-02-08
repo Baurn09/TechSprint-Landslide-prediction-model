@@ -1,6 +1,6 @@
 import pandas as pd
+import geopandas as gpd
 import requests
-import json
 import os
 import sys
 
@@ -10,7 +10,8 @@ import sys
 
 BASE_DIR = os.path.dirname(__file__)
 
-GRID_CSV = os.path.join(BASE_DIR, "grid_features_ml.csv")
+FEATURE_CSV = os.path.join(BASE_DIR, "grid_features_ml.csv")
+GRID_GEOJSON = os.path.join(BASE_DIR, "../web/public/data/grid_features_geojson.geojson")
 
 OUTPUT_GEOJSON = os.path.join(
     BASE_DIR,
@@ -25,17 +26,28 @@ API_URL = "http://localhost:8000/predict/grid"
 
 
 # =========================================
-# CHECK FILE
+# CHECK FILES
 # =========================================
 
-if not os.path.exists(GRID_CSV):
-    print("❌ grid csv not found")
+if not os.path.exists(FEATURE_CSV):
+    print("❌ Feature CSV not found")
     sys.exit(1)
 
-print("📂 Loading grid CSV...")
-df = pd.read_csv(GRID_CSV)
-print("✅ Rows:", len(df))
+if not os.path.exists(GRID_GEOJSON):
+    print("❌ Grid GeoJSON not found")
+    sys.exit(1)
 
+
+# =========================================
+# LOAD FEATURE CSV
+# =========================================
+
+print("📂 Loading feature CSV...")
+df = pd.read_csv(FEATURE_CSV)
+
+print("Rows:", len(df))
+
+# Clean NaN for JSON safety
 df = df.replace([float("inf"), -float("inf")], 0)
 df = df.fillna(0)
 
@@ -80,76 +92,44 @@ if resp.status_code != 200:
 
 risk_df = pd.DataFrame(resp.json()["results"])
 
+data = resp.json()
+print("API keys:", data.keys())
+print("First row:", data["results"][0])
 print("✅ Predictions received")
 
 
 # =========================================
-# MERGE RISK
+# LOAD REAL GRID POLYGONS
 # =========================================
 
-df = df.merge(risk_df, on="grid_uid", how="left")
-df["risk"] = df["risk"].fillna(0)
+print("🗺️ Loading grid polygons...")
+gdf = gpd.read_file(GRID_GEOJSON)
 
+print("Polygons:", len(gdf))
 
-# =========================================
-# CHECK LAT/LON EXIST
-# =========================================
+print("CSV grid_uids:", len(set(risk_df["grid_uid"])))
+print("GeoJSON grid_uids:", len(set(gdf["grid_uid"])))
 
-if "lat" not in df.columns or "lon" not in df.columns:
-    print("❌ lat/lon missing — re-export grid with centroid coords from GEE")
-    sys.exit(1)
-
+common = set(risk_df["grid_uid"]) & set(gdf["grid_uid"])
+print("Common IDs:", len(common))
 
 # =========================================
-# BUILD GEOJSON POLYGONS (3km visual cells)
+# MERGE RISK INTO POLYGONS
 # =========================================
 
-print("🗺️ Building GeoJSON polygons...")
-
-features = []
-
-cell_half_deg = 0.015   # ~3km visual size
-
-for _, row in df.iterrows():
-
-    lat = row["lat"]
-    lon = row["lon"]
-
-    poly = [
-        [lon-cell_half_deg, lat-cell_half_deg],
-        [lon+cell_half_deg, lat-cell_half_deg],
-        [lon+cell_half_deg, lat+cell_half_deg],
-        [lon-cell_half_deg, lat+cell_half_deg],
-        [lon-cell_half_deg, lat-cell_half_deg]
-    ]
-
-    features.append({
-        "type": "Feature",
-        "properties": {
-            "grid_uid": row["grid_uid"],
-            "risk": float(row["risk"])
-        },
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [poly]
-        }
-    })
-
-
-geojson = {
-    "type": "FeatureCollection",
-    "features": features
-}
+gdf = gdf.merge(risk_df, on="grid_uid", how="left")
+gdf["risk"] = gdf["risk"].fillna(0)
 
 
 # =========================================
-# SAVE
+# SAVE FINAL RISK MAP
 # =========================================
 
 os.makedirs(os.path.dirname(OUTPUT_GEOJSON), exist_ok=True)
 
-with open(OUTPUT_GEOJSON, "w") as f:
-    json.dump(geojson, f)
+gdf.to_file(OUTPUT_GEOJSON, driver="GeoJSON")
 
-print("✅ Saved:", OUTPUT_GEOJSON)
+print("✅ Saved risk map:")
+print(OUTPUT_GEOJSON)
+
 print("🚀 Grid inference complete")

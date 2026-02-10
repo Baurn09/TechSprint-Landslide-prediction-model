@@ -221,9 +221,27 @@ export default function RiskMap() {
             })}
             onEachFeature={(feature, layer) => {
               const r = feature.properties.risk;
-              layer.bindPopup(
-                `Risk: ${(r * 100).toFixed(1)}%`
-              );
+              const gridId = feature.properties.grid_uid;
+
+              layer.bindPopup(`
+                <div style="min-width:160px">
+                  <b>Grid:</b> ${gridId}<br/>
+                  <b>Risk:</b> ${(r * 100).toFixed(1)}%<br/><br/>
+                  <button 
+                    onclick="window.location.href='/dashboard?grid_uid=${encodeURIComponent(gridId)}'"
+
+                    style="
+                      background:#2563eb;
+                      color:white;
+                      padding:6px 10px;
+                      border-radius:6px;
+                      border:none;
+                      cursor:pointer;
+                    ">
+                    Open Satellite Dashboard
+                  </button>
+                </div>
+              `);
             }}
           />
         )}

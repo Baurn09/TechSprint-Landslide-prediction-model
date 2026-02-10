@@ -9,31 +9,58 @@ import Metric from "../components/metric/page";
 export default function Dashboard() {
   const [data, setData] = useState(null);
   const searchParams = useSearchParams();
-  const area = searchParams.get("area") || "default";
+  const rawId = searchParams.get("grid_uid");
+  const grid_uid = rawId?.trim();
+  const area = searchParams.get("area");
   const router = useRouter();
 
-  const hasSensors = deployedSensors[area] === true;
+  const hasSensors = area ? deployedSensors[area] === true : false;
+
 
   useEffect(() => {
-    fetch(`/api/satellite?area=${area}`)
-      .then((res) => res.json())
+    const url = grid_uid
+      ? `/api/satellite?grid_uid=${encodeURIComponent(grid_uid)}`
+      : `/api/satellite?area=${area}`;
+
+    fetch(url)
+      .then(async res => {
+        if (!res.ok) {
+          const err = await res.json();
+          throw new Error(err.error || "API error");
+        }
+        return res.json();
+      })
       .then(setData)
-      .catch(console.error);
-  }, [area]);
+      .catch(e => {
+        console.error(e);
+        setData(null);
+      });
 
-  if (!data) {
-    return <p className="p-8">Loading satellite assessment...</p>;
-  }
+  }, [area, grid_uid]);
 
-  const { features, riskScore, decision } = data;
+
+
+ if (!data) {
+  return (
+    <p className="p-8 text-red-600">
+      Satellite data unavailable for this grid.
+    </p>
+  );
+}
+
+
+  const { features, rawFeatures, riskScore, decision } = data;
+
 
   const directions = {
-    S: features.S > 0.7 ? "up" : "stable",
-    R: features.R > 0.6 ? "up" : "down",
-    V: features.V < 0.4 ? "down" : "stable",
-    P: "stable",
-    H: features.H > 0.5 ? "up" : "stable",
-  };
+  S: (features?.S ?? 0) > 0.7 ? "up" : "stable",
+  R: (features?.R ?? 0) > 0.6 ? "up" : "down",
+  V: (features?.V ?? 0) < 0.4 ? "down" : "stable",
+  P: "stable",
+};
+
+console.log("Dashboard data:", data);
+
 
 
   return (
@@ -45,7 +72,10 @@ export default function Dashboard() {
       </p>
 
       <p className="text-sm text-gray-600 mt-1">
-        Monitoring Area: <strong>{area.toUpperCase()}</strong>
+        Monitoring Target:  
+        <strong>
+          {grid_uid ? ` GRID ${grid_uid}` : (area || "UNKNOWN").toUpperCase()}
+        </strong>
       </p>
 
       {/* Satellite Metrics */}
@@ -83,6 +113,34 @@ export default function Dashboard() {
 
         
       </div>
+
+      {rawFeatures && (
+        <div className="mt-6 p-4 rounded bg-white shadow">
+          <h3 className="font-semibold mb-3">
+            Grid Environmental Features
+          </h3>
+
+          <div className="grid grid-cols-2 gap-3 text-sm">
+
+            <div>Elevation: <b>{rawFeatures.elevation?.toFixed(1)} m</b></div>
+            <div>Slope: <b>{rawFeatures.slope?.toFixed(2)} °</b></div>
+
+            <div>NDVI: <b>{rawFeatures.ndvi?.toFixed(3)}</b></div>
+
+            <div>Rain 1d: <b>{rawFeatures.rain_1d?.toFixed(1)} mm</b></div>
+            <div>Rain 7d: <b>{rawFeatures.rain_7d?.toFixed(1)} mm</b></div>
+            <div>Rain 30d: <b>{rawFeatures.rain_30d?.toFixed(1)} mm</b></div>
+
+            <div>Soil Moisture: <b>{rawFeatures.soil_moisture?.toFixed(3)}</b></div>
+            <div>Soil Type: <b>{rawFeatures.soil_type}</b></div>
+
+            <div>Population: <b>{rawFeatures.population?.toFixed(0)}</b></div>
+
+          </div>
+        </div>
+      )}
+
+
 
       {/* Risk Assessment */}
       <div className="mt-6 p-4 rounded bg-gray-100">

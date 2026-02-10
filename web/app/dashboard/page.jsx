@@ -49,7 +49,8 @@ export default function Dashboard() {
 }
 
 
-  const { features, rawFeatures, riskScore, decision } = data;
+  const { features, rawFeatures, riskScore, decision, drivers, contributions } = data;
+
 
 
   const directions = {
@@ -139,6 +140,44 @@ console.log("Dashboard data:", data);
           </div>
         </div>
       )}
+
+      {/* ================= EXPLAINABILITY ================= */}
+
+      {drivers && (
+        <div className="mt-6 p-4 rounded bg-white shadow">
+          <h3 className="font-semibold mb-2">
+            Why this grid is risky
+          </h3>
+
+          <ul className="text-sm space-y-2">
+
+            {drivers.includes("rainfall") && (
+              <li>🌧️ High recent rainfall increased ground saturation</li>
+            )}
+
+            {drivers.includes("slope") && (
+              <li>⛰️ Steep terrain raises landslide probability</li>
+            )}
+
+            {drivers.includes("vegetation") && (
+              <li>🌱 Low vegetation cover reduces soil binding</li>
+            )}
+
+            {drivers.includes("soil") && (
+              <li>💧 High soil moisture weakens slope stability</li>
+            )}
+
+          </ul>
+
+          <div className="mt-3 text-xs text-gray-500">
+            Model contribution weights:
+            {Object.entries(contributions).map(([k,v]) => (
+              <div key={k}>{k}: {(v*100).toFixed(1)}%</div>
+            ))}
+          </div>
+        </div>
+      )}  
+
 
 
 

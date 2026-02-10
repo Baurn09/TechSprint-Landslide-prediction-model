@@ -76,6 +76,21 @@ export async function GET(request) {
       if (riskScore >= 0.7) decision = "DEPLOY_SENSORS";
       else if (riskScore >= 0.4) decision = "MONITOR";
 
+      // ================= EXPLAINABILITY =================
+
+      const contributions = {
+        rainfall: features.R * 0.30,
+        slope: features.S * 0.30,
+        vegetation: (1 - features.V) * 0.20,
+        soil: features.P * 0.20
+      };
+
+      const sorted = Object.entries(contributions)
+        .sort((a, b) => b[1] - a[1]);
+
+      const topDrivers = sorted.slice(0, 2).map(x => x[0]);
+
+
       return Response.json({
         target: grid_uid,
         mode: "grid",
@@ -84,6 +99,8 @@ export async function GET(request) {
         riskScore,
         riskPercent: Math.round(riskScore * 100),
         decision,
+        drivers: topDrivers,        // ⭐ NEW
+        contributions,              // ⭐ NEW
         model: "Grid ML Inference"
       });
     }

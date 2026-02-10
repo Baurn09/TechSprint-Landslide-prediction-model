@@ -9,9 +9,9 @@
 MPU6050 accelgyro;
 
 // ---------------- PIN DEFINITIONS ----------------
-const int SOIL_PIN = A0;   // Soil sensor analog pin
+const int SOIL_PIN = A0;
 
-// LoRa pins (Arduino Uno / Nano example)
+// LoRa pins (Arduino Uno / Nano)
 #define LORA_SS   10
 #define LORA_RST  9
 #define LORA_DIO0 2
@@ -24,29 +24,22 @@ int16_t prev_ax = 0, prev_ay = 0, prev_az = 0;
 const float ACCEL_SCALE = 16384.0;
 
 // ---------------- SOIL CALIBRATION ----------------
-const int AirValue   = 600;   // dry
-const int WaterValue = 250;   // wet
+const int AirValue   = 600;
+const int WaterValue = 250;
 
 void setup() {
   Wire.begin();
-  Serial.begin(115200);     // ✅ MATCHES PYTHON
+  Serial.begin(115200);
   delay(2000);
 
-  // ---- MPU6050 ----
+  // MPU6050 init
   accelgyro.initialize();
-  if (!accelgyro.testConnection()) {
-    Serial.println("MPU6050 FAIL");
-  } else {
-    Serial.println("MPU6050 OK");
-  }
 
-  // ---- LoRa ----
+  // LoRa init
   LoRa.setPins(LORA_SS, LORA_RST, LORA_DIO0);
   if (!LoRa.begin(433E6)) {
-    Serial.println("LoRa init failed");
-    while (1);
+    while (1); // hard stop if LoRa fails
   }
-  Serial.println("LoRa OK");
 
   pinMode(SOIL_PIN, INPUT);
 }
@@ -80,8 +73,8 @@ void loop() {
   prev_ay = ay;
   prev_az = az;
 
-  // -------- SERIAL OUTPUT (MATCHED FORMAT) --------
-  // Raw Data: soil,tilt,vibration
+  // -------- SERIAL OUTPUT (EXACT MATCH) --------
+  // Python expects: Raw Data: soil,tilt,vibration
   Serial.print("Raw Data: ");
   Serial.print(soilMoisture, 1);
   Serial.print(",");

@@ -21,6 +21,18 @@ df.drop_duplicates(inplace=True)
 df.fillna(df.median(numeric_only=True), inplace=True)
 
 # ==================================================
+# STEP 1.5: DATASET BALANCING (UNDERSAMPLING)
+# ==================================================
+
+pos = df[df.landslide == 1]
+neg = df[df.landslide == 0].sample(len(pos), random_state=42)
+
+df = pd.concat([pos, neg]).sample(frac=1, random_state=42).reset_index(drop=True)
+
+print(f"Balanced Dataset | Landslide: {len(pos)} | No Landslide: {len(neg)}")
+
+
+# ==================================================
 # STEP 2: FEATURE ENGINEERING (PHYSICS-AWARE)
 # ==================================================
 
@@ -93,7 +105,6 @@ print("\n--- Training Logistic Regression Model ---")
 
 model = LogisticRegression(
     max_iter=2000,
-    class_weight="balanced",  # important for rare landslides
     solver="lbfgs",
     random_state=42
 )

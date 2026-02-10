@@ -142,11 +142,12 @@ sat_scaler = joblib.load(
 )
 
 class SatelliteInput(BaseModel):
-    features: list  # [R, V, S, E, P, H, rain_slope]
+    features: list  # [R, V, S, E, P]
 @app.post("/predict/satellite")
 def predict_satellite(data: SatelliteInput):
 
-    R, V, S, E, P, H, RS = data.features
+    R, V, S, E, P = data.features
+
 
     # ---- derive training features ----
 
@@ -164,6 +165,40 @@ def predict_satellite(data: SatelliteInput):
     rain_intensity_ratio = rain_1d / (rain_30d + 1e-6)
     bare_soil_index = 1 - V
     saturation_index = rain_30d * soil_moisture
+
+    # ================= DASHBOARD INDICATORS =================
+
+    # 1. Rainfall Stress
+    rainfall_stress = (
+        0.5 * rain_1d +
+        0.3 * rain_7d +
+        0.2 * rain_30d
+    )
+
+    # 2. Slope Factor
+    slope_factor = (
+        0.6 * slope +
+        0.4 * rain_slope_interaction
+    )
+
+    # 3. Soil Saturation
+    soil_saturation = (
+        0.5 * soil_moisture +
+        0.5 * saturation_index
+    )
+
+    # 4. Vegetation Protection
+    vegetation_protection = (
+        0.7 * V -
+        0.3 * bare_soil_index
+    )
+
+    # 5. Terrain Context
+    terrain_context = elevation
+
+    # 6. Human Exposure
+    human_exposure = population
+
 
     feature_vector = [[
         elevation,
@@ -188,5 +223,96 @@ def predict_satellite(data: SatelliteInput):
 
     return {
         "riskScore": float(prob),
-        "riskPercent": int(prob * 100)
+        "riskPercent": int(prob * 100),
+
+        "indicators": {
+            "rainfallStress": round(float(rainfall_stress), 2),
+            "slopeFactor": round(float(slope_factor), 2),
+            "soilSaturation": round(float(soil_saturation), 3),
+            "vegetationProtection": round(float(vegetation_protection), 3),
+            "terrainContext": round(float(terrain_context), 1),
+            "humanExposure": int(human_exposure)
+        }
     }
+
+
+# ==================================================
+# GRID BATCH MODEL INFERENCE (NEW)
+# ==================================================
+
+class GridRow(BaseModel):
+    grid_uid: str
+    ndvi: float
+    population: float
+    rain_1d: float
+    rain_7d: float
+    rain_30d: float
+    slope: float
+    soil_moisture: float
+    soil_type: float
+    elevation: float
+
+
+class GridBatchInput(BaseModel):
+    rows: list[GridRow]
+
+
+@app.post("/predict/grid")
+def predict_grid(data: GridBatchInput):
+
+    results = []
+
+    for row in data.rows:
+
+        # -------- base inputs from GEE --------
+
+        elevation = row.elevation
+        V = row.ndvi
+        population = row.population * 100
+        rain_1d = row.rain_1d
+        rain_7d = row.rain_7d
+        rain_30d = row.rain_30d
+        slope = row.slope
+        soil_moisture = row.soil_moisture
+        soil_type = row.soil_type
+
+        # -------- derived features (MATCH TRAINING) --------
+
+        rain_slope_interaction = rain_7d * slope
+        rain_intensity_ratio = rain_1d / (rain_30d + 1e-6)
+        bare_soil_index = 1.0 - V
+        saturation_index = rain_30d * soil_moisture
+
+        feature_vector = [[
+            elevation,
+            V,
+            bare_soil_index,
+            population,
+            rain_1d,
+            rain_7d,
+            rain_30d,
+            rain_intensity_ratio,
+            slope,
+            rain_slope_interaction,
+            soil_moisture,
+            saturation_index,
+            soil_type
+        ]]
+
+
+        print("Sample feature vector:", feature_vector)
+        X = np.array(feature_vector)
+
+        X_scaled = sat_scaler.transform(X)
+
+        prob = sat_model.predict_proba(X_scaled)[0][1]
+        print("prob:", prob)
+        if slope < 5 or elevation < 600:
+            prob = 0
+
+        results.append({
+            "grid_uid": row.grid_uid,
+            "risk": float(prob)
+        })
+
+    return {"results": results}

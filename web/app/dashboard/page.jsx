@@ -27,8 +27,17 @@ export default function Dashboard() {
 
   const { features, riskScore, decision } = data;
 
+  const directions = {
+    S: features.S > 0.7 ? "up" : "stable",
+    R: features.R > 0.6 ? "up" : "down",
+    V: features.V < 0.4 ? "down" : "stable",
+    P: "stable",
+    H: features.H > 0.5 ? "up" : "stable",
+  };
+
+
   return (
-    <main className="p-8 w-full min-h-screen text-black bg-white">
+    <main className="p-8 w-full min-h-screen text-black bg-[#F2EFEA]">
       <h1 className="text-2xl font-bold">Live Dashboard</h1>
 
       <p className="text-sm text-gray-500 mt-1">
@@ -45,29 +54,34 @@ export default function Dashboard() {
           label="Slope Factor"
           value={features.S}
           color="#ef4444"
+          trend={[0.6, 0.65, features.S]}   // sparkline data
+          direction={directions.S}
         />
 
         <Metric
           label="Rainfall Index"
           value={features.R}
           color="#3b82f6"
+          trend={[0.6, 0.65, features.R]}   // sparkline data
+          direction={directions.R}
         />
 
         <Metric
           label="Vegetation Index (NDVI)"
           value={features.V}
           color="#22c55e"
+          trend={[0.6, 0.65, features.V]}   // sparkline data
+          direction={directions.V}
         />
 
         <Metric
           label="Soil Stability Proxy"
           value={features.P}
+          trend={[0.6, 0.65, features.P]}   // sparkline data
+          direction={directions.P}
         />
 
-        <Metric
-          label="Historical Susceptibility"
-          value={features.H}
-        />
+        
       </div>
 
       {/* Risk Assessment */}

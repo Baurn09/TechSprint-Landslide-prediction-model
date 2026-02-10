@@ -1,5 +1,5 @@
 soil:
-  saturation_rate_critical: 0.02     # Δθ / sec
+  saturation_rate_critical: 0.02    #Δθ / sec
   max_safe_moisture: 0.45
 
 tilt:

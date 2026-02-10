@@ -665,6 +665,27 @@ raw = """[93.335972, 27.241524], { date: '06-06-2021', name: 'Leporiang Landslid
 [92.201385,25.447416], {date:'2020-05-26', name:'Salaroh'}
 [92.19558,25.441778], {date:'2020-05-26', name:'Iawmusiang Landslide II'}
 [92.19447,25.442333], {date:'2020-05-26', name:'Iawmusiang Landslide I'}
+[25.54161, 92.01250], { date: '2015-2016', name: 'Debris slide along NH-44 (TS 83 C/2)' }
+[25.53961, 92.00156], { date: '2015-2016', name: 'Rock slide along NH-44 (TS 83 C/2)' }
+[25.56933, 92.20214], { date: '2015-2016', name: 'Earth slide along Nongbah Road (TS 83 C/2)' }
+[25.43011, 92.18217], { date: '2015-2016', name: 'Rock slide along NH-40 (TS 83 C/3)' }
+[25.49047, 92.06931], { date: '2015-2016', name: 'Debris slide on downslope of road (TS 83 C/3)' }
+[25.40019, 92.01573], { date: '2015-2016', name: 'Natural rock slide by toe erosion (TS 83 C/3)' }
+[25.65839, 93.11808], { date: 'May-2015', name: 'Shallow translational debris slide along NH-54, ~2 km SE of Langlao Disa (LS-1)' }
+[25.61092, 93.09178], { date: '2015', name: 'Shallow translational debris slide along NH-54, ~1.5 km W of Purana Dibolong (LS-4)' }
+[25.67153, 93.11522], { date: '05-07-2015', name: 'Slope cut failure (topple) along NH-54, ~1 km E of Langlao Disa (LS-5)' }
+[25.64897, 93.12083], { date: '2015', name: 'Shallow translational debris slide along NH-54, ~3 km N of Hatikhali (LS-6)' }
+[25.50669, 93.10536], { date: '2015', name: 'Shallow translational debris slide along NH-54, near Langting (LS-7)' }
+[25.81756, 93.10886], { date: '15-11-2015', name: 'Rock fall along NH-54, ~2 km SW of Arlongapai (LS-8)' }
+[25.72561, 93.13075], { date: '15-08-2015', name: 'Shallow translational debris slide at Manderdisa–Daolapur 3 (LS-9)' }
+[25.72486, 93.13108], { date: '15-08-2015', name: 'Shallow translational debris slide at Manderdisa–Daolapur 3 (LS-10)' }
+[25.97253, 91.85939], { date: '2015-2016', name: 'Umling Debris slide (reactivated)' }
+[25.49000, 93.05000], { date: '2015-2016', name: 'Multiple landslides recorded during field season 2015–16 (Dima Hasao / NH-54 region – approximate)' }
+[26.00000, 93.20000], { date: '2016-2017', name: 'Landslides identified during FS 2016–17 (Karbi Anglong region – approximate)' }
+[26.30000, 91.60000], { date: '2017-2018', name: 'Landslide inventory prepared using field survey and Google Earth imagery (Guwahati hill region – approximate)' }
+[26.10000, 91.70000], { date: '2018-2019', name: 'Landslides mapped as inventory polygons during FS 2018–19 (Central Assam hill tracts – approximate)' }
+[25.45000, 92.75000], { date: '2019-2020', name: 'Landslide incidences documented during FS 2019–20 (Barail Range / Dima Hasao sector – approximate)' }
+[25.60000, 92.90000], { date: '2020-2021', name: 'Landslide incidences observed during FS 2020–21 (Dima Hasao meso-scale study area – approximate)' }
 """
 
 features = []

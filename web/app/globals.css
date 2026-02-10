@@ -37,13 +37,6 @@ body {
   font-weight: 700;
 }
 
-.leaflet-control-scale-line {
-  background: rgba(255,255,255,0.95);
-  border: 9px solid #111;
-  padding: 8px 12px;
-  border-radius: 9px;
-}
-
 /* Black & white ONLY for terrain basemap */
 .bw-tiles {
   filter: grayscale(100%) contrast(115%) brightness(95%);
@@ -76,8 +69,63 @@ body {
   pointer-events: auto;
 }
 
-.leaflet-control-zoom a {
-  background: #F2EFEA;
-  color: #111;
-  border-radius: 8px;
+/* === SCALE CONTROL (GLASS) === */
+.leaflet-control-scale {
+  font-size: 18px;
+  font-weight: 700;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.75),
+    rgba(255,255,255,0.45)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.6);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+
+  padding: 6px 10px;
 }
+
+.leaflet-control-scale-line {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: #111;
+}
+
+/* === ZOOM CONTROL (GLASS) === */
+.leaflet-control-zoom {
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.75),
+    rgba(255,255,255,0.45)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.6);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+
+  overflow: hidden;
+}
+
+.leaflet-control-zoom a {
+  background: transparent !important;
+  color: #111 !important;
+  font-weight: 700;
+  border: none !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: rgba(255,255,255,0.35) !important;
+}
+
+/* === TERRAIN BASMAP B/W === */
+.bw-tiles {
+  filter: grayscale(100%) contrast(115%) brightness(95%);
+}
+

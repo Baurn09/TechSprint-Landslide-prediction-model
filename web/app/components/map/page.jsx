@@ -104,86 +104,150 @@ export default function RiskMap() {
 
       {/* ================= TITLE ================= */}
 
-      <div className="absolute top-6 left-6 z-[1000] bg-[#F2EFEA] rounded-xl shadow-lg p-4 max-w-sm">
-        <h1 className="text-2xl font-bold text-gray-900">
+      <div className="
+        absolute top-6 left-6 z-[1000]
+        rounded-2xl p-5 max-w-sm
+        bg-white/30 backdrop-blur-xl
+        shadow-[0_8px_30px_rgba(0,0,0,0.12)]
+        border border-white/40
+      ">
+        <h1 className="text-2xl font-bold text-gray-900 drop-shadow-sm">
           LEWS: Landslide Early Warning System
         </h1>
-        <h1 className="text-md pt-3 font-bold text-gray-900">
+
+        <h2 className="text-md pt-3 font-semibold text-gray-900">
           Satellite-Based Landslide Susceptibility
-        </h1>
-        <p className="text-md text-gray-600 mt-1">
+        </h2>
+
+        <p className="text-md text-gray-800 mt-1">
           Macro-level analysis to identify zones requiring ground sensor monitoring
         </p>
       </div>
 
-
       {/* ================= LEGEND ================= */}
 
-      <div className="absolute bottom-6 right-6 z-[1000] bg-[#F2EFEA] rounded-xl shadow-lg p-3 text-sm space-y-2">
-        <div className="flex items-center gap-2">
-          <span className="w-3 h-3 bg-[#2563eb] rounded-sm"></span>
-          <span className="text-black font-bold text-md">Ground sensors deployed</span>
+      <div className="
+        absolute bottom-6 right-6 z-[1000]
+        rounded-2xl p-4 text-sm space-y-3
+        bg-gradient-to-br from-white/40 to-white/10
+        backdrop-blur-xl
+        shadow-[0_8px_30px_rgba(0,0,0,0.15)]
+        border border-white/40
+      ">
+        <div className="flex items-center gap-3">
+          <span className="w-3 h-3 bg-[#2563eb] rounded-sm shadow-sm"></span>
+          <span className="text-gray-900 font-semibold text-md">
+            Ground Sensors Deployed
+          </span>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="w-3 h-3 bg-[#dc2626] rounded-sm"></span>
-          <span className="text-black font-bold text-md">High Risk: Satellite monitoring only</span>
+
+        <div className="flex items-center gap-3">
+          <span className="w-3 h-3 bg-[#dc2626] rounded-sm shadow-sm"></span>
+          <span className="text-gray-900 font-semibold text-md">
+            High Risk: Satellite monitoring only
+          </span>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="w-3 h-3 bg-orange-300 rounded-sm"></span>
-          <span className="text-black font-bold text-md">Moderate Risk: Satellite monitoring only</span>
+
+        <div className="flex items-center gap-3">
+          <span className="w-3 h-3 bg-orange-300 rounded-sm shadow-sm"></span>
+          <span className="text-gray-900 font-semibold text-md">
+            Moderate Risk: Satellite monitoring only
+          </span>
         </div>
       </div>
+
 
 
       {/* ================= BASEMAP TOGGLE ================= */}
 
-      <div className="absolute text-black top-1/2 -translate-y-1/2 left-6 z-[1000] bg-[#F2EFEA] rounded-xl shadow-lg p-3 space-y-2">
-        <div className="font-bold text-lg">Terrain View</div>
+      <div className="
+        absolute top-1/2 -translate-y-1/2 left-6 z-[1000]
+        rounded-2xl p-4 space-y-3
+        bg-gradient-to-br from-white/40 to-white/10
+        backdrop-blur-xl
+        shadow-[0_10px_40px_rgba(0,0,0,0.15)]
+        border border-white/40
+        text-gray-900
+      ">
+        <div className="font-bold text-xl tracking-wide">
+          Terrain View
+        </div>
 
-        {Object.entries(BASEMAPS).map(([key, map]) => (
-          <label key={key} className="flex gap-2 cursor-pointer">
-            <input
-              type="radio"
-              checked={basemap === key}
-              onChange={() => setBasemap(key)}
-            />
-            {map.name}
-          </label>
-        ))}
+        <div className="space-y-2">
+          {Object.entries(BASEMAPS).map(([key, map]) => (
+            <label
+              key={key}
+              className="
+                flex items-center gap-2 cursor-pointer
+                text-lg font-medium
+                hover:bg-white/30 rounded-md px-2 py-1
+                transition
+              "
+            >
+              <input
+                type="radio"
+                checked={basemap === key}
+                onChange={() => setBasemap(key)}
+                className="accent-gray-700"
+              />
+              {map.name}
+            </label>
+          ))}
+        </div>
 
-        <hr />
+        <hr className="border-white/40" />
 
-        <label className="flex gap-2 cursor-pointer text-sm">
+        <label
+          className="
+            flex items-center gap-2 cursor-pointer
+            text-sm font-medium
+            hover:bg-white/30 rounded-md px-2 py-1
+            transition
+          "
+        >
           <input
             type="checkbox"
             checked={showHillGrid}
             onChange={() => setShowHillGrid(v => !v)}
+            className="accent-gray-700 text-lg"
           />
-          Show Hill Grid
+          <div className="text-lg">Show Hill Grid</div>
         </label>
       </div>
 
+
       {/*North Arrow */}
       <div
-        className="absolute top-24 right-6 z-[1000]
-                  bg-[#F2EFEA] backdrop-blur-md
-                  rounded-full shadow-lg
-                  w-12 h-12
-                  flex flex-col items-center justify-center"
+        className="
+          absolute top-24 right-6 z-[1000]
+          w-12 h-12
+          rounded-full
+          flex flex-col items-center justify-center
+
+          bg-gradient-to-br from-white/40 to-white/10
+          backdrop-blur-xl
+          border border-white/40
+          shadow-[0_8px_30px_rgba(0,0,0,0.15)]
+        "
       >
-        <span className="text-xs font-bold text-red-500 leading-none">N</span>
+        <span className="text-xs font-bold text-red-500 leading-none drop-shadow-sm">
+          N
+        </span>
+
         <svg
           width="18"
           height="18"
           viewBox="0 0 24 24"
           fill="none"
+          className="drop-shadow-sm"
         >
           <path
             d="M12 2 L17 22 L12 17 L7 22 Z"
-            fill="red"
+            fill="#dc2626"
           />
         </svg>
       </div>
+
 
       {/* ================= MAP ================= */}
 
@@ -236,7 +300,11 @@ export default function RiskMap() {
           <GeoJSON
             data={hillGrid}
             style={{
-              color: basemap == "street" ? "black" : "#3BC1A8",
+              color:
+                basemap === "street" ? "black" :
+                basemap === "terrain" ? "#3BC1A8" :
+                basemap === "satellite" ? "#3BC1A8" :
+                "black",
               weight: 0.5,
               fillOpacity: 0.04  
             }}
@@ -247,7 +315,7 @@ export default function RiskMap() {
 
         {/* ================= HOTSPOTS ================= */}
 
-        {/* {hotspots.map((spot) => {
+        {hotspots.map((spot) => {
           const deployed = deployedSensors[spot.id];
 
           return (
@@ -277,7 +345,7 @@ export default function RiskMap() {
               </Popup>
             </Rectangle>
           );
-        })} */}
+        })}
 
       </MapContainer>
     </main>

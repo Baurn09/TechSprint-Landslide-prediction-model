@@ -3,7 +3,7 @@ import threading
 import time
 
 # ---------------- CONFIG ----------------
-SERIAL_PORT = "COM3"          # 🔁 Change if needed
+SERIAL_PORT = "COM6"          # 🔁 Change if needed
 BAUD_RATE = 115200            # MUST match Serial.begin()
 # ----------------------------------------
 
@@ -24,28 +24,24 @@ def read_serial():
             if not line:
                 continue
 
-            # 🔎 Debug: see everything coming from Arduino
-            print("📡 RAW:", line)
+            print(f"📡 RAW: '{line}'") # Added quotes to see hidden spaces
 
-            # Expected format:
-            # Raw Data: soil,tilt,vibration
-            if line.startswith("Raw Data:"):
-                data = line.replace("Raw Data:", "").strip()
-
+            # Use 'in' instead of 'startswith' to be safer
+            if "Raw Data:" in line:
                 try:
-                    soil, tilt, vib = map(float, data.split(","))
+                    # Split by colon first, then take the second part
+                    data_part = line.split(":")[-1].strip()
+                    soil, tilt, vib = map(float, data_part.split(","))
 
                     latest_sensor_data["soil"] = soil
                     latest_sensor_data["tilt"] = tilt
                     latest_sensor_data["vibration"] = vib
+                    
+                except ValueError as e:
+                    print(f"⚠️ Parse error: {e} in data: {line}")
 
-                    print("📥 Parsed:", latest_sensor_data)
-
-                except ValueError:
-                    print("⚠️ Parse failed →", data)
-
-    except serial.SerialException as e:
-        print("❌ Serial error:", e)
+                except serial.SerialException as e:
+                    print("❌ Serial error:", e)
 
     except Exception as e:
         print("❌ Unexpected error:", e)

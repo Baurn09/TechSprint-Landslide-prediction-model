@@ -13,10 +13,14 @@ app = FastAPI()
 # START SERIAL (UNCHANGED)
 # ==================================================
 
-@app.on_event("startup")
-def startup_event():
-    print("🚀 FastAPI starting...")
-    start_serial_thread()
+@app.get("/")
+def home():
+    return {"message": "Landslide Prediction API is running"}
+
+@app.get("/data")
+def get_sensor_data():
+    # This sends the latest LoRa data to your website/frontend
+    return latest_sensor_data
 
 # ==================================================
 # SENSOR CONFIG (UNCHANGED)

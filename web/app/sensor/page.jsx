@@ -9,33 +9,27 @@ import { deployedSensors } from "../lib/deployedSensors";
 export default function SensorPage() {
   const searchParams = useSearchParams();
   const router = useRouter();
+
   const area = searchParams.get("area") || "default";
   const sensorId = searchParams.get("sensor_id");
-
-  // 🔒 block access if no sensors deployed
-  if (!deployedSensors[area]) {
-    router.push(`/dashboard?area=${area}`);
-    return null;
-  }
 
   const [data, setData] = useState(null);
   const [moistureHistory, setMoistureHistory] = useState([]);
   const [motionHistory, setMotionHistory] = useState([]);
+  const [randomRisk, setRandomRisk] = useState(0);
+
+  // 🔒 block access if no sensors deployed
+  useEffect(() => {
+    if (!deployedSensors[area]) {
+      router.push(`/dashboard?area=${area}`);
+    }
+  }, [area, router]);
 
   useEffect(() => {
     fetchData();
-    
     const id = setInterval(fetchData, 3000);
     return () => clearInterval(id);
   }, [area]);
-
-   useEffect(()=>{
-    random_risk = () => (
-    Math.random() * 10
-    )
-  },[features.tilt])
-
-  
 
   const fetchData = async () => {
     const res = await fetch(`/api/sensor?area=${area}`);
@@ -43,19 +37,20 @@ export default function SensorPage() {
 
     setData(json);
 
-    console.log("Fetched sensor data:", json);
+    // 🎲 Random risk (for now)
+    setRandomRisk(Math.random());
 
     if (json?.features?.soilMoisture !== undefined) {
-      setMoistureHistory((prev) => [
+      setMoistureHistory(prev => [
         ...prev.slice(-19),
         json.features.soilMoisture,
       ]);
     }
 
     if (json?.features?.magnitude !== undefined) {
-      setMotionHistory((prev) => [
+      setMotionHistory(prev => [
         ...prev.slice(-19),
-        json.features.vibration,
+        json.features.magnitude,
       ]);
     }
   };
@@ -64,15 +59,16 @@ export default function SensorPage() {
     return <p className="p-8">Loading ground sensor data…</p>;
   }
 
-  const { features, riskScore } = data;
- 
+  const { features } = data;
+
   // ==========================
   // 🔮 FORECAST LOGIC
   // ==========================
-  const forecast = getForecast(riskScore);
+  const forecast = getForecast(randomRisk);
 
   return (
     <main className="p-8 bg-white text-black min-h-screen">
+
       {/* NEAR-TERM ALERT */}
       {forecast.level === "NEAR_TERM" && (
         <div className="mb-6 bg-red-600 text-white p-4 rounded shadow animate-pulse">
@@ -101,17 +97,17 @@ export default function SensorPage() {
       <div className="grid grid-cols-3 gap-6 mt-6">
         <Metric
           label="Soil Moisture (%)"
-          value={features.soilMoisture}
+          value={features.soilMoisture.toFixed(1)}
         />
 
         <Metric
           label="Tilt Index"
-          value={features.tilt}
+          value={features.tilt.toFixed(3)}
         />
 
         <Metric
           label="Vibration Index"
-          value={features.vibration}
+          value={features.vibration.toFixed(3)}
         />
       </div>
 
@@ -121,7 +117,7 @@ export default function SensorPage() {
           Ground Sensor ML Risk Estimation
         </h3>
         <p className="mt-1">
-          Risk Score: <strong>{random_risk}</strong>
+          Risk Score: <strong>{randomRisk.toFixed(2)}</strong>
         </p>
       </div>
 
@@ -138,7 +134,6 @@ export default function SensorPage() {
         >
           Forecast Window: <strong>{forecast.duration}</strong>
         </p>
-
       </div>
 
       {/* Trends */}
@@ -181,11 +176,11 @@ export default function SensorPage() {
 }
 
 /* ==========================
-   Helper Components & Logic
+   Helper Logic
    ========================== */
 
-function getForecast(riskScore) {
-  if (riskScore >= 0.7) {
+function getForecast(risk) {
+  if (risk >= 0.7) {
     return {
       level: "NEAR_TERM",
       duration: "24–72 hours",
@@ -196,7 +191,7 @@ function getForecast(riskScore) {
     };
   }
 
-  if (riskScore >= 0.4) {
+  if (risk >= 0.4) {
     return {
       level: "MODERATE",
       duration: "3–7 days",
@@ -215,7 +210,6 @@ function getForecast(riskScore) {
     windowClass: "bg-green-700",
   };
 }
-
 
 function Metric({ label, value }) {
   return (

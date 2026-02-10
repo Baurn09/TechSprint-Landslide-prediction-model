@@ -2,53 +2,45 @@ import serial
 import threading
 import time
 
-# 🔥 SHARED SENSOR STATE (DO NOT REASSIGN THIS)
+SERIAL_PORT = "COM3"          # Windows example
+# SERIAL_PORT = "/dev/ttyUSB0"  # Linux
+BAUD_RATE = 115200            # ✅ MUST match ESP32 Serial.begin()
+
 latest_sensor_data = {
     "soil": None,
     "tilt": None,
     "vibration": None
 }
 
-def start_serial_thread():
-    t = threading.Thread(target=read_serial, daemon=True)
-    t.start()
-    print("🚀 Serial thread started")
-
 def read_serial():
     try:
-        # 🔧 CHANGE COM PORT IF NEEDED
-        ser = serial.Serial("COM5", 9600, timeout=1)
-        time.sleep(2)  # allow Arduino to reset
-        print("✅ Serial port opened")
-    except Exception as e:
-        print("❌ Failed to open serial port:", e)
-        return
+        ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=1)
+        time.sleep(2)  # allow ESP32 reset
+        print("✅ ESP32 connected via USB")
 
-    while True:
-        try:
-            line = ser.readline().decode("utf-8").strip()
+        while True:
+            line = ser.readline().decode(errors="ignore").strip()
             if not line:
                 continue
 
-            # EXPECTED FORMAT: soil,tilt,vibration
-            # Example: 56.2,0.031,1.84
-            parts = line.split(",")
+            # ESP32 sends: "Raw Data: soil,tilt,vibration"
+            if line.startswith("Raw Data:"):
+                try:
+                    data = line.replace("Raw Data:", "").strip()
+                    soil, tilt, vib = map(float, data.split(","))
 
-            if len(parts) != 3:
-                print("⚠️ Invalid serial format:", line)
-                continue
+                    latest_sensor_data["soil"] = soil
+                    latest_sensor_data["tilt"] = tilt
+                    latest_sensor_data["vibration"] = vib
 
-            soil = float(parts[0])
-            tilt = float(parts[1])
-            vib  = float(parts[2])
+                    print("📥 Updated:", latest_sensor_data)
 
-            # ✅ UPDATE (NOT reassignment)
-            latest_sensor_data["soil"] = soil
-            latest_sensor_data["tilt"] = tilt
-            latest_sensor_data["vibration"] = vib
+                except ValueError:
+                    print("⚠️ Bad sensor data:", line)
 
-            # 🔍 DEBUG (CONFIRM DATA FLOW)
-            print("📡 SENSOR:", latest_sensor_data)
+    except Exception as e:
+        print("❌ Serial connection failed:", e)
 
-        except Exception as e:
-            print("❌ Serial read error:", e)
+def start_serial_thread():
+    t = threading.Thread(target=read_serial, daemon=True)
+    t.start()

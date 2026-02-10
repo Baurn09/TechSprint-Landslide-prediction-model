@@ -14,7 +14,11 @@ export default function Dashboard() {
   const area = searchParams.get("area");
   const router = useRouter();
 
-  const hasSensors = area ? deployedSensors[area] === true : false;
+  const SENSOR_DEPLOYED_GRID = "+3467+934"; // ← SAME grid you colored blue on map
+
+  const hasSensors =
+    (grid_uid && grid_uid === SENSOR_DEPLOYED_GRID) ||
+    (area && deployedSensors[area] === true);
 
 
   useEffect(() => {
@@ -116,7 +120,7 @@ console.log("Dashboard data:", data);
       </div>
 
       {rawFeatures && (
-        <div className="mt-6 p-4 rounded bg-white shadow">
+        <div className="mt-6 p-4 rounded bg-[#E5E7EB] shadow">
           <h3 className="font-semibold mb-3">
             Grid Environmental Features
           </h3>
@@ -144,12 +148,12 @@ console.log("Dashboard data:", data);
       {/* ================= EXPLAINABILITY ================= */}
 
       {drivers && (
-        <div className="mt-6 p-4 rounded bg-white shadow">
+        <div className="mt-6 p-6 rounded bg-[#E5E7EB] shadow">
           <h3 className="font-semibold mb-2">
             Why this grid is risky
           </h3>
 
-          <ul className="text-sm space-y-2">
+          <ul className="text-sm font-bold space-y-2">
 
             {drivers.includes("rainfall") && (
               <li>🌧️ High recent rainfall increased ground saturation</li>
@@ -169,12 +173,12 @@ console.log("Dashboard data:", data);
 
           </ul>
 
-          <div className="mt-3 text-xs text-gray-500">
+          {/* <div className="mt-3 text-[.9vw] text-gray-500">
             Model contribution weights:
             {Object.entries(contributions).map(([k,v]) => (
               <div key={k}>{k}: {(v*100).toFixed(1)}%</div>
             ))}
-          </div>
+          </div> */}
         </div>
       )}  
 
@@ -209,20 +213,27 @@ console.log("Dashboard data:", data);
       </div>
 
       {/* Ground Sensor Status */}
+      {/* Ground Sensor Status */}
       <div className="mt-6 bg-gray-100 p-4 rounded">
         <h3 className="font-semibold">Ground Sensor Status</h3>
 
         {hasSensors ? (
           <>
             <p className="text-green-700 mt-1">
-              Ground sensors are deployed in this area.
+              Ground sensors are deployed in this grid.
             </p>
 
             <button
               className="mt-3 px-4 py-2 bg-blue-600 text-white rounded"
-              onClick={() => router.push(`/sensor?area=${area}`)}
+              onClick={() =>
+                router.push(
+                  grid_uid
+                    ? `/sensor?area=noney&sensor_id=${grid_uid}`
+                    : `/sensor?area=${area}`
+                )
+              }
             >
-              View Ground Sensor Data
+              View Ground Sensor Dashboard
             </button>
           </>
         ) : (
@@ -233,6 +244,7 @@ console.log("Dashboard data:", data);
           </p>
         )}
       </div>
+
     </main>
   );
 }

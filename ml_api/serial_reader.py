@@ -3,7 +3,7 @@ import threading
 import time
 
 # ---------------- CONFIG ----------------
-SERIAL_PORT = "COM3"          # 🔁 Change if needed
+SERIAL_PORT = "COM15"          # 🔁 Change if needed
 BAUD_RATE = 115200            # MUST match Serial.begin()
 # ----------------------------------------
 

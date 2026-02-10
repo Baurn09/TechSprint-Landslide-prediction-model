@@ -97,17 +97,17 @@ export default function SensorPage() {
       <div className="grid grid-cols-3 gap-6 mt-6">
         <Metric
           label="Soil Moisture (%)"
-          value={features.soilMoisture.toFixed(1)}
+          value={features.soilMoisture}
         />
 
         <Metric
           label="Tilt Index"
-          value={features.tilt.toFixed(3)}
+          value={features.tilt}
         />
 
         <Metric
           label="Vibration Index"
-          value={features.vibration.toFixed(3)}
+          value={features.vibration}
         />
       </div>
 

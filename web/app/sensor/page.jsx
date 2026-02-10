@@ -38,7 +38,7 @@ export default function SensorPage() {
     setData(json);
 
     // 🎲 Random risk (for now)
-    setRandomRisk(Math.random());
+    setRandomRisk(Math.random() );
 
     if (json?.features?.soilMoisture !== undefined) {
       setMoistureHistory(prev => [

@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import numpy as np
 from collections import deque
+import joblib
+import os
 
 # ================= SENSOR IMPORTS =================
 from ml_api.serial_reader import start_serial_thread, latest_sensor_data
@@ -10,7 +12,16 @@ from ml_api.serial_reader import start_serial_thread, latest_sensor_data
 app = FastAPI()
 
 # ==================================================
-# START SERIAL (UNCHANGED)
+# START SERIAL ON API STARTUP  ✅ CRITICAL
+# ==================================================
+
+@app.on_event("startup")
+def startup_event():
+    start_serial_thread()
+    print("✅ Serial reader started")
+
+# ==================================================
+# BASIC ROUTES
 # ==================================================
 
 @app.get("/")
@@ -19,11 +30,11 @@ def home():
 
 @app.get("/data")
 def get_sensor_data():
-    # This sends the latest LoRa data to your website/frontend
+    # Sends latest live sensor data
     return latest_sensor_data
 
 # ==================================================
-# SENSOR CONFIG (UNCHANGED)
+# SENSOR CONFIG
 # ==================================================
 
 WINDOW = 120  # calibration samples
@@ -39,7 +50,7 @@ prev_soil = None
 prev_tilt = None
 
 # ==================================================
-# SENSOR ENDPOINT (UNCHANGED)
+# SENSOR-BASED PREDICTION
 # ==================================================
 
 @app.post("/predict/sensor")
@@ -126,11 +137,8 @@ def predict_sensor():
     }
 
 # ==================================================
-# SATELLITE MODEL (NEW – DOES NOT TOUCH SENSOR)
+# SATELLITE MODEL
 # ==================================================
-
-import joblib
-import os
 
 BASE_DIR = os.path.dirname(__file__)
 
@@ -143,13 +151,11 @@ sat_scaler = joblib.load(
 
 class SatelliteInput(BaseModel):
     features: list  # [R, V, S, E, P]
+
 @app.post("/predict/satellite")
 def predict_satellite(data: SatelliteInput):
 
     R, V, S, E, P = data.features
-
-
-    # ---- derive training features ----
 
     rain_1d = R * 100
     rain_7d = R * 200
@@ -166,65 +172,29 @@ def predict_satellite(data: SatelliteInput):
     bare_soil_index = 1 - V
     saturation_index = rain_30d * soil_moisture
 
-    # ================= DASHBOARD INDICATORS =================
-
-    # 1. Rainfall Stress
-    rainfall_stress = (
-        0.5 * rain_1d +
-        0.3 * rain_7d +
-        0.2 * rain_30d
-    )
-
-    # 2. Slope Factor
-    slope_factor = (
-        0.6 * slope +
-        0.4 * rain_slope_interaction
-    )
-
-    # 3. Soil Saturation
-    soil_saturation = (
-        0.5 * soil_moisture +
-        0.5 * saturation_index
-    )
-
-    # 4. Vegetation Protection
-    vegetation_protection = (
-        0.7 * V -
-        0.3 * bare_soil_index
-    )
-
-    # 5. Terrain Context
+    rainfall_stress = 0.5 * rain_1d + 0.3 * rain_7d + 0.2 * rain_30d
+    slope_factor = 0.6 * slope + 0.4 * rain_slope_interaction
+    soil_saturation = 0.5 * soil_moisture + 0.5 * saturation_index
+    vegetation_protection = 0.7 * V - 0.3 * bare_soil_index
     terrain_context = elevation
-
-    # 6. Human Exposure
     human_exposure = population
 
-
     feature_vector = [[
-        elevation,
-        V,
-        population,
-        rain_1d,
-        rain_7d,
-        rain_30d,
-        slope,
-        soil_moisture,
-        soil_type,
+        elevation, V, population,
+        rain_1d, rain_7d, rain_30d,
+        slope, soil_moisture, soil_type,
         rain_slope_interaction,
         rain_intensity_ratio,
         bare_soil_index,
         saturation_index
     ]]
 
-    X = np.array(feature_vector)
-
-    X_scaled = sat_scaler.transform(X)
-    prob = sat_model.predict_proba(X_scaled)[0][1]
+    X = sat_scaler.transform(np.array(feature_vector))
+    prob = sat_model.predict_proba(X)[0][1]
 
     return {
         "riskScore": float(prob),
         "riskPercent": int(prob * 100),
-
         "indicators": {
             "rainfallStress": round(float(rainfall_stress), 2),
             "slopeFactor": round(float(slope_factor), 2),
@@ -235,9 +205,8 @@ def predict_satellite(data: SatelliteInput):
         }
     }
 
-
 # ==================================================
-# GRID BATCH MODEL INFERENCE (NEW)
+# GRID BATCH MODEL
 # ==================================================
 
 class GridRow(BaseModel):
@@ -252,10 +221,8 @@ class GridRow(BaseModel):
     soil_type: float
     elevation: float
 
-
 class GridBatchInput(BaseModel):
     rows: list[GridRow]
-
 
 @app.post("/predict/grid")
 def predict_grid(data: GridBatchInput):
@@ -264,50 +231,31 @@ def predict_grid(data: GridBatchInput):
 
     for row in data.rows:
 
-        # -------- base inputs from GEE --------
-
-        elevation = row.elevation
-        V = row.ndvi
-        population = row.population * 100
-        rain_1d = row.rain_1d
-        rain_7d = row.rain_7d
-        rain_30d = row.rain_30d
-        slope = row.slope
-        soil_moisture = row.soil_moisture
-        soil_type = row.soil_type
-
-        # -------- derived features (MATCH TRAINING) --------
-
-        rain_slope_interaction = rain_7d * slope
-        rain_intensity_ratio = rain_1d / (rain_30d + 1e-6)
-        bare_soil_index = 1.0 - V
-        saturation_index = rain_30d * soil_moisture
+        rain_slope_interaction = row.rain_7d * row.slope
+        rain_intensity_ratio = row.rain_1d / (row.rain_30d + 1e-6)
+        bare_soil_index = 1.0 - row.ndvi
+        saturation_index = row.rain_30d * row.soil_moisture
 
         feature_vector = [[
-            elevation,
-            V,
+            row.elevation,
+            row.ndvi,
             bare_soil_index,
-            population,
-            rain_1d,
-            rain_7d,
-            rain_30d,
+            row.population * 100,
+            row.rain_1d,
+            row.rain_7d,
+            row.rain_30d,
             rain_intensity_ratio,
-            slope,
+            row.slope,
             rain_slope_interaction,
-            soil_moisture,
+            row.soil_moisture,
             saturation_index,
-            soil_type
+            row.soil_type
         ]]
 
+        X = sat_scaler.transform(np.array(feature_vector))
+        prob = sat_model.predict_proba(X)[0][1]
 
-        print("Sample feature vector:", feature_vector)
-        X = np.array(feature_vector)
-
-        X_scaled = sat_scaler.transform(X)
-
-        prob = sat_model.predict_proba(X_scaled)[0][1]
-        print("prob:", prob)
-        if slope < 5 or elevation < 600:
+        if row.slope < 5 or row.elevation < 600:
             prob = 0
 
         results.append({

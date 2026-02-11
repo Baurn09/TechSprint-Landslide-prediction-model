@@ -16,7 +16,6 @@ export default function SensorPage() {
   const [data, setData] = useState(null);
   const [moistureHistory, setMoistureHistory] = useState([]);
   const [motionHistory, setMotionHistory] = useState([]);
-  const [randomRisk, setRandomRisk] = useState(0);
 
   // 🔒 block access if no sensors deployed
   useEffect(() => {
@@ -37,9 +36,6 @@ export default function SensorPage() {
 
     setData(json);
 
-    // 🎲 Random risk (for now)
-    setRandomRisk(Math.random() );
-
     if (json?.features?.soilMoisture !== undefined) {
       setMoistureHistory(prev => [
         ...prev.slice(-19),
@@ -47,12 +43,13 @@ export default function SensorPage() {
       ]);
     }
 
-    if (json?.features?.magnitude !== undefined) {
+    if (json?.features?.vibration !== undefined) {
       setMotionHistory(prev => [
         ...prev.slice(-19),
-        json.features.magnitude,
+        json.features.vibration,
       ]);
     }
+
   };
 
   if (!data) {
@@ -64,7 +61,7 @@ export default function SensorPage() {
   // ==========================
   // 🔮 FORECAST LOGIC
   // ==========================
-  const forecast = getForecast(randomRisk);
+const forecast = getForecast(data.riskScore);
 
   return (
     <main className="p-8 bg-white text-black min-h-screen">
@@ -117,7 +114,7 @@ export default function SensorPage() {
           Ground Sensor ML Risk Estimation
         </h3>
         <p className="mt-1">
-          Risk Score: <strong>{randomRisk.toFixed(2)}</strong>
+          Risk Score: <strong>{data.riskScore?.toFixed(2)}</strong>
         </p>
       </div>
 

@@ -46,36 +46,43 @@ for _, row in df.iterrows():
 
 X = np.array(features)
 
-#Isolation Forest
+from sklearn.preprocessing import StandardScaler
+
+# =========================
+# SCALE FEATURES
+# =========================
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# =========================
+# ISOLATION FOREST
+# =========================
 model = IsolationForest(
-    n_estimators=150,
-    contamination=0.05,
+    n_estimators=200,
+    contamination=0.15,   # increased sensitivity
     random_state=42
 )
 
-model.fit(X)
+model.fit(X_scaled)
 
-#
-scores = model.decision_function(X)
+# =========================
+# SCORE CALCULATION
+# =========================
+scores = model.decision_function(X_scaled)
 
-# Normalize to 0–1
-risk = (scores - scores.min()) / (scores.max() - scores.min())
+min_score = scores.min()
+max_score = scores.max()
 
-# Invert (because lower score = more dangerous)
-risk = 1 - risk
-
-#Testing
-
-scores = model.decision_function(X)
-
-risk = (scores - scores.min()) / (scores.max() - scores.min())
+risk = (scores - min_score) / (max_score - min_score)
 risk = 1 - risk
 
 print("Min Risk:", risk.min())
 print("Max Risk:", risk.max())
 print("Sample Risks:", risk[:10])
 
+# =========================
+# SAVE EVERYTHING
+# =========================
+joblib.dump((model, scaler, min_score, max_score), MODEL_PATH)
 
-
-joblib.dump(model, MODEL_PATH)
-print("✅ Sensor anomaly model trained and saved")
+print("✅ Model trained properly with scaling")

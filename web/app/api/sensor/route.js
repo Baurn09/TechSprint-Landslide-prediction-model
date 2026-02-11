@@ -5,7 +5,7 @@ export async function GET(request) {
   try {
     const backend = await fetch("http://127.0.0.1:8000/predict/sensor", {
       method: "POST",
-      cache: "no-store", // 👈 important for live sensor data
+      cache: "no-store", // prevents caching for live sensor data
     });
 
     if (!backend.ok) {
@@ -18,6 +18,7 @@ export async function GET(request) {
       area,
       timestamp: new Date().toISOString(),
 
+      // 🔹 ML inferenced sensor values from FastAPI
       features: {
         soilMoisture: ml.soil,
         tilt: ml.tilt,
@@ -32,31 +33,11 @@ export async function GET(request) {
     });
 
   } catch (err) {
+    console.error("Sensor fetch error:", err);
+
     return Response.json(
       { error: "Backend unreachable" },
       { status: 500 }
     );
   }
-}
-
-
-  const ml = await backend.json();
-
-  return Response.json({
-    area,
-    timestamp: new Date().toISOString(),
-
-    // 👇 REAL SENSOR VALUES (from FastAPI)
-    features: {
-      soilMoisture: ml.soil,
-      tilt: ml.tilt,
-      vibration: ml.vibration,
-    },
-
-    riskScore: ml.riskScore,
-    riskPercent: ml.riskPercent,
-    status: ml.status,
-
-    model: "Ground Sensor (Hardware)",
-  });
 }

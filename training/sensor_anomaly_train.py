@@ -55,5 +55,27 @@ model = IsolationForest(
 
 model.fit(X)
 
+#
+scores = model.decision_function(X)
+
+# Normalize to 0–1
+risk = (scores - scores.min()) / (scores.max() - scores.min())
+
+# Invert (because lower score = more dangerous)
+risk = 1 - risk
+
+#Testing
+
+scores = model.decision_function(X)
+
+risk = (scores - scores.min()) / (scores.max() - scores.min())
+risk = 1 - risk
+
+print("Min Risk:", risk.min())
+print("Max Risk:", risk.max())
+print("Sample Risks:", risk[:10])
+
+
+
 joblib.dump(model, MODEL_PATH)
 print("✅ Sensor anomaly model trained and saved")

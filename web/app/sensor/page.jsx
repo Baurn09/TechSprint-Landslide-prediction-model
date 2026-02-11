@@ -31,26 +31,36 @@ export default function SensorPage() {
   }, [area]);
 
   const fetchData = async () => {
-    const res = await fetch(`/api/sensor?area=${area}`);
-    const json = await res.json();
+    try {
+      const res = await fetch(`/api/sensor?area=${area}`);
+      const json = await res.json();
 
-    setData(json);
+      if (json.error) {
+        console.error(json.error);
+        return;
+      }
 
-    if (json?.features?.soilMoisture !== undefined) {
-      setMoistureHistory(prev => [
-        ...prev.slice(-19),
-        json.features.soilMoisture,
-      ]);
+      setData(json);
+
+      if (json?.features?.soilMoisture !== undefined) {
+        setMoistureHistory(prev => [
+          ...prev.slice(-19),
+          json.features.soilMoisture,
+        ]);
+      }
+
+      if (json?.features?.vibration !== undefined) {
+        setMotionHistory(prev => [
+          ...prev.slice(-19),
+          json.features.vibration,
+        ]);
+      }
+
+    } catch (err) {
+      console.error("Sensor fetch failed:", err);
     }
-
-    if (json?.features?.vibration !== undefined) {
-      setMotionHistory(prev => [
-        ...prev.slice(-19),
-        json.features.vibration,
-      ]);
-    }
-
   };
+
 
   if (!data) {
     return <p className="p-8">Loading ground sensor data…</p>;
@@ -61,7 +71,7 @@ export default function SensorPage() {
   // ==========================
   // 🔮 FORECAST LOGIC
   // ==========================
-const forecast = getForecast(data.riskScore);
+const forecast = getForecast(data.riskScore ?? 0);
 
   return (
     <main className="p-8 bg-white text-black min-h-screen">

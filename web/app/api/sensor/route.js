@@ -3,7 +3,7 @@ export async function GET(request) {
   const area = searchParams.get("area") || "default";
 
   try {
-    const backend = await fetch("http://127.0.0.1:8000/predict/sensor", {
+    const backend = await fetch("http://localhost:8000/predict/sensor", {
       method: "POST",
       cache: "no-store", // prevents caching for live sensor data
     });

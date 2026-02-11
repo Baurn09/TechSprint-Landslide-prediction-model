@@ -10,6 +10,10 @@ from ml_api.serial_reader import start_serial_thread, latest_sensor_data
 # ================= APP =================
 app = FastAPI()
 
+
+prev_soil = None
+prev_tilt = None
+
 # ==================================================
 # START SERIAL ON API STARTUP  ✅ CRITICAL
 # ==================================================
@@ -54,19 +58,44 @@ def predict_sensor():
             "status": "NO SENSOR DATA"
         }
 
-    # ================= ML INFERENCE =================
+    global prev_soil, prev_tilt
 
-    feature_vector = np.array([[soil, tilt, vib]])
+    if prev_soil is None:
+        prev_soil, prev_tilt = soil, tilt
+        return {
+            "soil": soil,
+            "tilt": tilt,
+            "vibration": vib,
+            "riskScore": 0,
+            "riskPercent": 0,
+            "status": "CALIBRATING"
+        }
 
-    # If you used scaler:
-    # X_scaled = sensor_scaler.transform(feature_vector)
-    # prob = sensor_model.predict_proba(X_scaled)[0][1]
+    soil_rate = soil - prev_soil
+    tilt_rate = tilt - prev_tilt
 
-    prob = sensor_model.predict_proba(feature_vector)[0][1]
+    prev_soil, prev_tilt = soil, tilt
+
+    # Must match training features exactly
+    feature_vector = np.array([[
+        soil,
+        soil_rate,
+        tilt,
+        tilt_rate,
+        abs(vib)
+    ]])
+
+    # IsolationForest inference
+    anomaly_label = sensor_model.predict(feature_vector)[0]
+    anomaly_score = sensor_model.decision_function(feature_vector)[0]
+
+    # Convert anomaly score to 0–1 risk
+    risk = 1 - (anomaly_score + 0.5)
+    risk = max(0, min(risk, 1))
 
     status = (
-        "HIGH" if prob > 0.7
-        else "MODERATE" if prob > 0.4
+        "HIGH" if risk > 0.7
+        else "MODERATE" if risk > 0.4
         else "LOW"
     )
 
@@ -74,8 +103,8 @@ def predict_sensor():
         "soil": round(float(soil), 2),
         "tilt": round(float(tilt), 4),
         "vibration": round(float(vib), 4),
-        "riskScore": float(prob),
-        "riskPercent": int(prob * 100),
+        "riskScore": float(risk),
+        "riskPercent": int(risk * 100),
         "status": status
     }
 

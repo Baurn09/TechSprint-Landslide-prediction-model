@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import numpy as np
-from collections import deque
 import joblib
 import os
 
@@ -33,21 +32,6 @@ def get_sensor_data():
     # Sends latest live sensor data
     return latest_sensor_data
 
-# ==================================================
-# SENSOR CONFIG
-# ==================================================
-
-WINDOW = 120  # calibration samples
-SOIL_RATE_TH = 0.02
-TILT_RATE_TH = 0.05
-VIB_TH = 1.5
-
-soil_buf = deque(maxlen=WINDOW)
-tilt_buf = deque(maxlen=WINDOW)
-vib_buf  = deque(maxlen=WINDOW)
-
-prev_soil = None
-prev_tilt = None
 
 # ==================================================
 # SENSOR-BASED PREDICTION
@@ -55,9 +39,6 @@ prev_tilt = None
 
 @app.post("/predict/sensor")
 def predict_sensor():
-    global prev_soil, prev_tilt
-
-    print("🧠 main.py sees:", latest_sensor_data)
 
     soil = latest_sensor_data["soil"]
     tilt = latest_sensor_data["tilt"]
@@ -73,57 +54,19 @@ def predict_sensor():
             "status": "NO SENSOR DATA"
         }
 
-    soil_buf.append(soil)
-    tilt_buf.append(tilt)
-    vib_buf.append(abs(vib))
+    # ================= ML INFERENCE =================
 
-    if len(soil_buf) < WINDOW:
-        return {
-            "soil": soil,
-            "tilt": tilt,
-            "vibration": vib,
-            "riskScore": 0,
-            "riskPercent": 0,
-            "status": "CALIBRATING"
-        }
+    feature_vector = np.array([[soil, tilt, vib]])
 
-    soil_mean, soil_std = np.mean(soil_buf), np.std(soil_buf)
-    tilt_mean, tilt_std = np.mean(tilt_buf), np.std(tilt_buf)
-    vib_mean, vib_std   = np.mean(vib_buf), np.std(vib_buf)
+    # If you used scaler:
+    # X_scaled = sensor_scaler.transform(feature_vector)
+    # prob = sensor_model.predict_proba(X_scaled)[0][1]
 
-    soil_z = abs((soil - soil_mean) / (soil_std + 1e-6))
-    tilt_z = abs((tilt - tilt_mean) / (tilt_std + 1e-6))
-    vib_z  = abs((vib  - vib_mean)  / (vib_std  + 1e-6))
-
-    anomaly_score = soil_z + tilt_z + vib_z
-
-    if prev_soil is None:
-        prev_soil, prev_tilt = soil, tilt
-        return {
-            "soil": soil,
-            "tilt": tilt,
-            "vibration": vib,
-            "riskScore": 0,
-            "riskPercent": 0,
-            "status": "NORMAL"
-        }
-
-    soil_rate = soil - prev_soil
-    tilt_rate = tilt - prev_tilt
-
-    prev_soil, prev_tilt = soil, tilt
-
-    physics_trigger = (
-        soil_rate > SOIL_RATE_TH and
-        abs(tilt_rate) > TILT_RATE_TH and
-        vib > VIB_TH
-    )
-
-    risk = min(anomaly_score / 10, 1.0)
+    prob = sensor_model.predict_proba(feature_vector)[0][1]
 
     status = (
-        "HIGH" if (risk > 0.7 and physics_trigger)
-        else "MODERATE" if risk > 0.4
+        "HIGH" if prob > 0.7
+        else "MODERATE" if prob > 0.4
         else "LOW"
     )
 
@@ -131,8 +74,8 @@ def predict_sensor():
         "soil": round(float(soil), 2),
         "tilt": round(float(tilt), 4),
         "vibration": round(float(vib), 4),
-        "riskScore": round(float(risk), 3),
-        "riskPercent": int(risk * 100),
+        "riskScore": float(prob),
+        "riskPercent": int(prob * 100),
         "status": status
     }
 
@@ -141,6 +84,20 @@ def predict_sensor():
 # ==================================================
 
 BASE_DIR = os.path.dirname(__file__)
+
+# ==================================================
+# SENSOR ML MODEL
+# ==================================================
+
+sensor_model = joblib.load(
+    os.path.join(BASE_DIR, "../training/sensor_anomaly_model.pkl")
+)
+
+# If you used a scaler during training, also load:
+# sensor_scaler = joblib.load(
+#     os.path.join(BASE_DIR, "../training/sensor_scaler.pkl")
+# )
+
 
 sat_model = joblib.load(
     os.path.join(BASE_DIR, "../training/landslide_logistic_model.pkl")

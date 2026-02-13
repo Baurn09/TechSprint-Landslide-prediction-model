@@ -1,29 +1,33 @@
-import Sparkline from "../sparkline/page";
+import Sparkline from "../sparkline/Sparkline";
 
-export default function Metric({ label, value, trend, direction, color }) {
+export default function Metric({
+  label,
+  value = 0,
+  trend,
+  direction,
+  color
+}) {
+  console.log(label, trend);
+
   return (
-    <div className="bg-gray-200 p-4 rounded shadow">
+    <div className="bg-white p-4 rounded-xl shadow border border-gray-100 flex flex-col gap-2">
+
       <h4 className="text-sm text-gray-600">{label}</h4>
-      <p className="text-xl font-semibold mt-1 flex items-center gap-2">
-        {(value * 100).toFixed(0)}%
 
-        {direction === "up" && (
-          <span className="text-red-600 text-lg">▲</span>
-        )}
+      <div className="flex items-center gap-2">
+        <span className="text-2xl font-bold">
+          {(value * 100).toFixed(0)}%
+        </span>
 
-        {direction === "down" && (
-          <span className="text-green-600 text-lg">▼</span>
-        )}
+        {direction === "up" && <span className="text-red-600 text-lg">▲</span>}
+        {direction === "down" && <span className="text-green-600 text-lg">▼</span>}
+        {direction === "stable" && <span className="text-gray-400 text-lg">▬</span>}
+      </div>
 
-        {direction === "stable" && (
-          <span className="text-gray-500 text-lg">▬</span>
-        )}
-      </p>
-
-
-      {trend && (
+      {trend && trend.length > 1 && (
         <Sparkline data={trend} color={color} />
       )}
+
     </div>
   );
 }

@@ -5,246 +5,216 @@ import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { deployedSensors } from "../lib/deployedSensors.js";
 import Metric from "../components/metric/page";
+import RiskCircle from "../components/riskCircle/RiskCircle";
 
 export default function Dashboard() {
+
   const [data, setData] = useState(null);
   const searchParams = useSearchParams();
-  const rawId = searchParams.get("grid_uid");
-  const grid_uid = rawId?.trim();
+  const grid_uid = searchParams.get("grid_uid")?.trim();
   const area = searchParams.get("area");
   const router = useRouter();
 
-  const SENSOR_DEPLOYED_GRID = "+3467+934"; // ← SAME grid you colored blue on map
+  const SENSOR_DEPLOYED_GRID = "+3467+934";
 
   const hasSensors =
     (grid_uid && grid_uid === SENSOR_DEPLOYED_GRID) ||
-    (area && deployedSensors[area] === true);
-
+    (area && deployedSensors[area]);
 
   useEffect(() => {
     const url = grid_uid
       ? `/api/satellite?grid_uid=${encodeURIComponent(grid_uid)}`
       : `/api/satellite?area=${area}`;
 
-    fetch(url)
-      .then(async res => {
-        if (!res.ok) {
-          const err = await res.json();
-          throw new Error(err.error || "API error");
-        }
-        return res.json();
-      })
-      .then(setData)
-      .catch(e => {
-        console.error(e);
-        setData(null);
-      });
-
+    fetch(url).then(r => r.json()).then(setData);
   }, [area, grid_uid]);
 
+  if (!data) return <p className="p-8">Loading…</p>;
 
+  const { features, rawFeatures, riskScore, decision, drivers } = data;
 
- if (!data) {
+  const directions = {
+    S: features.S > 0.7 ? "up" : "stable",
+    R: features.R > 0.6 ? "up" : "down",
+    V: features.V < 0.4 ? "down" : "stable",
+    P: "stable",
+  };
+
+  // ================= UI =================
+
   return (
-    <p className="p-8 text-red-600">
-      Satellite data unavailable for this grid.
-    </p>
+    <main className="p-8 bg-[#F2EFEA] min-h-screen text-black">
+
+      {/* HEADER */}
+      <div className="mb-6">
+        <h1 className="text-2xl font-bold">Live Dashboard</h1>
+        <p className="text-sm text-gray-600">
+          Target: {grid_uid ? `GRID ${grid_uid}` : area}
+        </p>
+      </div>
+
+      {/* ================= ROW 1 ================= */}
+
+      <div className="grid grid-cols-3 gap-6">
+
+        {/* LEFT — BIG SUMMARY */}
+        <div className="col-span-2 bg-white rounded-xl p-10 shadow border border-gray-100">
+
+          <h3 className="font-semibold mb-4">
+            Satellite Risk Overview
+          </h3>
+
+          <div className="flex items-center justify-between">
+
+            <div>
+              <div className="text-lg text-gray-600 font-bold">
+                Risk Score
+              </div>
+
+              <div className="text-sm text-gray-500 mt-2">
+                Last updated: {new Date().toLocaleString()}
+              </div>
+            </div>
+
+            <RiskCircle score={riskScore} />
+
+          </div>
+        </div>
+
+
+        {/* RIGHT COLUMN STACK */}
+        <div className="flex flex-col gap-6">
+
+          {/* Deployment Decision */}
+          <div className="bg-white rounded-xl p-6 shadow border border-gray-100">
+
+            <h3 className="font-semibold mb-4">
+              Deployment Decision
+            </h3>
+
+            {decision === "DEPLOY_SENSORS" && (
+              <div className="text-red-600 font-semibold text-lg">
+                🔴 Deploy Ground Sensors
+              </div>
+            )}
+
+            {decision === "MONITOR" && (
+              <div className="text-orange-600 font-semibold text-lg">
+                🟠 Monitor Closely
+              </div>
+            )}
+
+            {decision === "NO_DEPLOYMENT" && (
+              <div className="text-green-600 font-semibold text-lg">
+                🟢 No Deployment Needed
+              </div>
+            )}
+
+          </div>
+
+
+          {/* ⭐ MOVED — Ground Sensor Status */}
+          <div className="bg-white rounded-xl p-6 shadow border border-gray-100">
+
+            <h3 className="font-semibold mb-3">
+              Ground Sensor Status
+            </h3>
+
+            {hasSensors ? (
+              <>
+                <div className="text-green-700 font-medium">
+                  Sensors deployed
+                </div>
+
+                <button
+                  className="mt-3 px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
+                  onClick={() =>
+                    router.push(`/sensor?area=noney&sensor_id=${grid_uid}`)
+                  }
+                >
+                  Open Ground Sensor Dashboard
+                </button>
+              </>
+            ) : (
+              <div className="text-yellow-700">
+                No sensors deployed yet
+              </div>
+            )}
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+      {/* ================= METRICS ================= */}
+
+      <div className="grid grid-cols-4 gap-5 mt-6">
+
+        <Metric label="Slope" value={features.S} direction={directions.S}/>
+        <Metric label="Rainfall" value={features.R} direction={directions.R}/>
+        <Metric label="NDVI" value={features.V} direction={directions.V}/>
+        <Metric label="Soil" value={features.P} direction={directions.P}/>
+
+      </div>
+
+
+      {/* ================= DETAILS ================= */}
+
+      <div className="grid grid-cols-2 gap-6 mt-6">
+
+        {/* FEATURES */}
+        {rawFeatures && (
+          <div className="bg-white rounded-xl p-6 shadow border border-gray-100">
+
+            <h3 className="font-semibold mb-4">
+              Environmental Features
+            </h3>
+
+            <div className="grid grid-cols-2 gap-3 text-sm">
+              <Info label="Elevation" v={rawFeatures.elevation}/>
+              <Info label="Slope" v={rawFeatures.slope}/>
+              <Info label="NDVI" v={rawFeatures.ndvi}/>
+              <Info label="Rain 7d" v={rawFeatures.rain_7d}/>
+              <Info label="Rain 30d" v={rawFeatures.rain_30d}/>
+              <Info label="Soil Moisture" v={rawFeatures.soil_moisture}/>
+            </div>
+
+          </div>
+        )}
+
+        {/* DRIVERS */}
+        {drivers && (
+          <div className="bg-white rounded-xl p-6 shadow border border-gray-100">
+
+            <h3 className="font-semibold mb-4">
+              Risk Drivers
+            </h3>
+
+            <ul className="space-y-2 text-sm font-medium">
+              {drivers.includes("rainfall") && <li>🌧️ High rainfall</li>}
+              {drivers.includes("slope") && <li>⛰️ Steep slope</li>}
+              {drivers.includes("vegetation") && <li>🌱 Low vegetation</li>}
+              {drivers.includes("soil") && <li>💧 Soil saturation</li>}
+            </ul>
+
+          </div>
+        )}
+
+      </div>
+
+    </main>
   );
 }
 
 
-  const { features, rawFeatures, riskScore, decision, drivers, contributions } = data;
-
-
-
-  const directions = {
-  S: (features?.S ?? 0) > 0.7 ? "up" : "stable",
-  R: (features?.R ?? 0) > 0.6 ? "up" : "down",
-  V: (features?.V ?? 0) < 0.4 ? "down" : "stable",
-  P: "stable",
-};
-
-console.log("Dashboard data:", data);
-
-
-
+// helper
+function Info({ label, v }) {
   return (
-    <main className="p-8 w-full min-h-screen text-black bg-[#F2EFEA]">
-      <h1 className="text-2xl font-bold">Live Dashboard</h1>
-
-      <p className="text-sm text-gray-500 mt-1">
-        Last updated: {new Date().toLocaleString()}
-      </p>
-
-      <p className="text-sm text-gray-600 mt-1">
-        Monitoring Target:  
-        <strong>
-          {grid_uid ? ` GRID ${grid_uid}` : (area || "UNKNOWN").toUpperCase()}
-        </strong>
-      </p>
-
-      {/* Satellite Metrics */}
-      <div className="grid grid-cols-3 gap-4 mt-6">
-        <Metric
-          label="Slope Factor"
-          value={features.S}
-          color="#ef4444"
-          trend={[0.6, 0.65, features.S]}   // sparkline data
-          direction={directions.S}
-        />
-
-        <Metric
-          label="Rainfall Index"
-          value={features.R}
-          color="#3b82f6"
-          trend={[0.6, 0.65, features.R]}   // sparkline data
-          direction={directions.R}
-        />
-
-        <Metric
-          label="Vegetation Index (NDVI)"
-          value={features.V}
-          color="#22c55e"
-          trend={[0.6, 0.65, features.V]}   // sparkline data
-          direction={directions.V}
-        />
-
-        <Metric
-          label="Soil Stability Proxy"
-          value={features.P}
-          trend={[0.6, 0.65, features.P]}   // sparkline data
-          direction={directions.P}
-        />
-
-        
-      </div>
-
-      {rawFeatures && (
-        <div className="mt-6 p-4 rounded bg-[#E5E7EB] shadow">
-          <h3 className="font-semibold mb-3">
-            Grid Environmental Features
-          </h3>
-
-          <div className="grid grid-cols-2 gap-3 text-sm">
-
-            <div>Elevation: <b>{rawFeatures.elevation?.toFixed(1)} m</b></div>
-            <div>Slope: <b>{rawFeatures.slope?.toFixed(2)} °</b></div>
-
-            <div>NDVI: <b>{rawFeatures.ndvi?.toFixed(3)}</b></div>
-
-            <div>Rain 1d: <b>{rawFeatures.rain_1d?.toFixed(1)} mm</b></div>
-            <div>Rain 7d: <b>{rawFeatures.rain_7d?.toFixed(1)} mm</b></div>
-            <div>Rain 30d: <b>{rawFeatures.rain_30d?.toFixed(1)} mm</b></div>
-
-            <div>Soil Moisture: <b>{rawFeatures.soil_moisture?.toFixed(3)}</b></div>
-            <div>Soil Type: <b>{rawFeatures.soil_type}</b></div>
-
-            <div>Population: <b>{rawFeatures.population?.toFixed(0)}</b></div>
-
-          </div>
-        </div>
-      )}
-
-      {/* ================= EXPLAINABILITY ================= */}
-
-      {drivers && (
-        <div className="mt-6 p-6 rounded bg-[#E5E7EB] shadow">
-          <h3 className="font-semibold mb-2">
-            Why this grid is risky
-          </h3>
-
-          <ul className="text-sm font-bold space-y-2">
-
-            {drivers.includes("rainfall") && (
-              <li>🌧️ High recent rainfall increased ground saturation</li>
-            )}
-
-            {drivers.includes("slope") && (
-              <li>⛰️ Steep terrain raises landslide probability</li>
-            )}
-
-            {drivers.includes("vegetation") && (
-              <li>🌱 Low vegetation cover reduces soil binding</li>
-            )}
-
-            {drivers.includes("soil") && (
-              <li>💧 High soil moisture weakens slope stability</li>
-            )}
-
-          </ul>
-
-          {/* <div className="mt-3 text-[.9vw] text-gray-500">
-            Model contribution weights:
-            {Object.entries(contributions).map(([k,v]) => (
-              <div key={k}>{k}: {(v*100).toFixed(1)}%</div>
-            ))}
-          </div> */}
-        </div>
-      )}  
-
-
-
-
-      {/* Risk Assessment */}
-      <div className="mt-6 p-4 rounded bg-gray-100">
-        <h3 className="font-semibold">Sensor Deployment Assessment</h3>
-
-        <p className="mt-1">
-          Satellite Risk Score: <strong>{riskScore.toFixed(2)}</strong>
-        </p>
-
-        {decision === "DEPLOY_SENSORS" && (
-          <p className="text-red-600 mt-2">
-            🔴 High susceptibility detected. Ground sensors recommended.
-          </p>
-        )}
-
-        {decision === "MONITOR" && (
-          <p className="text-yellow-600 mt-2">
-            🟠 Moderate susceptibility. Continue satellite monitoring.
-          </p>
-        )}
-
-        {decision === "NO_DEPLOYMENT" && (
-          <p className="text-green-600 mt-2">
-            🟢 Low susceptibility. No sensor deployment needed.
-          </p>
-        )}
-      </div>
-
-      {/* Ground Sensor Status */}
-      {/* Ground Sensor Status */}
-      <div className="mt-6 bg-gray-100 p-4 rounded">
-        <h3 className="font-semibold">Ground Sensor Status</h3>
-
-        {hasSensors ? (
-          <>
-            <p className="text-green-700 mt-1">
-              Ground sensors are deployed in this grid.
-            </p>
-
-            <button
-              className="mt-3 px-4 py-2 bg-blue-600 text-white rounded"
-              onClick={() =>
-                router.push(
-                  grid_uid
-                    ? `/sensor?area=noney&sensor_id=${grid_uid}`
-                    : `/sensor?area=${area}`
-                )
-              }
-            >
-              View Ground Sensor Dashboard
-            </button>
-          </>
-        ) : (
-          <p className="text-yellow-700 mt-1">
-            No ground sensors deployed yet.
-            <br />
-            Satellite assessment recommends monitoring.
-          </p>
-        )}
-      </div>
-
-    </main>
+    <div>
+      <div className="text-gray-500 text-xs">{label}</div>
+      <div className="font-semibold">{v?.toFixed ? v.toFixed(2) : v}</div>
+    </div>
   );
 }

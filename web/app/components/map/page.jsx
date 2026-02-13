@@ -244,6 +244,7 @@ export default function RiskMap() {
 
 
         {/* HILL GRID */}
+        {/* HILL GRID */}
         {hillGrid && showHillGrid && (
           <GeoJSON
             data={hillGrid}
@@ -252,8 +253,10 @@ export default function RiskMap() {
               weight: 0.5,
               fillOpacity: 0.04
             }}
+            interactive={false}   // ⭐⭐⭐ THIS FIXES IT
           />
         )}
+
 
       </MapContainer>
     </main>
